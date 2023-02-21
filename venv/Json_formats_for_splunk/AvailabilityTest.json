@@ -1,0 +1,21 @@
+{
+    "Type":"String(OSLAT/Cyclist)",
+    "OCP_Main_Version":"String",
+    "OCP_Minor_Version":"String",
+    "Node_Name":"String",
+    "Duration":"number",
+    "Kernel":"String",
+    "Side_Loaded":"boolean",
+    "Operator_Version":"String",
+    "Test_Units":
+    [
+        { 
+            "Index":"number", 
+            "Max_Latency":"number", 
+            "Min_Latency":"number", 
+            "Avg_Latency":"number", 
+            "Availability":"number", 
+            "Number_Of_Nines":"number"
+            }
+        ]
+}

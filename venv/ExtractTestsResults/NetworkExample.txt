@@ -1,0 +1,1329 @@
+Started by user Yang Liu
+Rebuilds build #2456
+Checking out git https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git into /var/jenkins_home/jobs/ocp-far-edge-vran-deployment/workspace@script/2c53200a11162d9166b6d700a2c9caa4fe3aadfee055e8fa805a5afdf6ca1a51 to read jenkins/jobs/ocp-far-edge-vran-pipeline/ocp-far-edge-vran-deployment.groovy
+The recommended git tool is: git
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/jobs/ocp-far-edge-vran-deployment/workspace@script/2c53200a11162d9166b6d700a2c9caa4fe3aadfee055e8fa805a5afdf6ca1a51/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git # timeout=10
+Fetching upstream changes from https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.31.1'
+ > git fetch --tags --force --progress -- https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse origin/master^{commit} # timeout=10
+Checking out Revision 5464609dbd088d805c4320242971acc76fcb768b (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5464609dbd088d805c4320242971acc76fcb768b # timeout=10
+Commit message: "Merge branch 'add-hive-to-upstream-assisted' into 'master'"
+ > git rev-list --no-walk 5464609dbd088d805c4320242971acc76fcb768b # timeout=10
+Loading library kni-qe-ci-lib@master
+Attempting to resolve master from remote references...
+ > git --version # timeout=10
+ > git --version # 'git version 2.31.1'
+ > git ls-remote -- https://gitlab.cee.redhat.com/ocp-edge-qe/kni-qe-ci-lib.git # timeout=10
+Found match: refs/heads/master revision 66856cb6497a0f60a285212c38644ace321e188c
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/jobs/ocp-far-edge-vran-deployment/workspace@libs/b0410d60c1af37cebac1e10dd1b96e888793315619a7b2ca03bfcf6c20ace6b5/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://gitlab.cee.redhat.com/ocp-edge-qe/kni-qe-ci-lib.git # timeout=10
+Fetching without tags
+Fetching upstream changes from https://gitlab.cee.redhat.com/ocp-edge-qe/kni-qe-ci-lib.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.31.1'
+ > git fetch --no-tags --force --progress -- https://gitlab.cee.redhat.com/ocp-edge-qe/kni-qe-ci-lib.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking out Revision 66856cb6497a0f60a285212c38644ace321e188c (master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 66856cb6497a0f60a285212c38644ace321e188c # timeout=10
+Commit message: "Merge branch 'add-rm-to-sendBuildResults' into 'master'"
+ > git rev-list --no-walk 66856cb6497a0f60a285212c38644ace321e188c # timeout=10
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on ocp-edge45.lab.eng.tlv2.redhat.com in /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+The recommended git tool is: git
+No credentials specified
+Fetching changes from the remote Git repository
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/.git # timeout=10
+ > git config remote.origin.url https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git # timeout=10
+Fetching upstream changes from https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.31.1'
+ > git fetch --tags --force --progress -- https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking out Revision 5464609dbd088d805c4320242971acc76fcb768b (origin/master)
+ > git rev-parse origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5464609dbd088d805c4320242971acc76fcb768b # timeout=10
+Commit message: "Merge branch 'add-hive-to-upstream-assisted' into 'master'"
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] lock
+Trying to acquire lock on [Label: registry.ran-vcl01.ptp.lab.eng.bos.redhat.com, Quantity: 1]
+Lock acquired on [Label: registry.ran-vcl01.ptp.lab.eng.bos.redhat.com, Quantity: 1]
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Process Profile Values)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] fileExists
+[Pipeline] echo
+File jenkins/ci-profiles-new/4.12/far-edge-vran-system-testing.yaml exists
+[Pipeline] readYaml
+[Pipeline] readFile
+[Pipeline] echo
+Values read from file: [jobs:[[name:ocp-far-edge-vran-deployment, params:[lock_label_host:${LOCK_LABEL_HOST}, version:${VERSION}, HUB_PULL_SPEC:${PULL_SPEC}, DU_PULL_SPEC:${PULL_SPEC}, ZTP_SITECONFIG_REPO_BRANCH:kni-qe-1-4.12, ZTP_POLICIES_REPO_BRANCH:kni-qe-1-4.12, DEPLOY_HUB:false, OPERATORS_HUB:false, MIRROR_SPOKE_OPERATOR_IMAGES:true, DEPLOY_DU:true, UPLOAD_METRICS:true, RAN_METRICS_FORMAL_TEST:true, TEST_PREPARATION:true, TEST_TYPE:run_cnf_tests,run_edge_deployment_sanity_tests,run_edge_deployment_progression_tests,run_edge_deployment_regression_tests,run_cucushift_non_admin,run_cucushift_admin,run_fec_du_system_tests,flexran,aggregate_test_results, profile_name:${PROFILE_NAME}, profile_override:${PROFILE_OVERRIDE}]]], lock_label:far-edge-vran, profile_runner_job:far-edge-vran-deployment, ocp_deploy:true, acm_install_source:latest_downstream_snapshot_2.5, operators_setup:true, baremetal_net_ipv6:true, baremetal_net_ipv4:false, provisioning_network_state:Disabled, management_interface_type:ilo5-VirtualMedia, network_type:OVNKubernetes, disconnected_install:true, olm_catalog_source:redhat-operators, operators_list:advanced-cluster-management,openshift-gitops-operator, test_type:, trigger_day:[Disabled], email_notification:[subject:${VERSION}, enabled:true, to:kni-ci-results@redhat.com, cc:mcornea@redhat.com], send_to_kafka:version=$VERSION,pull_spec=$PULL_SPEC,profile_name=$PROFILE_NAME, disable_nodes_check:true]
+[Pipeline] echo
+Resource 'registry.ran-vcl01.ptp.lab.eng.bos.redhat.com' isLocked By: ocp-far-edge-vran-deployment #2457
+[Pipeline] echo
+No Upstream Job found..
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Clone Repos)
+[Pipeline] echo
+Cleaning workspace
+[Pipeline] cleanWs
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is disabled by the job configuration...
+[WS-CLEANUP] done
+[Pipeline] checkout
+The recommended git tool is: git
+No credentials specified
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Avoid fetching tags
+Cloning repository https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git
+ > git init /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment # timeout=10
+Fetching upstream changes from https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.31.1'
+ > git fetch --no-tags --force --progress --depth=1 -- https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git config remote.origin.url https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking out Revision 5464609dbd088d805c4320242971acc76fcb768b (origin/master)
+Commit message: "Merge branch 'add-hive-to-upstream-assisted' into 'master'"
+[Pipeline] script
+[Pipeline] {
+[Pipeline] addShortText
+[Pipeline] addShortText
+[Pipeline] addShortText
+[Pipeline] addShortText
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy hub cluster)
+Stage "Deploy hub cluster" skipped due to when conditional
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Set up hub cluster operators)
+Stage "Set up hub cluster operators" skipped due to when conditional
+[Pipeline] }
+ > git rev-parse origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5464609dbd088d805c4320242971acc76fcb768b # timeout=10
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Mirror DU release payload and operators)
+[Pipeline] node
+Running on registry.ran-vcl01.ptp.lab.eng.bos.redhat.com in /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // node
+Stage "Mirror DU release payload and operators" skipped due to when conditional
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Clean up pre-existing DU resources)
+[Pipeline] node
+Running on registry.ran-vcl01.ptp.lab.eng.bos.redhat.com in /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // node
+Stage "Clean up pre-existing DU resources" skipped due to when conditional
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy DU node)
+[Pipeline] node
+Running on registry.ran-vcl01.ptp.lab.eng.bos.redhat.com in /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // node
+Stage "Deploy DU node" skipped due to when conditional
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Wait for DU policies)
+[Pipeline] node
+Running on registry.ran-vcl01.ptp.lab.eng.bos.redhat.com in /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // node
+Stage "Wait for DU policies" skipped due to when conditional
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (DU test preparation)
+[Pipeline] node
+Running on registry.ran-vcl01.ptp.lab.eng.bos.redhat.com in /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // node
+Stage "DU test preparation" skipped due to when conditional
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Side load temporary RT kernel)
+[Pipeline] node
+Running on registry.ran-vcl01.ptp.lab.eng.bos.redhat.com in /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // node
+Stage "Side load temporary RT kernel" skipped due to when conditional
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run system tests)
+Stage "Run system tests" skipped due to when conditional
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run oslat test)
+[Pipeline] node
+Running on registry.ran-vcl01.ptp.lab.eng.bos.redhat.com in /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: git
+No credentials specified
+Fetching changes from the remote Git repository
+Checking out Revision 5464609dbd088d805c4320242971acc76fcb768b (origin/master)
+Commit message: "Merge branch 'add-hive-to-upstream-assisted' into 'master'"
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+Stage "Run oslat test" skipped due to when conditional
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run cyclictest)
+[Pipeline] node
+Running on registry.ran-vcl01.ptp.lab.eng.bos.redhat.com in /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: git
+No credentials specified
+Fetching changes from the remote Git repository
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/.git # timeout=10
+ > git config remote.origin.url https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git # timeout=10
+Fetching upstream changes from https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.27.0'
+ > git fetch --tags --force --progress -- https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5464609dbd088d805c4320242971acc76fcb768b # timeout=10
+Checking out Revision 5464609dbd088d805c4320242971acc76fcb768b (origin/master)
+Commit message: "Merge branch 'add-hive-to-upstream-assisted' into 'master'"
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+Stage "Run cyclictest" skipped due to when conditional
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run cpu_util test)
+[Pipeline] node
+Running on registry.ran-vcl01.ptp.lab.eng.bos.redhat.com in /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: git
+No credentials specified
+Fetching changes from the remote Git repository
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/.git # timeout=10
+ > git config remote.origin.url https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git # timeout=10
+Fetching upstream changes from https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.27.0'
+ > git fetch --tags --force --progress -- https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5464609dbd088d805c4320242971acc76fcb768b # timeout=10
+Checking out Revision 5464609dbd088d805c4320242971acc76fcb768b (origin/master)
+Commit message: "Merge branch 'add-hive-to-upstream-assisted' into 'master'"
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+Stage "Run cpu_util test" skipped due to when conditional
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run rfc2544 test)
+[Pipeline] node
+Running on registry.ran-vcl01.ptp.lab.eng.bos.redhat.com in /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: git
+No credentials specified
+Fetching changes from the remote Git repository
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/.git # timeout=10
+ > git config remote.origin.url https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git # timeout=10
+Fetching upstream changes from https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.27.0'
+ > git fetch --tags --force --progress -- https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5464609dbd088d805c4320242971acc76fcb768b # timeout=10
+Checking out Revision 5464609dbd088d805c4320242971acc76fcb768b (origin/master)
+Commit message: "Merge branch 'add-hive-to-upstream-assisted' into 'master'"
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] warnError
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+No credentials specified
+Fetching changes from the remote Git repository
+Using shallow fetch with depth 1
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/.git # timeout=10
+ > git config remote.origin.url https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git # timeout=10
+Fetching upstream changes from https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.27.0'
+ > git fetch --tags --force --progress -- https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5464609dbd088d805c4320242971acc76fcb768b # timeout=10
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/.git # timeout=10
+ > git config remote.origin.url https://gitlab.cee.redhat.com/ran/ran-integration.git # timeout=10
+Fetching upstream changes from https://gitlab.cee.redhat.com/ran/ran-integration.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.27.0'
+ > git fetch --no-tags --force --progress --depth=1 -- https://gitlab.cee.redhat.com/ran/ran-integration.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking out Revision d8f0b73aa86cc6f9d85b6ef49aa573d5aceee0e2 (origin/master)
+Commit message: "Merge branch 'addtalmbmer' into 'master'"
+ > git rev-parse origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d8f0b73aa86cc6f9d85b6ef49aa573d5aceee0e2 # timeout=10
+ > git rev-list --no-walk d8f0b73aa86cc6f9d85b6ef49aa573d5aceee0e2 # timeout=10
+[Pipeline] sh
++ export KUBECONFIG=/home/kni/clusterconfigs/cnfde4/auth/kubeconfig
++ KUBECONFIG=/home/kni/clusterconfigs/cnfde4/auth/kubeconfig
++ RFC2544ROOT=/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/rfc2544
++ SCRIPTS_DIR=/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/scripts
++ ./rfc2544/run-rfc-2544-tests.sh
+
+Running rfc2544 tests for cnfde4
+pod/dpdk-testpmd-cnfde4 configured
+[0;34m[INFO] Wait till pod/dpdk-testpmd-cnfde4 is ready[0m
+pod/dpdk-testpmd-cnfde4 condition met
+[0;34m[INFO] Verify pod/dpdk-testpmd-cnfde4 ready[0m
+[0;36m[INFO] pod/dpdk-testpmd-cnfde4 is ready[0m
+RFC2544_PARAMS: STCWEB=10.16.231.202:8888;CHASSIS=spt-n4u-mgmt;TESTCFG=spirent_testcfg.xml;PORT1=//spt-n4u-mgmt/2/6;PORT2=//spt-n4u-mgmt/2/7
+99.912
++ [[ ! -f '' ]]
++ touch
+touch: missing file operand
+Try 'touch --help' for more information.
++ true
++ source
+/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/scripts/set_ran_extra_vars.sh: line 12: source: filename argument required
+source: usage: source filename [arguments]
++ '[' -z /home/kni/clusterconfigs/cnfde4/auth/kubeconfig ']'
++ '[' -z '' ']'
++ export OC_EXE=oc
++ OC_EXE=oc
++ '[' -z ']'
+++ oc config view -o 'jsonpath={.clusters[].cluster.server}{"\n"}'
++ cluster=https://api.cnfde4.sno.ptp.lab.eng.bos.redhat.com:6443
++ cluster=cnfde4.sno.ptp.lab.eng.bos.redhat.com:6443
++ cluster=cnfde4
++ echo 'export RAN_METRICS_CLUSTER="cnfde4"'
+/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/scripts/set_ran_extra_vars.sh: line 21: ${RAN_EXTRA_VARS}: ambiguous redirect
+++ oc version
+++ grep Server
+++ awk '{print $3}'
++ export_version='export RAN_METRICS_SW_VERSION="4.12.0-rc.5"'
+++ strings
+++ grep RAN_METRICS_SW_VERSION
++ [[ -z '' ]]
++ echo 'export RAN_METRICS_SW_VERSION="4.12.0-rc.5"'
+/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/scripts/set_ran_extra_vars.sh: line 27: ${RAN_EXTRA_VARS}: ambiguous redirect
++ MC_NS=openshift-machine-config-operator
++ '[' -z ']'
+++ oc get node -l kubernetes.io/hostname -o name
+++ awk -F / '{print $2}'
++ NODE=cnfde4.ptp.lab.eng.bos.redhat.com
+++ oc get pods -n openshift-machine-config-operator -o wide
+++ grep -E 'machine-config-daemon.*cnfde4.ptp.lab.eng.bos.redhat.com'
+++ awk '{print $1}'
++ MACHINE_CONFIG_DAEMON=machine-config-daemon-kvw26
+++ oc exec -n openshift-machine-config-operator machine-config-daemon-kvw26 -c machine-config-daemon -- chroot /rootfs lscpu
++ LSCPU='Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              104
+On-line CPU(s) list: 0-103
+Thread(s) per core:  2
+Core(s) per socket:  26
+Socket(s):           2
+NUMA node(s):        2
+Vendor ID:           GenuineIntel
+BIOS Vendor ID:      Intel
+CPU family:          6
+Model:               85
+Model name:          Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz
+BIOS Model name:     Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz
+Stepping:            7
+CPU MHz:             2999.984
+BogoMIPS:            4200.00
+Virtualization:      VT-x
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            1024K
+L3 cache:            36608K
+NUMA node0 CPU(s):   0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102
+NUMA node1 CPU(s):   1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99,101,103
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear flush_l1d arch_capabilities'
+++ echo 'Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              104
+On-line CPU(s) list: 0-103
+Thread(s) per core:  2
+Core(s) per socket:  26
+Socket(s):           2
+NUMA node(s):        2
+Vendor ID:           GenuineIntel
+BIOS Vendor ID:      Intel
+CPU family:          6
+Model:               85
+Model name:          Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz
+BIOS Model name:     Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz
+Stepping:            7
+CPU MHz:             2999.984
+BogoMIPS:            4200.00
+Virtualization:      VT-x
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            1024K
+L3 cache:            36608K
+NUMA node0 CPU(s):   0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102
+NUMA node1 CPU(s):   1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99,101,103
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear flush_l1d arch_capabilities'
+++ grep '^Model name'
+++ awk '{print substr($0, index($0,$3))}'
++ CPU_TYPE='Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz'
+++ echo 'Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              104
+On-line CPU(s) list: 0-103
+Thread(s) per core:  2
+Core(s) per socket:  26
+Socket(s):           2
+NUMA node(s):        2
+Vendor ID:           GenuineIntel
+BIOS Vendor ID:      Intel
+CPU family:          6
+Model:               85
+Model name:          Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz
+BIOS Model name:     Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz
+Stepping:            7
+CPU MHz:             2999.984
+BogoMIPS:            4200.00
+Virtualization:      VT-x
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            1024K
+L3 cache:            36608K
+NUMA node0 CPU(s):   0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102
+NUMA node1 CPU(s):   1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99,101,103
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear flush_l1d arch_capabilities'
+++ grep Thread
+++ awk '{print $4}'
++ HYPERTHREAD=2
++ echo 'export RAN_METRICS_CPU_TYPE="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz"'
+/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/scripts/set_ran_extra_vars.sh: line 39: ${RAN_EXTRA_VARS}: ambiguous redirect
++ echo 'export RAN_METRICS_HYPERTHREAD="2"'
+/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/scripts/set_ran_extra_vars.sh: line 40: ${RAN_EXTRA_VARS}: ambiguous redirect
+export RAN_METRICS_CLUSTER="cnfde4"
+export RAN_METRICS_SW_VERSION="4.12.0-rc.5"
+export RAN_METRICS_CPU_TYPE="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz"
+export RAN_METRICS_HYPERTHREAD="2"
+[0;34m[INFO] Pushing ranmetrics_rfc2544_test_throughput{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="28800", framesize="512.0", test_load="512.0"} 99.912 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   258    0     0  100   258      0   7818 --:--:-- --:--:-- --:--:--  7818
+[0;34m[INFO] Pushing ranmetrics_rfc2544_test_min{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="28800", framesize="512.0", test_load="512.0"} 5.95 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   249    0     0  100   249      0   7545 --:--:-- --:--:-- --:--:--  7323
+[0;34m[INFO] Pushing ranmetrics_rfc2544_test_max{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="28800", framesize="512.0", test_load="512.0"} 38.095 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   251    0     0  100   251      0   8096 --:--:-- --:--:-- --:--:--  8096
+[0;34m[INFO] Pushing ranmetrics_rfc2544_test_avg{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="28800", framesize="512.0", test_load="512.0"} 7.064 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   250    0     0  100   250      0   6250 --:--:-- --:--:-- --:--:--  6250
+[0;34m[INFO] Pushing ranmetrics_rfc2544_histograms{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="28800", framesize="512.0", test_load="512.0"} {x<5.57},0,0;{5.57<=x<6.21},7629256,0;{6.21<=x<6.85},89281222752,1314271716;{6.85<=x<7.49},44573989460,98584450534;{7.49<=x<8.13},1342760548,34402508972;{8.13<=x<8.77},7714415,906964227;{8.77<=x<9.41},970293,5615355;{9.41<=x<10.05},725674,842608;{10.05<=x<10.69},643091,685859;{10.69<=x<11.33},590551,629430;{11.33<=x<11.97},471474,537807;{11.97<=x<12.61},334695,393598;{12.61<=x<13.25},232072,268997;{13.25<=x<13.89},174564,185977;{13.89<=x<14.53},163043,153220;{x>=14.53},1626236,1739824; to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100  1296  100   559  100   737  24304  32043 --:--:-- --:--:-- --:--:-- 58909
+text format parsing error in line 1: expected float as value, got "{x<5.57},0,0;{5.57<=x<6.21},7629256,0;{6.21<=x<6.85},89281222752,1314271716;{6.85<=x<7.49},44573989460,98584450534;{7.49<=x<8.13},1342760548,34402508972;{8.13<=x<8.77},7714415,906964227;{8.77<=x<9.41},970293,5615355;{9.41<=x<10.05},725674,842608;{10.05<=x<10.69},643091,685859;{10.69<=x<11.33},590551,629430;{11.33<=x<11.97},471474,537807;{11.97<=x<12.61},334695,393598;{12.61<=x<13.25},232072,268997;{13.25<=x<13.89},174564,185977;{13.89<=x<14.53},163043,153220;{x>=14.53},1626236,1739824;"
+pod "dpdk-testpmd-cnfde4" deleted
+[0;36mScript took 30387 seconds[0m
+export RAN_METRICS_CLUSTER="cnfde4"
+export RAN_METRICS_SW_VERSION="4.12.0-rc.5"
+export RAN_METRICS_CPU_TYPE="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz"
+export RAN_METRICS_HYPERTHREAD="2"
+Posting time: 30387, tags pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", pipeline_stage="run-rfc-2544-tests"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   237    0     0  100   237      0   7406 --:--:-- --:--:-- --:--:--  7406
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   374  100   118  100   256   5130  11130 --:--:-- --:--:-- --:--:-- 17000
+text format parsing error in line 1: expected float as value, got "-rfc-2544-tests_duration_seconds{pipeline=\"ci\","
+removed '/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/ran-extra-vars_cnfde4'
+[Pipeline] }
+[Pipeline] // warnError
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run ptp test)
+[Pipeline] node
+Running on registry.ran-vcl01.ptp.lab.eng.bos.redhat.com in /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: git
+No credentials specified
+Fetching changes from the remote Git repository
+Checking out Revision 5464609dbd088d805c4320242971acc76fcb768b (origin/master)
+Commit message: "Merge branch 'add-hive-to-upstream-assisted' into 'master'"
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] warnError
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+No credentials specified
+Fetching changes from the remote Git repository
+Using shallow fetch with depth 1
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/.git # timeout=10
+ > git config remote.origin.url https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git # timeout=10
+Fetching upstream changes from https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.27.0'
+ > git fetch --tags --force --progress -- https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5464609dbd088d805c4320242971acc76fcb768b # timeout=10
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/.git # timeout=10
+ > git config remote.origin.url https://gitlab.cee.redhat.com/ran/ran-integration.git # timeout=10
+Fetching upstream changes from https://gitlab.cee.redhat.com/ran/ran-integration.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.27.0'
+ > git fetch --no-tags --force --progress --depth=1 -- https://gitlab.cee.redhat.com/ran/ran-integration.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking out Revision d8f0b73aa86cc6f9d85b6ef49aa573d5aceee0e2 (origin/master)
+Commit message: "Merge branch 'addtalmbmer' into 'master'"
+[Pipeline] sh
++ export KUBECONFIG=/home/kni/clusterconfigs/cnfde4/auth/kubeconfig
++ KUBECONFIG=/home/kni/clusterconfigs/cnfde4/auth/kubeconfig
++ SCRIPTS_DIR=/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/scripts
++ ./scripts/test_ptp.sh ptp=8h,rfc2544
+ > git rev-parse origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d8f0b73aa86cc6f9d85b6ef49aa573d5aceee0e2 # timeout=10
+[0;34m[INFO] Wait for 20 seconds before starting test[0m
+[0;34m[INFO] Collecting ptp slave logs..[0m
+[0;34m[INFO] Collecting ptp logs for 8h[0m
+[0;34m[INFO] Killing ptp log collection pids on executor: 1935961, 1935962, 1935960[0m
+./scripts/test_ptp.sh: line 176: kill: (1935961) - No such process
+./scripts/test_ptp.sh: line 176: kill: (1935962) - No such process
+./scripts/test_ptp.sh: line 176: kill: (1935960) - No such process
+[0;34m[INFO] Getting MAX MIN offset Values[0m
+[0;36m[INFO] PTP4L MAX Value 39[0m
+[0;36m[INFO] PTP4L MIN Value 1[0m
+[0;36m[INFO] PHC2SYS MAX Value 72[0m
+[0;36m[INFO] PHC2SYS MIN Value 1[0m
+[0;36m[INFO] PTP4L AVG VALUE 5.4057[0m
+[0;36m[INFO] PHC2SYS AVG VALUE 9.17221[0m
+[0;34m[INFO] Get PTP interface and NIC info[0m
++ MC_NS=openshift-machine-config-operator
+++ oc get pods -n openshift-machine-config-operator -o wide
+++ grep -E 'machine-config-daemon.*cnfde4.ptp.lab.eng.bos.redhat.com'
+++ awk '{print $1}'
++ MACHINE_CONFIG_DAEMON=machine-config-daemon-kvw26
++ PTP_INTERFACES=($(oc get ptpconfigs.ptp.openshift.io -n ${NAMESPACE} -o json | jq -r '.items[].spec.profile[].interface'))
+++ oc get ptpconfigs.ptp.openshift.io -n openshift-ptp -o json
+++ jq -r '.items[].spec.profile[].interface'
++ [[ null == null ]]
++ PTP_INTERFACES=($(oc get ptpconfigs.ptp.openshift.io -n ${NAMESPACE} -o json | jq -r '.items[].spec.profile[].ptp4lConf' | grep -B1 "masterOnly 0" | sed -n '$!N;/\nmasterOnly 0$/P;D' | sed 's/[][]//g'))
+++ oc get ptpconfigs.ptp.openshift.io -n openshift-ptp -o json
+++ jq -r '.items[].spec.profile[].ptp4lConf'
+++ grep -B1 'masterOnly 0'
+++ sed -n '$!N;/\nmasterOnly 0$/P;D'
+++ sed 's/[][]//g'
++ NUMBER_OF_INTERFACES=2
++ declare -a PTP_INTERFACE_BUS_IDS
++ declare -a PTP_NICS
++ (( i=0 ))
++ (( i<NUMBER_OF_INTERFACES ))
+++ oc exec -n openshift-machine-config-operator machine-config-daemon-kvw26 -c machine-config-daemon -- chroot /rootfs ethtool -i ens4f0
+++ grep bus-info
+++ awk -F: '{ print $3":"$4 }'
++ PTP_INTERFACE_BUS_IDS[$i]=af:00.0
+++ oc exec -n openshift-machine-config-operator machine-config-daemon-kvw26 -c machine-config-daemon -- chroot /rootfs lspci -s af:00.0
+++ awk -F: '{print $3}'
++ PTP_NICS[$i]=' Intel Corporation Ethernet Controller E810-C for SFP (rev 02)'
++ (( i++  ))
++ (( i<NUMBER_OF_INTERFACES ))
+++ oc exec -n openshift-machine-config-operator machine-config-daemon-kvw26 -c machine-config-daemon -- chroot /rootfs ethtool -i ens1f0
+++ grep bus-info
+++ awk -F: '{ print $3":"$4 }'
++ PTP_INTERFACE_BUS_IDS[$i]=3b:00.0
+++ oc exec -n openshift-machine-config-operator machine-config-daemon-kvw26 -c machine-config-daemon -- chroot /rootfs lspci -s 3b:00.0
+++ awk -F: '{print $3}'
++ PTP_NICS[$i]=' Intel Corporation Ethernet Controller E810-C for SFP (rev 02)'
++ (( i++  ))
++ (( i<NUMBER_OF_INTERFACES ))
++ step 'INFO] Get PTP clock state and ptp4l process status from endpoint'
++ st='INFO] Get PTP clock state and ptp4l process status from endpoint'
++ message='INFO] Get PTP clock state and ptp4l process status from endpoint'
++ '[' -t ']'
++ echo -e '\033[0;34mINFO] Get PTP clock state and ptp4l process status from endpoint\033[0m'
+[0;34mINFO] Get PTP clock state and ptp4l process status from endpoint[0m
++ error_report=
++ ptp_clock_state=($(get_metrics_from_endpoint | get_ptp_clock_state))
+++ get_metrics_from_endpoint
+++ get_ptp_clock_state
+++ oc exec linuxptp-daemon-4vkgp -c linuxptp-daemon-container -n openshift-ptp -- curl localhost:9091/metrics
+++ grep -E openshift_ptp_clock_state
+++ grep -v '^#'
+++ awk -F '{' '{print $2}'
+++ awk '{sub(" ","") ; print }'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100  6616    0  6616    0     0  3230k      0 --:--:-- --:--:-- --:--:-- 3230k
++ '[' -z 'iface="CLOCK_REALTIME",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="phc2sys"}1' ']'
++ ptp4l_process_status=($(get_metrics_from_endpoint | get_ptp4l_process_status))
+++ get_metrics_from_endpoint
+++ get_ptp4l_process_status
+++ oc exec linuxptp-daemon-4vkgp -c linuxptp-daemon-container -n openshift-ptp -- curl localhost:9091/metrics
+++ grep -v '^#'
+++ grep -E 'openshift_ptp_process_status.*process=\"ptp4l\"'
+++ awk -F '{' '{print $2}'
+++ awk '{sub(" ","") ; print }'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100  6615    0  6615    0     0  6459k      0 --:--:-- --:--:-- --:--:-- 6459k
++ '[' -z 'config="ptp4l.0.config",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"}1' ']'
++ step '[INFO] Pushing Metrics'
++ st='[INFO] Pushing Metrics'
++ message='[INFO] Pushing Metrics'
++ '[' -t ']'
++ echo -e '\033[0;34m[INFO] Pushing Metrics\033[0m'
+[0;34m[INFO] Pushing Metrics[0m
++ bash /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/scripts/set_ran_extra_vars.sh
++ [[ ! -f /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/ran-extra-vars_cnfde4 ]]
++ touch /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/ran-extra-vars_cnfde4
++ source /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/ran-extra-vars_cnfde4
++ '[' -z /home/kni/clusterconfigs/cnfde4/auth/kubeconfig ']'
++ '[' -z '' ']'
++ export OC_EXE=oc
++ OC_EXE=oc
++ '[' -z ']'
+++ oc config view -o 'jsonpath={.clusters[].cluster.server}{"\n"}'
++ cluster=https://api.cnfde4.sno.ptp.lab.eng.bos.redhat.com:6443
++ cluster=cnfde4.sno.ptp.lab.eng.bos.redhat.com:6443
++ cluster=cnfde4
++ echo 'export RAN_METRICS_CLUSTER="cnfde4"'
+++ oc version
+++ grep Server
+++ awk '{print $3}'
++ export_version='export RAN_METRICS_SW_VERSION="4.12.0-rc.5"'
+++ strings /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/ran-extra-vars_cnfde4
+++ grep RAN_METRICS_SW_VERSION
++ [[ -z '' ]]
++ echo 'export RAN_METRICS_SW_VERSION="4.12.0-rc.5"'
++ MC_NS=openshift-machine-config-operator
++ '[' -z ']'
+++ oc get node -l kubernetes.io/hostname -o name
+++ awk -F / '{print $2}'
++ NODE=cnfde4.ptp.lab.eng.bos.redhat.com
+++ oc get pods -n openshift-machine-config-operator -o wide
+++ grep -E 'machine-config-daemon.*cnfde4.ptp.lab.eng.bos.redhat.com'
+++ awk '{print $1}'
++ MACHINE_CONFIG_DAEMON=machine-config-daemon-kvw26
+++ oc exec -n openshift-machine-config-operator machine-config-daemon-kvw26 -c machine-config-daemon -- chroot /rootfs lscpu
++ LSCPU='Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              104
+On-line CPU(s) list: 0-103
+Thread(s) per core:  2
+Core(s) per socket:  26
+Socket(s):           2
+NUMA node(s):        2
+Vendor ID:           GenuineIntel
+BIOS Vendor ID:      Intel
+CPU family:          6
+Model:               85
+Model name:          Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz
+BIOS Model name:     Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz
+Stepping:            7
+CPU MHz:             2100.000
+BogoMIPS:            4200.00
+Virtualization:      VT-x
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            1024K
+L3 cache:            36608K
+NUMA node0 CPU(s):   0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102
+NUMA node1 CPU(s):   1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99,101,103
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear flush_l1d arch_capabilities'
+++ echo 'Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              104
+On-line CPU(s) list: 0-103
+Thread(s) per core:  2
+Core(s) per socket:  26
+Socket(s):           2
+NUMA node(s):        2
+Vendor ID:           GenuineIntel
+BIOS Vendor ID:      Intel
+CPU family:          6
+Model:               85
+Model name:          Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz
+BIOS Model name:     Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz
+Stepping:            7
+CPU MHz:             2100.000
+BogoMIPS:            4200.00
+Virtualization:      VT-x
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            1024K
+L3 cache:            36608K
+NUMA node0 CPU(s):   0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102
+NUMA node1 CPU(s):   1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99,101,103
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear flush_l1d arch_capabilities'
+++ grep '^Model name'
+++ awk '{print substr($0, index($0,$3))}'
++ CPU_TYPE='Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz'
+++ echo 'Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              104
+On-line CPU(s) list: 0-103
+Thread(s) per core:  2
+Core(s) per socket:  26
+Socket(s):           2
+NUMA node(s):        2
+Vendor ID:           GenuineIntel
+BIOS Vendor ID:      Intel
+CPU family:          6
+Model:               85
+Model name:          Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz
+BIOS Model name:     Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz
+Stepping:            7
+CPU MHz:             2100.000
+BogoMIPS:            4200.00
+Virtualization:      VT-x
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            1024K
+L3 cache:            36608K
+NUMA node0 CPU(s):   0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102
+NUMA node1 CPU(s):   1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99,101,103
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear flush_l1d arch_capabilities'
+++ grep Thread
+++ awk '{print $4}'
++ HYPERTHREAD=2
++ echo 'export RAN_METRICS_CPU_TYPE="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz"'
++ echo 'export RAN_METRICS_HYPERTHREAD="2"'
++ set_ran_metrics_global_tags 0
++ rc=0
++ '[' -z x ']'
++ [[ ! -f /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/ran-extra-vars_cnfde4 ]]
++ true
++ source /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/ran-extra-vars_cnfde4
+++ export RAN_METRICS_CLUSTER=cnfde4
+++ RAN_METRICS_CLUSTER=cnfde4
+++ export RAN_METRICS_SW_VERSION=4.12.0-rc.5
+++ RAN_METRICS_SW_VERSION=4.12.0-rc.5
+++ export 'RAN_METRICS_CPU_TYPE=Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz'
+++ RAN_METRICS_CPU_TYPE='Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz'
+++ export RAN_METRICS_HYPERTHREAD=2
+++ RAN_METRICS_HYPERTHREAD=2
++ '[' -z x ']'
++ tags='pipeline=\"ci\", rc=\"0\"'
+++ compgen -e RAN_METRICS
++ for field in $(compgen -e RAN_METRICS)
++ '[' RAN_METRICS_CLUSTER == RAN_METRICS_URL ']'
+++ echo RAN_METRICS_CLUSTER
+++ sed 's/RAN_METRICS[_]*//g'
++ name=CLUSTER
++ tags='pipeline=\"ci\", rc=\"0\", cluster=\"cnfde4\"'
++ for field in $(compgen -e RAN_METRICS)
++ '[' RAN_METRICS_CPU_TYPE == RAN_METRICS_URL ']'
+++ echo RAN_METRICS_CPU_TYPE
+++ sed 's/RAN_METRICS[_]*//g'
++ name=CPU_TYPE
++ tags='pipeline=\"ci\", rc=\"0\", cluster=\"cnfde4\", cpu_type=\"Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz\"'
++ for field in $(compgen -e RAN_METRICS)
++ '[' RAN_METRICS_FORMAL_TEST == RAN_METRICS_URL ']'
+++ echo RAN_METRICS_FORMAL_TEST
+++ sed 's/RAN_METRICS[_]*//g'
++ name=FORMAL_TEST
++ tags='pipeline=\"ci\", rc=\"0\", cluster=\"cnfde4\", cpu_type=\"Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz\", formal_test=\"false\"'
++ for field in $(compgen -e RAN_METRICS)
++ '[' RAN_METRICS_HYPERTHREAD == RAN_METRICS_URL ']'
+++ echo RAN_METRICS_HYPERTHREAD
+++ sed 's/RAN_METRICS[_]*//g'
++ name=HYPERTHREAD
++ tags='pipeline=\"ci\", rc=\"0\", cluster=\"cnfde4\", cpu_type=\"Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz\", formal_test=\"false\", hyperthread=\"2\"'
++ for field in $(compgen -e RAN_METRICS)
++ '[' RAN_METRICS_SW_VERSION == RAN_METRICS_URL ']'
+++ echo RAN_METRICS_SW_VERSION
+++ sed 's/RAN_METRICS[_]*//g'
++ name=SW_VERSION
++ tags='pipeline=\"ci\", rc=\"0\", cluster=\"cnfde4\", cpu_type=\"Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz\", formal_test=\"false\", hyperthread=\"2\", sw_version=\"4.12.0-rc.5\"'
++ for field in $(compgen -e RAN_METRICS)
++ '[' RAN_METRICS_URL == RAN_METRICS_URL ']'
++ continue
++ sed /RAN_GLOBAL_TAGS/d /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/ran-extra-vars_cnfde4
+export RAN_METRICS_CLUSTER="cnfde4"
+export RAN_METRICS_SW_VERSION="4.12.0-rc.5"
+export RAN_METRICS_CPU_TYPE="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz"
+export RAN_METRICS_HYPERTHREAD="2"
++ echo 'export RAN_GLOBAL_TAGS="pipeline=\"ci\", rc=\"0\", cluster=\"cnfde4\", cpu_type=\"Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz\", formal_test=\"false\", hyperthread=\"2\", sw_version=\"4.12.0-rc.5\""'
++ source /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/ran-extra-vars_cnfde4
+++ export RAN_METRICS_CLUSTER=cnfde4
+++ RAN_METRICS_CLUSTER=cnfde4
+++ export RAN_METRICS_SW_VERSION=4.12.0-rc.5
+++ RAN_METRICS_SW_VERSION=4.12.0-rc.5
+++ export 'RAN_METRICS_CPU_TYPE=Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz'
+++ RAN_METRICS_CPU_TYPE='Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz'
+++ export RAN_METRICS_HYPERTHREAD=2
+++ RAN_METRICS_HYPERTHREAD=2
+++ export 'RAN_GLOBAL_TAGS=pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5"'
+++ RAN_GLOBAL_TAGS='pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5"'
++ GLOBAL_TAGS='pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h"'
++ (( i=0, j=1 ))
++ (( i<NUMBER_OF_INTERFACES ))
++ GLOBAL_TAGS='pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"'
++ (( i++, j++  ))
++ (( i<NUMBER_OF_INTERFACES ))
++ GLOBAL_TAGS='pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"'
++ (( i++, j++  ))
++ (( i<NUMBER_OF_INTERFACES ))
++ msg 'GLOBAL_TAGS: pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"'
++ st='GLOBAL_TAGS: pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"'
++ message='GLOBAL_TAGS: pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"'
++ '[' -t ']'
++ echo -e '\033[0;36mGLOBAL_TAGS: pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"\033[0m'
+[0;36mGLOBAL_TAGS: pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"[0m
++ push_metric http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/ 'ranmetrics_ptp4l_max_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 39'
++ local ranmetric_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ local 'ranmetric=ranmetrics_ptp4l_max_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 39'
++ local index_value=
++ local index_label=index
++ [[ ! -z '' ]]
++ true
++ local push_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ step '[INFO] Pushing ranmetrics_ptp4l_max_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 39 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ st='[INFO] Pushing ranmetrics_ptp4l_max_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 39 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ message='[INFO] Pushing ranmetrics_ptp4l_max_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 39 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ '[' -t ']'
++ echo -e '\033[0;34m[INFO] Pushing ranmetrics_ptp4l_max_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 39 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/\033[0m'
+[0;34m[INFO] Pushing ranmetrics_ptp4l_max_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 39 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
++ echo -e 'ranmetrics_ptp4l_max_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 39\n'
++ curl --data-binary @- http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   390    0     0  100   390      0  12580 --:--:-- --:--:-- --:--:-- 12580
++ push_metric http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/ 'ranmetrics_ptp4l_min_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 1'
++ local ranmetric_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ local 'ranmetric=ranmetrics_ptp4l_min_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 1'
++ local index_value=
++ local index_label=index
++ [[ ! -z '' ]]
++ true
++ local push_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ step '[INFO] Pushing ranmetrics_ptp4l_min_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ st='[INFO] Pushing ranmetrics_ptp4l_min_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ message='[INFO] Pushing ranmetrics_ptp4l_min_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ '[' -t ']'
++ echo -e '\033[0;34m[INFO] Pushing ranmetrics_ptp4l_min_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/\033[0m'
+[0;34m[INFO] Pushing ranmetrics_ptp4l_min_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
++ echo -e 'ranmetrics_ptp4l_min_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 1\n'
++ curl --data-binary @- http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   389    0     0  100   389      0  12156 --:--:-- --:--:-- --:--:-- 12156
++ push_metric http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/ 'ranmetrics_ptp4l_avg_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 5.4057'
++ local ranmetric_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ local 'ranmetric=ranmetrics_ptp4l_avg_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 5.4057'
++ local index_value=
++ local index_label=index
++ [[ ! -z '' ]]
++ true
++ local push_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ step '[INFO] Pushing ranmetrics_ptp4l_avg_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 5.4057 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ st='[INFO] Pushing ranmetrics_ptp4l_avg_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 5.4057 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ message='[INFO] Pushing ranmetrics_ptp4l_avg_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 5.4057 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ '[' -t ']'
++ echo -e '\033[0;34m[INFO] Pushing ranmetrics_ptp4l_avg_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 5.4057 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/\033[0m'
+[0;34m[INFO] Pushing ranmetrics_ptp4l_avg_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 5.4057 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
++ echo -e 'ranmetrics_ptp4l_avg_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 5.4057\n'
++ curl --data-binary @- http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   394    0     0  100   394      0  12312 --:--:-- --:--:-- --:--:-- 12312
++ push_metric http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/ 'ranmetrics_phc2sys_max_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 72'
++ local ranmetric_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ local 'ranmetric=ranmetrics_phc2sys_max_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 72'
++ local index_value=
++ local index_label=index
++ [[ ! -z '' ]]
++ true
++ local push_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ step '[INFO] Pushing ranmetrics_phc2sys_max_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 72 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ st='[INFO] Pushing ranmetrics_phc2sys_max_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 72 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ message='[INFO] Pushing ranmetrics_phc2sys_max_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 72 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ '[' -t ']'
++ echo -e '\033[0;34m[INFO] Pushing ranmetrics_phc2sys_max_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 72 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/\033[0m'
+[0;34m[INFO] Pushing ranmetrics_phc2sys_max_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 72 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
++ echo -e 'ranmetrics_phc2sys_max_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 72\n'
++ curl --data-binary @- http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   392    0     0  100   392      0  12250 --:--:-- --:--:-- --:--:-- 12250
++ push_metric http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/ 'ranmetrics_phc2sys_min_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 1'
++ local ranmetric_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ local 'ranmetric=ranmetrics_phc2sys_min_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 1'
++ local index_value=
++ local index_label=index
++ [[ ! -z '' ]]
++ true
++ local push_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ step '[INFO] Pushing ranmetrics_phc2sys_min_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ st='[INFO] Pushing ranmetrics_phc2sys_min_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ message='[INFO] Pushing ranmetrics_phc2sys_min_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ '[' -t ']'
++ echo -e '\033[0;34m[INFO] Pushing ranmetrics_phc2sys_min_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/\033[0m'
+[0;34m[INFO] Pushing ranmetrics_phc2sys_min_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
++ echo -e 'ranmetrics_phc2sys_min_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 1\n'
++ curl --data-binary @- http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   391    0     0  100   391      0  11848 --:--:-- --:--:-- --:--:-- 11848
++ push_metric http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/ 'ranmetrics_phc2sys_avg_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 9.17221'
++ local ranmetric_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ local 'ranmetric=ranmetrics_phc2sys_avg_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 9.17221'
++ local index_value=
++ local index_label=index
++ [[ ! -z '' ]]
++ true
++ local push_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ step '[INFO] Pushing ranmetrics_phc2sys_avg_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 9.17221 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ st='[INFO] Pushing ranmetrics_phc2sys_avg_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 9.17221 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ message='[INFO] Pushing ranmetrics_phc2sys_avg_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 9.17221 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ '[' -t ']'
++ echo -e '\033[0;34m[INFO] Pushing ranmetrics_phc2sys_avg_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 9.17221 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/\033[0m'
+[0;34m[INFO] Pushing ranmetrics_phc2sys_avg_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 9.17221 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
++ echo -e 'ranmetrics_phc2sys_avg_offset{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"} 9.17221\n'
++ curl --data-binary @- http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   397    0     0  100   397      0  12806 --:--:-- --:--:-- --:--:-- 12806
++ save_IFS
++ saved_IFS=' 	
+'
++ : unset saved_IFS
++ n=0
++ locked_clock=0
++ for i in ${ptp_clock_state[@]}
++ IFS='}'
++ read -r tags metrics
++ metrics=1
++ EXTRA_TAGS='pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="CLOCK_REALTIME",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="phc2sys"'
++ push_metric http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/ 'ranmetrics_ptp_clock_0_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="CLOCK_REALTIME",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="phc2sys"} 1'
++ local ranmetric_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ local 'ranmetric=ranmetrics_ptp_clock_0_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="CLOCK_REALTIME",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="phc2sys"} 1'
++ local index_value=
++ local index_label=index
++ [[ ! -z '' ]]
++ true
++ local push_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ step '[INFO] Pushing ranmetrics_ptp_clock_0_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="CLOCK_REALTIME",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="phc2sys"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ st='[INFO] Pushing ranmetrics_ptp_clock_0_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="CLOCK_REALTIME",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="phc2sys"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ message='[INFO] Pushing ranmetrics_ptp_clock_0_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="CLOCK_REALTIME",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="phc2sys"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ '[' -t ']'
++ echo -e '\033[0;34m[INFO] Pushing ranmetrics_ptp_clock_0_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="CLOCK_REALTIME",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="phc2sys"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/\033[0m'
+[0;34m[INFO] Pushing ranmetrics_ptp_clock_0_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="CLOCK_REALTIME",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="phc2sys"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
++ echo -e 'ranmetrics_ptp_clock_0_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="CLOCK_REALTIME",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="phc2sys"} 1\n'
++ curl --data-binary @- http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   473    0     0  100   473      0  14781 --:--:-- --:--:-- --:--:-- 14781
++ [[ 1 == 1 ]]
++ locked_clock=1
++ n=1
++ for i in ${ptp_clock_state[@]}
++ IFS='}'
++ read -r tags metrics
++ metrics=1
++ EXTRA_TAGS='pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="ens1fx",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"'
++ push_metric http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/ 'ranmetrics_ptp_clock_1_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="ens1fx",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1'
++ local ranmetric_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ local 'ranmetric=ranmetrics_ptp_clock_1_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="ens1fx",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1'
++ local index_value=
++ local index_label=index
++ [[ ! -z '' ]]
++ true
++ local push_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ step '[INFO] Pushing ranmetrics_ptp_clock_1_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="ens1fx",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ st='[INFO] Pushing ranmetrics_ptp_clock_1_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="ens1fx",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ message='[INFO] Pushing ranmetrics_ptp_clock_1_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="ens1fx",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ '[' -t ']'
++ echo -e '\033[0;34m[INFO] Pushing ranmetrics_ptp_clock_1_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="ens1fx",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/\033[0m'
+[0;34m[INFO] Pushing ranmetrics_ptp_clock_1_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="ens1fx",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
++ echo -e 'ranmetrics_ptp_clock_1_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="ens1fx",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1\n'
++ curl --data-binary @- http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   463    0     0  100   463      0  14468 --:--:-- --:--:-- --:--:-- 14468
++ [[ 1 == 1 ]]
++ locked_clock=2
++ n=2
++ for i in ${ptp_clock_state[@]}
++ IFS='}'
++ read -r tags metrics
++ metrics=1
++ EXTRA_TAGS='pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="ens4fx",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"'
++ push_metric http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/ 'ranmetrics_ptp_clock_2_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="ens4fx",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1'
++ local ranmetric_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ local 'ranmetric=ranmetrics_ptp_clock_2_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="ens4fx",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1'
++ local index_value=
++ local index_label=index
++ [[ ! -z '' ]]
++ true
++ local push_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ step '[INFO] Pushing ranmetrics_ptp_clock_2_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="ens4fx",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ st='[INFO] Pushing ranmetrics_ptp_clock_2_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="ens4fx",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ message='[INFO] Pushing ranmetrics_ptp_clock_2_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="ens4fx",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ '[' -t ']'
++ echo -e '\033[0;34m[INFO] Pushing ranmetrics_ptp_clock_2_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="ens4fx",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/\033[0m'
+[0;34m[INFO] Pushing ranmetrics_ptp_clock_2_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="ens4fx",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
++ echo -e 'ranmetrics_ptp_clock_2_state{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", iface="ens4fx",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1\n'
++ curl --data-binary @- http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   463    0     0  100   463      0  15433 --:--:-- --:--:-- --:--:-- 15433
++ [[ 1 == 1 ]]
++ locked_clock=3
++ n=3
++ [[ 3 -ne 3 ]]
++ n=0
++ running_processes=0
++ for i in ${ptp4l_process_status[@]}
++ IFS='}'
++ read -r tags metrics
++ metrics=1
++ EXTRA_TAGS='pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", config="ptp4l.0.config",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"'
++ push_metric http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/ 'ranmetrics_ptp4l_0_status{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", config="ptp4l.0.config",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1'
++ local ranmetric_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ local 'ranmetric=ranmetrics_ptp4l_0_status{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", config="ptp4l.0.config",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1'
++ local index_value=
++ local index_label=index
++ [[ ! -z '' ]]
++ true
++ local push_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ step '[INFO] Pushing ranmetrics_ptp4l_0_status{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", config="ptp4l.0.config",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ st='[INFO] Pushing ranmetrics_ptp4l_0_status{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", config="ptp4l.0.config",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ message='[INFO] Pushing ranmetrics_ptp4l_0_status{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", config="ptp4l.0.config",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ '[' -t ']'
++ echo -e '\033[0;34m[INFO] Pushing ranmetrics_ptp4l_0_status{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", config="ptp4l.0.config",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/\033[0m'
+[0;34m[INFO] Pushing ranmetrics_ptp4l_0_status{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", config="ptp4l.0.config",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
++ echo -e 'ranmetrics_ptp4l_0_status{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", config="ptp4l.0.config",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1\n'
++ curl --data-binary @- http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   469    0     0  100   469      0  14212 --:--:-- --:--:-- --:--:-- 13794
+100   469    0     0  100   469      0  13794 --:--:-- --:--:-- --:--:-- 13794
++ [[ 1 == 1 ]]
++ running_processes=1
++ n=1
++ for i in ${ptp4l_process_status[@]}
++ IFS='}'
++ read -r tags metrics
++ metrics=1
++ EXTRA_TAGS='pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", config="ptp4l.1.config",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"'
++ push_metric http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/ 'ranmetrics_ptp4l_1_status{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", config="ptp4l.1.config",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1'
++ local ranmetric_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ local 'ranmetric=ranmetrics_ptp4l_1_status{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", config="ptp4l.1.config",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1'
++ local index_value=
++ local index_label=index
++ [[ ! -z '' ]]
++ true
++ local push_url=http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
++ step '[INFO] Pushing ranmetrics_ptp4l_1_status{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", config="ptp4l.1.config",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ st='[INFO] Pushing ranmetrics_ptp4l_1_status{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", config="ptp4l.1.config",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ message='[INFO] Pushing ranmetrics_ptp4l_1_status{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", config="ptp4l.1.config",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/'
++ '[' -t ']'
++ echo -e '\033[0;34m[INFO] Pushing ranmetrics_ptp4l_1_status{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", config="ptp4l.1.config",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/\033[0m'
+[0;34m[INFO] Pushing ranmetrics_ptp4l_1_status{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", config="ptp4l.1.config",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
++ echo -e 'ranmetrics_ptp4l_1_status{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", config="ptp4l.1.config",node="cnfde4.ptp.lab.eng.bos.redhat.com",process="ptp4l"} 1\n'
++ curl --data-binary @- http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   469    0     0  100   469      0  14212 --:--:-- --:--:-- --:--:-- 14212
++ [[ 1 == 1 ]]
++ running_processes=2
++ n=2
++ restore_IFS
++ IFS=' 	
+'
++ : unset IFS
++ unset saved_IFS
++ [[ 2 -ne 2 ]]
++ [[ ! -z '' ]]
++ gen_xml_report ptp '{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"}: Checks if the ptp lock is locked and ptp4l process is running.' 8h ''
++ '[' -z '' ']'
++ local msg=
++ test_name=ptp
++ test_description='{pipeline="ci", rc="0", cluster="cnfde4", cpu_type="Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz", formal_test="false", hyperthread="2", sw_version="4.12.0-rc.5", duration="8h", interface1="ens4f0", nic1=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)", interface2="ens1f0", nic2=" Intel Corporation Ethernet Controller E810-C for SFP (rev 02)"}: Checks if the ptp lock is locked and ptp4l process is running.'
++ duration=8h
++ msg=
++ envsubst
++ exit 0
+[Pipeline] }
+[Pipeline] // warnError
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run reboot test)
+[Pipeline] node
+Running on registry.ran-vcl01.ptp.lab.eng.bos.redhat.com in /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: git
+No credentials specified
+Fetching changes from the remote Git repository
+Checking out Revision 60eb856271da8e4d0e709d1a9902e573bc12e5b4 (origin/master)
+Commit message: "Merge branch 'kmm-brew-fix' into 'master'"
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/.git # timeout=10
+ > git config remote.origin.url https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git # timeout=10
+Fetching upstream changes from https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.27.0'
+ > git fetch --tags --force --progress -- https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 60eb856271da8e4d0e709d1a9902e573bc12e5b4 # timeout=10
+ > git rev-list --no-walk 5464609dbd088d805c4320242971acc76fcb768b # timeout=10
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+Stage "Run reboot test" skipped due to when conditional
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (RAN functional test)
+[Pipeline] node
+Running on registry.ran-vcl01.ptp.lab.eng.bos.redhat.com in /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: git
+No credentials specified
+Fetching changes from the remote Git repository
+Checking out Revision 60eb856271da8e4d0e709d1a9902e573bc12e5b4 (origin/master)
+Commit message: "Merge branch 'kmm-brew-fix' into 'master'"
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+Stage "RAN functional test" skipped due to when conditional
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run ocp-edge-auto Tests)
+Stage "Run ocp-edge-auto Tests" skipped due to when conditional
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run cnf-tests validation)
+Stage "Run cnf-tests validation" skipped due to when conditional
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/.git # timeout=10
+ > git config remote.origin.url https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git # timeout=10
+Fetching upstream changes from https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.27.0'
+ > git fetch --tags --force --progress -- https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 60eb856271da8e4d0e709d1a9902e573bc12e5b4 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run Cucushift Tests)
+Stage "Run Cucushift Tests" skipped due to when conditional
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (FlexRAN tests)
+[Pipeline] node
+Running on registry.ran-vcl01.ptp.lab.eng.bos.redhat.com in /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: git
+No credentials specified
+Fetching changes from the remote Git repository
+Checking out Revision 60eb856271da8e4d0e709d1a9902e573bc12e5b4 (origin/master)
+Commit message: "Merge branch 'kmm-brew-fix' into 'master'"
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+Stage "FlexRAN tests" skipped due to when conditional
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Aggregate test results)
+[Pipeline] node
+Running on registry.ran-vcl01.ptp.lab.eng.bos.redhat.com in /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: git
+No credentials specified
+Fetching changes from the remote Git repository
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/.git # timeout=10
+ > git config remote.origin.url https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git # timeout=10
+Fetching upstream changes from https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.27.0'
+ > git fetch --tags --force --progress -- https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 60eb856271da8e4d0e709d1a9902e573bc12e5b4 # timeout=10
+Checking out Revision 60eb856271da8e4d0e709d1a9902e573bc12e5b4 (origin/master)
+Commit message: "Merge branch 'kmm-brew-fix' into 'master'"
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+Stage "Aggregate test results" skipped due to when conditional
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+Lock released on resource [Label: registry.ran-vcl01.ptp.lab.eng.bos.redhat.com, Quantity: 1]
+[Pipeline] // lock
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/.git # timeout=10
+ > git config remote.origin.url https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git # timeout=10
+Fetching upstream changes from https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.27.0'
+ > git fetch --tags --force --progress -- https://gitlab.cee.redhat.com/ocp-edge-qe/ocp-edge-ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 60eb856271da8e4d0e709d1a9902e573bc12e5b4 # timeout=10
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

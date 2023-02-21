@@ -1,0 +1,1495 @@
+14:40:15  + rm -fr cnf-gotests
+14:40:15  + git clone https://gitlab.cee.redhat.com/cnf/cnf-gotests.git
+14:40:15  Cloning into 'cnf-gotests'...
+14:40:20  + export KUBECONFIG=/home/kni/clusterconfigs/cnfdf35/auth/kubeconfig
+14:40:20  + KUBECONFIG=/home/kni/clusterconfigs/cnfdf35/auth/kubeconfig
+14:40:20  + SCRIPTS_DIR=/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/scripts
+14:40:20  + ./scripts/test_cpu_util.sh oslat=8h,cyclictest=8h,cpu_util=8h,reboot=6
+14:40:20  /usr/local/bin/go
+14:40:20  {
+14:40:20      "Name": "registry.kni-qe-40.ptp.lab.eng.bos.redhat.com:5000/ran-test/oslat",
+14:40:20      "Digest": "sha256:c0838ad6fd5eb0dba4e2cf4550c41dfd3510732501c98363cef47b45955b84f0",
+14:40:20      "RepoTags": [
+14:40:20          "latest"
+14:40:20      ],
+14:40:20      "Created": "2021-11-25T14:09:29.3425584Z",
+14:40:20      "DockerVersion": "",
+14:40:20      "Labels": {
+14:40:20          "io.buildah.version": "1.23.1",
+14:40:20          "org.label-schema.build-date": "20210915",
+14:40:20          "org.label-schema.license": "GPLv2",
+14:40:20          "org.label-schema.name": "CentOS Base Image",
+14:40:20          "org.label-schema.schema-version": "1.0",
+14:40:20          "org.label-schema.vendor": "CentOS"
+14:40:20      },
+14:40:20      "Architecture": "amd64",
+14:40:20      "Os": "linux",
+14:40:20      "Layers": [
+14:40:20          "sha256:a1d0c75327776413fa0db9ed3adcdbadedc95a662eb1d360dad82bb913f8a1d1",
+14:40:20          "sha256:89f50ab4627d816c8b22287139ebe407b86a99e90f6a808da2069268bc2ac3e8",
+14:40:20          "sha256:64ba37e0dc4e5ba90d97d63c24f8b4d5864491fc5414e28384f014c880de1818",
+14:40:20          "sha256:7167432fe13b17e6565ec0a4baa64ea4f89d17051a9df2420767409709c25f8f",
+14:40:20          "sha256:da2b07d88fc0746f7110fb2dbf97893a5aa5facf8a52d1bef7d79e697cecd484"
+14:40:20      ],
+14:40:20      "Env": [
+14:40:20          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+14:40:20      ]
+14:40:20  }
+14:40:21  {
+14:40:21      "Name": "registry.kni-qe-40.ptp.lab.eng.bos.redhat.com:5000/ran-test/process-exporter",
+14:40:21      "Digest": "sha256:551611f1d6cea8180268e2f839cb6d83c0f3b146957988cbaedbbf530aae2a25",
+14:40:21      "RepoTags": [
+14:40:21          "ppid-2"
+14:40:21      ],
+14:40:21      "Created": "2021-03-01T15:58:46.130935242Z",
+14:40:21      "DockerVersion": "",
+14:40:21      "Labels": {
+14:40:21          "io.buildah.version": "1.18.0"
+14:40:21      },
+14:40:21      "Architecture": "amd64",
+14:40:21      "Os": "linux",
+14:40:21      "Layers": [
+14:40:21          "sha256:9015564014022a73af9501738e8abfc905c43246b6bc41906919fd173ec42640"
+14:40:21      ],
+14:40:21      "Env": [
+14:40:21          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+14:40:21      ]
+14:40:21  }
+14:40:21  {
+14:40:21      "Name": "registry.kni-qe-40.ptp.lab.eng.bos.redhat.com:5000/ran-test/stress-ng",
+14:40:21      "Digest": "sha256:c80909489339054f9b6d6144538acc803a5d06736243fcbe6f4e6c5639a35f6c",
+14:40:21      "RepoTags": [
+14:40:21          "2.0"
+14:40:21      ],
+14:40:21      "Created": "2021-06-01T19:44:18.957464457Z",
+14:40:21      "DockerVersion": "",
+14:40:21      "Labels": {
+14:40:21          "io.buildah.version": "1.20.1",
+14:40:21          "org.label-schema.build-date": "20201204",
+14:40:21          "org.label-schema.license": "GPLv2",
+14:40:21          "org.label-schema.name": "CentOS Base Image",
+14:40:21          "org.label-schema.schema-version": "1.0",
+14:40:21          "org.label-schema.vendor": "CentOS"
+14:40:21      },
+14:40:21      "Architecture": "amd64",
+14:40:21      "Os": "linux",
+14:40:21      "Layers": [
+14:40:21          "sha256:7a0437f04f83f084b7ed68ad9c4a4947e12fc4e1b006b38129bac89114ec3621",
+14:40:21          "sha256:2cbd6ce7c90c9bb75546b8518c33fb1291e89eef35c1172ddbf6035841b51245",
+14:40:21          "sha256:af419e957c8037bbc200ad165f1393effc8bc19b826785ca2c256d52f7ac5c32",
+14:40:21          "sha256:29ff22612958b925e75d7284c954082bb3d6d2753dbe53075ad2e3ab6d97ca32",
+14:40:21          "sha256:4983e42de9350d95bd65087bfe178753a43d9395374fe422381223e9a6faf581"
+14:40:21      ],
+14:40:21      "Env": [
+14:40:21          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+14:40:21      ]
+14:40:21  }
+14:40:21  {
+14:40:21      "Name": "registry.kni-qe-40.ptp.lab.eng.bos.redhat.com:5000/ran-test/cnf-tests",
+14:40:21      "Digest": "sha256:a85a76fa1430aecef14f19c3293c92860aca5427d7fff093257b013103614277",
+14:40:21      "RepoTags": [
+14:40:21          "4.8"
+14:40:21      ],
+14:40:21      "Created": "2022-09-07T15:56:59.83874783Z",
+14:40:21      "DockerVersion": "",
+14:40:21      "Labels": {
+14:40:21          "License": "GPLv2+",
+14:40:21          "architecture": "x86_64",
+14:40:21          "build-date": "2022-08-25T03:40:16.181535",
+14:40:21          "com.redhat.build-host": "cpt-1001.osbs.prod.upshift.rdu2.redhat.com",
+14:40:21          "com.redhat.component": "openshift-enterprise-base-container",
+14:40:21          "com.redhat.license_terms": "https://www.redhat.com/agreements",
+14:40:21          "description": "This is the base image from which all OpenShift Container Platform images inherit.",
+14:40:21          "distribution-scope": "public",
+14:40:21          "io.buildah.version": "1.24.2",
+14:40:21          "io.k8s.description": "ART equivalent image openshift-4.8-openshift-enterprise-base - rhel-8/base-repos",
+14:40:21          "io.k8s.display-name": "4.8-base",
+14:40:21          "io.openshift.build.commit.author": "",
+14:40:21          "io.openshift.build.commit.date": "",
+14:40:21          "io.openshift.build.commit.id": "ab604657b15b2a795416035a9213563b79e4aabb",
+14:40:21          "io.openshift.build.commit.message": "",
+14:40:21          "io.openshift.build.commit.ref": "release-4.8",
+14:40:21          "io.openshift.build.commit.url": "https://github.com/openshift/images/commit/ad38e116f3533e0e78621a2887d8b70cde7cba31",
+14:40:21          "io.openshift.build.name": "",
+14:40:21          "io.openshift.build.namespace": "",
+14:40:21          "io.openshift.build.source-context-dir": "",
+14:40:21          "io.openshift.build.source-location": "https://github.com/openshift-kni/cnf-features-deploy",
+14:40:21          "io.openshift.ci.from.base": "sha256:8cd238c846bf6d75334cd71cfce77cef32676f8c59c0e861e3e4f8ead81d5b2d",
+14:40:21          "io.openshift.expose-services": "",
+14:40:21          "io.openshift.maintainer.component": "Release",
+14:40:21          "io.openshift.maintainer.product": "OpenShift Container Platform",
+14:40:21          "io.openshift.tags": "openshift",
+14:40:21          "maintainer": "Federico Paolinelli \u003cfpaoline@redhat.com\u003e",
+14:40:21          "name": "openshift/ose-base",
+14:40:21          "release": "202208241844.p0.gad38e11.assembly.stream",
+14:40:21          "summary": "Provides the latest release of the Red Hat Extended Life Base Image.",
+14:40:21          "url": "https://access.redhat.com/containers/#/registry.access.redhat.com/openshift/ose-base/images/v4.8.0-202208241844.p0.gad38e11.assembly.stream",
+14:40:21          "vcs-ref": "ab604657b15b2a795416035a9213563b79e4aabb",
+14:40:21          "vcs-type": "git",
+14:40:21          "vcs-url": "https://github.com/openshift-kni/cnf-features-deploy",
+14:40:21          "vendor": "Red Hat, Inc.",
+14:40:21          "version": "v4.8.0"
+14:40:21      },
+14:40:21      "Architecture": "amd64",
+14:40:21      "Os": "linux",
+14:40:21      "Layers": [
+14:40:21          "sha256:cadc283046514317dd4ecd1438530437d99cc92bf73080fb9e12e76751108de0",
+14:40:21          "sha256:fd464176d200a96c67f45dd10129481cbb797d604395b3240f80fcef996f5f4c",
+14:40:21          "sha256:b988c8c7898a0efb6582c467c495fa2fcaa724f579f260307433effd55074aba",
+14:40:21          "sha256:a967c739d6f4b2cda9d3d85bbb13c06d5762b28ae6b16842092ba9e4ce984a2d",
+14:40:21          "sha256:39644210bcd714b9b5a0f0d698034e8028b4bccf490db1bf39346882abfd26f9",
+14:40:21          "sha256:56b2d846ec2d0c5149d7c5968427408bd6d7c1648ab1d012c78bc888626d1867"
+14:40:21      ],
+14:40:21      "Env": [
+14:40:21          "__doozer=merge",
+14:40:21          "BUILD_RELEASE=202208241844.p0.gad38e11.assembly.stream",
+14:40:21          "BUILD_VERSION=v4.8.0",
+14:40:21          "OS_GIT_MAJOR=4",
+14:40:21          "OS_GIT_MINOR=8",
+14:40:21          "OS_GIT_PATCH=0",
+14:40:21          "OS_GIT_TREE_STATE=clean",
+14:40:21          "OS_GIT_VERSION=4.8.0-202208241844.p0.gad38e11.assembly.stream-ad38e11",
+14:40:21          "SOURCE_GIT_TREE_STATE=clean",
+14:40:21          "OS_GIT_COMMIT=ad38e11",
+14:40:21          "SOURCE_DATE_EPOCH=1622627932",
+14:40:21          "SOURCE_GIT_COMMIT=ad38e116f3533e0e78621a2887d8b70cde7cba31",
+14:40:21          "SOURCE_GIT_TAG=ad38e11",
+14:40:21          "SOURCE_GIT_URL=https://github.com/openshift/images",
+14:40:21          "GODEBUG=x509ignoreCN=0,madvdontneed=1",
+14:40:21          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+14:40:21          "container=oci",
+14:40:21          "OPENSHIFT_CI=true",
+14:40:21          "BUILD_LOGLEVEL=0",
+14:40:21          "SUITES_PATH=/usr/bin/",
+14:40:21          "OPENSHIFT_BUILD_NAME=cnf-tests",
+14:40:21          "OPENSHIFT_BUILD_NAMESPACE=ci-op-tjh8lmv3"
+14:40:21      ]
+14:40:21  }
+14:40:21  /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+14:40:21  [0;34m[INFO] Set up test environment[0m
+14:40:21  go mod tidy && \
+14:40:21  go mod vendor
+14:40:22  go: downloading github.com/argoproj-labs/argocd-operator v0.5.0
+14:40:22  go: downloading github.com/stolostron/klusterlet-addon-controller v0.0.0-20230125024035-c724f5abe19c
+14:40:22  go: downloading github.com/stolostron/cluster-lifecycle-api v0.0.0-20220621134646-8b67f2e6afed
+14:40:22  go: downloading open-cluster-management.io/api v0.8.0
+14:40:27  Installing needed dependencies
+14:40:27  hack/install-ginkgo.sh
+14:40:27  /home/kni/go/bin/ginkgo
+14:40:27  [0;34m[INFO] Find ginkgo executable[0m
+14:40:27  [0;34m[INFO] Sleep for 10 minutes to prepare for idle state test[0m
+14:50:38  [0;34m[INFO] Run cpu utilization test[0m
+14:50:38  + /home/kni/go/bin/ginkgo -timeout=26h -v test/ran/cpu/
+14:50:41  Running Suite: RAN CPU management tests - /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/cpu
+14:50:41  ==========================================================================================================================
+14:50:41  Random Seed: [1m1676724627[0m
+14:50:41  
+14:50:41  Will run [1m6[0m of [1m6[0m specs
+14:50:41  [38;5;243m------------------------------[0m
+14:50:41  [0m[1m[BeforeSuite] [0m
+14:50:41  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/cpu/cpu_suite_test.go:38[0m
+14:50:41  2023/02/18 07:50:41 Creating namespace: cnfgotestpriv
+14:51:09  2023/02/18 07:51:09 Creating test namespace ran-test
+14:51:15  2023/02/18 07:51:14 All pods are ready in daemonset: process-exporter
+14:51:15  [38;5;10m[BeforeSuite] PASSED [33.282 seconds][0m
+14:51:15  [38;5;243m------------------------------[0m
+14:51:15  [0mSNO core reduction [38;5;243mReserved CPUs configured in RT performance profile [0m[1mshould be limited to 2 cores[0m
+14:51:15  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/cpu/tests/sno_cpu_utilization.go:75[0m
+14:51:15  2023/02/18 07:51:14 Exec command on cnfdf35.telco5gran.eng.rdu2.redhat.com: [uname -r]
+14:51:15  2023/02/18 07:51:14 Kernel version: 4.18.0-372.41.1.rt7.198.el8_6.x86_64
+14:51:15  2023/02/18 07:51:14 Exec command on cnfdf35.telco5gran.eng.rdu2.redhat.com: [cat /sys/devices/system/cpu/cpu0/topology/thread_siblings_list]
+14:51:15  [38;5;10m• [0.630 seconds][0m
+14:51:15  [38;5;243m------------------------------[0m
+14:51:15  [0mSNO core reduction [38;5;243mManagement CPU utilization in idle state [0m[1mshould use less than 2 core(s)[0m
+14:51:15  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/cpu/tests/sno_cpu_utilization.go:86[0m
+14:51:15  2023/02/18 07:51:15 Wait for 10m0s in idle...
+15:01:26  2023/02/18 08:01:15 Command in prom pod: [bash -c curl "-s" 'http://localhost:9090/api/v1/query' --data-urlencode 'query=max_over_time((sum(namedprocess_namegroup_cpu_rate{groupname!~"conmon"})+sum(pod:container_cpu_usage:sum{pod!~"process-exp.*",pod!~"oslat.*",pod!~"stress.*",pod!~"cnfgotestpriv.*"}))[10m0s:30s])'; echo]
+15:01:26  2023/02/18 08:01:15 output: {"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1676725305.065,"1.012940720572684"]}]}}
+15:01:26  2023/02/18 08:01:15 Query max over time total mgmt cpu usage
+15:01:26  2023/02/18 08:01:15 Query max over time cpu usage for OS daemon
+15:01:26  2023/02/18 08:01:15 Command in prom pod: [bash -c curl "-s" 'http://localhost:9090/api/v1/query' --data-urlencode 'query=max_over_time(sum(namedprocess_namegroup_cpu_rate{groupname!~"conmon"})[10m0s:30s])'; echo]
+15:01:26  2023/02/18 08:01:15 output: {"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1676725305.353,"0.1913333333333634"]}]}}
+15:01:26  2023/02/18 08:01:15 Query max over time cpu usage for infra pods
+15:01:26  2023/02/18 08:01:15 Command in prom pod: [bash -c curl "-s" 'http://localhost:9090/api/v1/query' --data-urlencode 'query=max_over_time(sum(pod:container_cpu_usage:sum{pod!~"process-exp.*",pod!~"oslat.*",pod!~"stress.*",pod!~"cnfgotestpriv.*"})[10m0s:30s])'; echo]
+15:01:26    ranmetrics_cpu_total_idle_max: 1.0129407
+15:01:26    ranmetrics_cpu_os_daemon_idle_max: 0.1913333
+15:01:26    ranmetrics_cpu_infra_pods_idle_max: 0.83627412023/02/18 08:01:16 output: {"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1676725306.218,"0.836274053905962"]}]}}
+15:01:26  2023/02/18 08:01:16 Mgmt CPU usage for the last 10m0s - Non-pod mgmt overhead, mgmt pods, total: 0.1913,0.8363,1.0129
+15:01:26  
+15:01:26  [38;5;10m• [601.558 seconds][0m
+15:01:26  [38;5;243m------------------------------[0m
+15:01:26  [0mSNO core reduction [38;5;243mManagement CPU utilization with workload pods running [0m[1mshould use less than 2 core(s) during and post pod launch[0m
+15:01:26  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/cpu/tests/sno_cpu_utilization.go:126[0m
+15:01:37  2023/02/18 08:01:36 Creating up to 2 oslat pods with total 35 cpus
+15:01:43  2023/02/18 08:01:42 2 oslat pods with total 35 cpus are created and running
+15:01:43  2023/02/18 08:01:42 Creating up to 40 stress-ng pods with total 72 cpus
+15:04:36  2023/02/18 08:04:23 40 stress-ng pods with total 72 cpus are created and running
+15:04:36  2023/02/18 08:04:23 Wait for 15m0s with workload pods running...
+15:19:34  2023/02/18 08:19:23 Command in prom pod: [bash -c curl "-s" 'http://localhost:9090/api/v1/query' --data-urlencode 'query=max_over_time((sum(namedprocess_namegroup_cpu_rate{groupname!~"conmon"})+sum(pod:container_cpu_usage:sum{pod!~"process-exp.*",pod!~"oslat.*",pod!~"stress.*",pod!~"cnfgotestpriv.*"}))[18m6s:30s])'; echo]
+15:19:34  2023/02/18 08:19:23 output: {"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1676726393.143,"3.5141912754125233"]}]}}
+15:19:34  2023/02/18 08:19:23 Query max over time total mgmt cpu usage
+15:19:34  2023/02/18 08:19:23 Query max over time cpu usage for OS daemon
+15:19:34  2023/02/18 08:19:23 Command in prom pod: [bash -c curl "-s" 'http://localhost:9090/api/v1/query' --data-urlencode 'query=max_over_time(sum(namedprocess_namegroup_cpu_rate{groupname!~"conmon"})[18m6s:30s])'; echo]
+15:19:34  2023/02/18 08:19:23 output: {"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1676726393.453,"2.5786666666666878"]}]}}
+15:19:34  2023/02/18 08:19:23 Query max over time cpu usage for infra pods
+15:19:34  2023/02/18 08:19:24 Command in prom pod: [bash -c curl "-s" 'http://localhost:9090/api/v1/query' --data-urlencode 'query=max_over_time(sum(pod:container_cpu_usage:sum{pod!~"process-exp.*",pod!~"oslat.*",pod!~"stress.*",pod!~"cnfgotestpriv.*"})[18m6s:30s])'; echo]
+15:19:34    ranmetrics_cpu_total_workloadlaunch_max: 3.51419132023/02/18 08:19:24 output: {"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1676726393.783,"1.1052742524458883"]}]}}
+15:19:34  2023/02/18 08:19:24 Mgmt CPU usage for the last 18m6s - Non-pod mgmt overhead, mgmt pods, total: 2.5787,1.1053,3.5142
+15:19:34  
+15:19:34    ranmetrics_cpu_os_daemon_workloadlaunch_max: 2.5786667
+15:19:34    ranmetrics_cpu_infra_pods_workloadlaunch_max: 1.1052743
+15:19:34  [38;5;10m• [1087.551 seconds][0m
+15:19:34  [38;5;243m------------------------------[0m
+15:19:34  [0mSNO core reduction [38;5;243mManagement CPU utilization with workload pods running [0mwith must-gather running [0m[1mshould use less than 2 core(s)[0m
+15:19:34  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/cpu/tests/sno_cpu_utilization.go:142[0m
+15:19:34  2023/02/18 08:19:24 run command 'oc [version]'
+15:19:34  2023/02/18 08:19:34 run command 'oc [adm must-gather]'
+15:29:00  2023/02/18 08:28:59 Command in prom pod: [bash -c curl "-s" 'http://localhost:9090/api/v1/query' --data-urlencode 'query=max_over_time((sum(namedprocess_namegroup_cpu_rate{groupname!~"conmon"})+sum(pod:container_cpu_usage:sum{pod!~"process-exp.*",pod!~"oslat.*",pod!~"stress.*",pod!~"cnfgotestpriv.*"}))[9m35s:30s])'; echo]
+15:29:00  2023/02/18 08:29:00 output: {"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1676726969.552,"2.4245860094168625"]}]}}
+15:29:00  2023/02/18 08:29:00 Query max over time total mgmt cpu usage
+15:29:00  2023/02/18 08:29:00 Query max over time cpu usage for OS daemon
+15:29:00  2023/02/18 08:29:00 Command in prom pod: [bash -c curl "-s" 'http://localhost:9090/api/v1/query' --data-urlencode 'query=max_over_time(sum(namedprocess_namegroup_cpu_rate{groupname!~"conmon"})[9m35s:30s])'; echo]
+15:29:00  2023/02/18 08:29:00 output: {"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1676726969.880,"0.3613333333332712"]}]}}
+15:29:00  2023/02/18 08:29:00 Query max over time cpu usage for infra pods
+15:29:00  2023/02/18 08:29:00 Command in prom pod: [bash -c curl "-s" 'http://localhost:9090/api/v1/query' --data-urlencode 'query=max_over_time(sum(pod:container_cpu_usage:sum{pod!~"process-exp.*",pod!~"oslat.*",pod!~"stress.*",pod!~"cnfgotestpriv.*"})[9m35s:30s])'; echo]
+15:29:01    2023/02/18 08:29:00 output: {"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1676726970.224,"2.2359193427501878"]}]}}
+15:29:01  2023/02/18 08:29:00 Mgmt CPU usage for the last 9m35s - Non-pod mgmt overhead, mgmt pods, total: 0.3613,2.2359,2.4246
+15:29:01  ranmetrics_cpu_total_mustgather_max: 2.4245860
+15:29:01    ranmetrics_cpu_os_daemon_mustgather_max: 0.3613333
+15:29:01    ranmetrics_cpu_infra_pods_mustgather_max: 2.2359193
+15:29:01  2023/02/18 08:29:00 Must-gather dirs to be removed: [/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/cpu/must-gather.local.5855150736323135943]
+15:29:01  [38;5;10m• [576.562 seconds][0m
+15:29:01  [38;5;243m------------------------------[0m
+15:29:01  [0mSNO core reduction [38;5;243mManagement CPU utilization with workload pods running [0mwith Prometheus queries running [0m[1mshould use less than 2 core(s)[0m
+15:29:01  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/cpu/tests/sno_cpu_utilization.go:160[0m
+15:29:01  2023/02/18 08:29:00 Repeatedly run prom query for 10m0s: max_over_time((sum(namedprocess_namegroup_cpu_rate{groupname!~"conmon"})+sum(pod:container_cpu_usage:sum{pod!~"process-exp.*",pod!~"oslat.*",pod!~"stress.*",pod!~"cnfgotestpriv.*"}))[12h:30s])
+15:39:42  2023/02/18 08:39:32 Command in prom pod: [bash -c curl "-s" 'http://localhost:9090/api/v1/query' --data-urlencode 'query=max_over_time((sum(namedprocess_namegroup_cpu_rate{groupname!~"conmon"})+sum(pod:container_cpu_usage:sum{pod!~"process-exp.*",pod!~"oslat.*",pod!~"stress.*",pod!~"cnfgotestpriv.*"}))[10m31s:30s])'; echo]
+15:39:42  2023/02/18 08:39:32 output: {"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1676727601.942,"1.5235553425571533"]}]}}
+15:39:42  2023/02/18 08:39:32 Query max over time total mgmt cpu usage
+15:39:42  2023/02/18 08:39:32 Query max over time cpu usage for OS daemon
+15:39:42  2023/02/18 08:39:32 Command in prom pod: [bash -c curl "-s" 'http://localhost:9090/api/v1/query' --data-urlencode 'query=max_over_time(sum(namedprocess_namegroup_cpu_rate{groupname!~"conmon"})[10m31s:30s])'; echo]
+15:39:42  2023/02/18 08:39:32 output: {"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1676727602.265,"0.3213333333333689"]}]}}
+15:39:42  2023/02/18 08:39:32 Query max over time cpu usage for infra pods
+15:39:42  2023/02/18 08:39:32 Command in prom pod: [bash -c curl "-s" 'http://localhost:9090/api/v1/query' --data-urlencode 'query=max_over_time(sum(pod:container_cpu_usage:sum{pod!~"process-exp.*",pod!~"oslat.*",pod!~"stress.*",pod!~"cnfgotestpriv.*"})[10m31s:30s])'; echo]
+15:39:42    ranmetrics_cpu_total_promquery_max: 1.5235553
+15:39:42    ranmetrics_cpu_os_daemon_promquery_max: 0.3213333
+15:39:42    ranmetrics_cpu_infra_pods_promquery_max: 1.2888887
+15:39:42  2023/02/18 08:39:33 output: {"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1676727602.554,"1.2888886758904843"]}]}}
+15:39:42  2023/02/18 08:39:33 Mgmt CPU usage for the last 10m31s - Non-pod mgmt overhead, mgmt pods, total: 0.3213,1.2889,1.5236
+15:39:42  [38;5;10m• [632.185 seconds][0m
+15:39:42  [38;5;243m------------------------------[0m
+15:39:42  [0mSNO core reduction [38;5;243mManagement CPU utilization with workload pods running [0mwith workload running for 8h [0m[1mshould use less than 2 core(s)[0m
+15:39:42  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/cpu/tests/sno_cpu_utilization.go:171[0m
+15:39:42  2023/02/18 08:39:33 Wait for 8h0m0s with workload pods running...
+23:39:40  2023/02/18 16:39:33 Command in prom pod: [bash -c curl "-s" 'http://localhost:9090/api/v1/query' --data-urlencode 'query=max_over_time((sum(namedprocess_namegroup_cpu_rate{groupname!~"conmon"})+sum(pod:container_cpu_usage:sum{pod!~"process-exp.*",pod!~"oslat.*",pod!~"stress.*",pod!~"cnfgotestpriv.*"}))[8h0m0s:30s])'; echo]
+23:39:40  2023/02/18 16:39:33 output: {"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1676756403.412,"1.6296699613251515"]}]}}
+23:39:40  2023/02/18 16:39:33 Query max over time total mgmt cpu usage
+23:39:40  2023/02/18 16:39:33 Query max over time cpu usage for OS daemon
+23:39:40  2023/02/18 16:39:33 Command in prom pod: [bash -c curl "-s" 'http://localhost:9090/api/v1/query' --data-urlencode 'query=max_over_time(sum(namedprocess_namegroup_cpu_rate{groupname!~"conmon"})[8h0m0s:30s])'; echo]
+23:39:40  2023/02/18 16:39:33 output: {"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1676756403.758,"0.4894312195772746"]}]}}
+23:39:40  2023/02/18 16:39:33 Query max over time cpu usage for infra pods
+23:39:40  2023/02/18 16:39:33 Command in prom pod: [bash -c curl "-s" 'http://localhost:9090/api/v1/query' --data-urlencode 'query=max_over_time(sum(pod:container_cpu_usage:sum{pod!~"process-exp.*",pod!~"oslat.*",pod!~"stress.*",pod!~"cnfgotestpriv.*"})[8h0m0s:30s])'; echo]
+23:39:40  2023/02/18 16:39:34 output: {"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1676756404.070,"1.4343366279918588"]}]}}
+23:39:40    ranmetrics_cpu_total_steadyworkload_max: 1.6296700
+23:39:40  2023/02/18 16:39:34 Mgmt CPU usage for the last 8h0m0s - Non-pod mgmt overhead, mgmt pods, total: 0.4894,1.4343,1.6297
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_max: 0.4894312
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_max: 1.4343366
+23:39:40  2023/02/18 16:39:34 Query avg over time cpu usage for each infra pod
+23:39:40  2023/02/18 16:39:34 Command in prom pod: [bash -c curl "-s" 'http://localhost:9090/api/v1/query' --data-urlencode 'query=avg_over_time(pod:container_cpu_usage:sum{pod!~"process-exp.*",pod!~"oslat.*",pod!~"stress.*",pod!~"cnfgotestpriv.*"}[8h0m0s:30s] offset 1s)'; echo]
+23:39:40  2023/02/18 16:39:34 output: {"status":"success","data":{"resultType":"vector","result":[{"metric":{"namespace":"amq-router","pod":"amq-router-74db76f5c-wl842"},"value":[1676756404.382,"0.0005092067696922583"]},{"metric":{"namespace":"amq-router","pod":"interconnect-operator-55f557dcbb-rxkzm"},"value":[1676756404.382,"0.0023101908936812993"]},{"metric":{"namespace":"open-cluster-management-agent","pod":"klusterlet-67b4b667d8-nr4kt"},"value":[1676756404.382,"0.004071145675883692"]},{"metric":{"namespace":"open-cluster-management-agent","pod":"klusterlet-registration-agent-768764cb44-42dff"},"value":[1676756404.382,"0.0036950797978498114"]},{"metric":{"namespace":"open-cluster-management-agent","pod":"klusterlet-work-agent-7767d88c79-lpr6q"},"value":[1676756404.382,"0.006381074321610984"]},{"metric":{"namespace":"open-cluster-management-agent-addon","pod":"cluster-proxy-service-proxy-66599b78bf-bsn28"},"value":[1676756404.382,"0.00017783787408886295"]},{"metric":{"namespace":"open-cluster-management-agent-addon","pod":"config-policy-controller-76c99b599-8zkfg"},"value":[1676756404.382,"0.001269262994538836"]},{"metric":{"namespace":"open-cluster-management-agent-addon","pod":"governance-policy-framework-864696c55b-q88dp"},"value":[1676756404.382,"0.0010864645540793502"]},{"metric":{"namespace":"open-cluster-management-agent-addon","pod":"klusterlet-addon-workmgr-56647b95d7-k2njw"},"value":[1676756404.382,"0.001052756883150368"]},{"metric":{"namespace":"openshift-apiserver","pod":"apiserver-7c555bc4b7-6lg8t"},"value":[1676756404.382,"0.017093585488772992"]},{"metric":{"namespace":"openshift-apiserver-operator","pod":"openshift-apiserver-operator-67664579cc-ww75b"},"value":[1676756404.382,"0.004640999669097086"]},{"metric":{"namespace":"openshift-authentication","pod":"oauth-openshift-5665c68786-fzk64"},"value":[1676756404.382,"0.003476956036631388"]},{"metric":{"namespace":"openshift-authentication-operator","pod":"authentication-operator-5b9d5ffdcd-m5pk8"},"value":[1676756404.382,"0.014372458237293094"]},{"metric":{"namespace":"openshift-bare-metal-events","pod":"hw-event-proxy-operator-controller-manager-6d4c784ccb-w4whh"},"value":[1676756404.382,"0.0018367448995438092"]},{"metric":{"namespace":"openshift-cloud-controller-manager-operator","pod":"cluster-cloud-controller-manager-operator-586b98f77c-6qqrb"},"value":[1676756404.382,"0.0006819225669203528"]},{"metric":{"namespace":"openshift-cloud-credential-operator","pod":"cloud-credential-operator-6777b4bcfc-xz7nm"},"value":[1676756404.382,"0.0013999320141152459"]},{"metric":{"namespace":"openshift-cluster-csi-drivers","pod":"shared-resource-csi-driver-node-txdwg"},"value":[1676756404.382,"0.00035295105411516065"]},{"metric":{"namespace":"openshift-cluster-csi-drivers","pod":"shared-resource-csi-driver-operator-b5db648ff-snjw7"},"value":[1676756404.382,"0.002423320890038653"]},{"metric":{"namespace":"openshift-cluster-csi-drivers","pod":"shared-resource-csi-driver-webhook-6d8fb6dd8d-6tk5l"},"value":[1676756404.382,"0.00010247852658028313"]},{"metric":{"namespace":"openshift-cluster-machine-approver","pod":"machine-approver-6c6c59cfd4-8wdg6"},"value":[1676756404.382,"0.0009461472857035824"]},{"metric":{"namespace":"openshift-cluster-node-tuning-operator","pod":"cluster-node-tuning-operator-67bdb4fd49-rqlnm"},"value":[1676756404.382,"0.000628161666557584"]},{"metric":{"namespace":"openshift-cluster-node-tuning-operator","pod":"tuned-mbjgl"},"value":[1676756404.382,"0.000845767907849643"]},{"metric":{"namespace":"openshift-cluster-samples-operator","pod":"cluster-samples-operator-b549fc646-ghcrj"},"value":[1676756404.382,"0.0011356107032514124"]},{"metric":{"namespace":"openshift-cluster-storage-operator","pod":"cluster-storage-operator-784f4b76f8-pnkgz"},"value":[1676756404.382,"0.002773830211160438"]},{"metric":{"namespace":"openshift-cluster-storage-operator","pod":"csi-snapshot-controller-7bd6868dcd-kvw8x"},"value":[1676756404.382,"0.00012547340083261053"]},{"metric":{"namespace":"openshift-cluster-storage-operator","pod":"csi-snapshot-controller-operator-5c65dfdd84-j9d75"},"value":[1676756404.382,"0.0016360543283211121"]},{"metric":{"namespace":"openshift-cluster-storage-operator","pod":"csi-snapshot-webhook-797dfc544b-qnbnr"},"value":[1676756404.382,"0.00010805600468794161"]},{"metric":{"namespace":"openshift-cluster-version","pod":"cluster-version-operator-86c7d7df5c-hvtws"},"value":[1676756404.382,"0.008316757018332217"]},{"metric":{"namespace":"openshift-config-operator","pod":"openshift-config-operator-6846ff974-4f875"},"value":[1676756404.382,"0.004309301358705348"]},{"metric":{"namespace":"openshift-console-operator","pod":"console-operator-7fcc85fbd4-qbgdg"},"value":[1676756404.382,"0.004135724672997881"]},{"metric":{"namespace":"openshift-controller-manager","pod":"controller-manager-6955b4994b-29vfc"},"value":[1676756404.382,"0.0033628283733297785"]},{"metric":{"namespace":"openshift-controller-manager","pod":"controller-manager-7847f4dfd7-wxvrm"},"value":[1676756404.382,"0.0033719804936857257"]},{"metric":{"namespace":"openshift-controller-manager-operator","pod":"openshift-controller-manager-operator-f9fbf4b45-qhjbs"},"value":[1676756404.382,"0.004310881938157448"]},{"metric":{"namespace":"openshift-dns","pod":"dns-default-tbcnj"},"value":[1676756404.382,"0.0028510411547568297"]},{"metric":{"namespace":"openshift-dns","pod":"node-resolver-s5ptw"},"value":[1676756404.382,"0.0007856611267548164"]},{"metric":{"namespace":"openshift-dns-operator","pod":"dns-operator-7c8d558f4b-v4zt9"},"value":[1676756404.382,"0.0006552388253545017"]},{"metric":{"namespace":"openshift-etcd","pod":"etcd-cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.382,"0.08910848702224393"]},{"metric":{"namespace":"openshift-etcd-operator","pod":"etcd-operator-565c476565-qmd5m"},"value":[1676756404.382,"0.006594890096227611"]},{"metric":{"namespace":"openshift-image-registry","pod":"cluster-image-registry-operator-9c4bc59fd-t4mvq"},"value":[1676756404.382,"0.0016559379104997235"]},{"metric":{"namespace":"openshift-image-registry","pod":"node-ca-9rc6w"},"value":[1676756404.382,"0.00025568680471227916"]},{"metric":{"namespace":"openshift-ingress","pod":"router-default-794f96db69-jwsxk"},"value":[1676756404.382,"0.0009527787867301375"]},{"metric":{"namespace":"openshift-ingress-canary","pod":"ingress-canary-nwn52"},"value":[1676756404.382,"0.00008180689573611535"]},{"metric":{"namespace":"openshift-ingress-operator","pod":"ingress-operator-7c4b6b8f6d-h4pkb"},"value":[1676756404.382,"0.0016134625217592803"]},{"metric":{"namespace":"openshift-insights","pod":"insights-operator-5cb4b5bf7f-g69pm"},"value":[1676756404.382,"0.0008920368760963569"]},{"metric":{"namespace":"openshift-kube-apiserver","pod":"kube-apiserver-cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.382,"0.2170074855339292"]},{"metric":{"namespace":"openshift-kube-apiserver-operator","pod":"kube-apiserver-operator-5756474447-jzpw6"},"value":[1676756404.382,"0.014019759724753169"]},{"metric":{"namespace":"openshift-kube-controller-manager","pod":"kube-controller-manager-cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.382,"0.020468820749347832"]},{"metric":{"namespace":"openshift-kube-controller-manager-operator","pod":"kube-controller-manager-operator-79c6875d6c-2mzvr"},"value":[1676756404.382,"0.007878809358338073"]},{"metric":{"namespace":"openshift-kube-scheduler","pod":"openshift-kube-scheduler-cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.382,"0.0036147165425874615"]},{"metric":{"namespace":"openshift-kube-scheduler-operator","pod":"openshift-kube-scheduler-operator-856fbf5dd7-m98d2"},"value":[1676756404.382,"0.004639189425214349"]},{"metric":{"namespace":"openshift-kube-storage-version-migrator","pod":"migrator-6954ddf6dc-x2bg5"},"value":[1676756404.382,"0.00014322550940323636"]},{"metric":{"namespace":"openshift-kube-storage-version-migrator-operator","pod":"kube-storage-version-migrator-operator-596bd957bc-8t4dr"},"value":[1676756404.382,"0.002390371431369876"]},{"metric":{"namespace":"openshift-local-storage","pod":"local-storage-operator-76665f798b-kmpwf"},"value":[1676756404.382,"0.0003834510730192516"]},{"metric":{"namespace":"openshift-logging","pod":"cluster-logging-operator-6c5fdf48b8-5gt6b"},"value":[1676756404.382,"0.006900693995713273"]},{"metric":{"namespace":"openshift-logging","pod":"collector-rdjtc"},"value":[1676756404.382,"0.09001305022704417"]},{"metric":{"namespace":"openshift-machine-api","pod":"cluster-autoscaler-operator-67d44646bb-bj2xj"},"value":[1676756404.382,"0.0007488874851075891"]},{"metric":{"namespace":"openshift-machine-api","pod":"cluster-baremetal-operator-57b599b687-cnj7p"},"value":[1676756404.382,"0.00038287752340077763"]},{"metric":{"namespace":"openshift-machine-api","pod":"control-plane-machine-set-operator-5f4c6cf544-xs9qv"},"value":[1676756404.382,"0.000403115631780689"]},{"metric":{"namespace":"openshift-machine-api","pod":"machine-api-operator-7f5df8447f-klhd7"},"value":[1676756404.382,"0.0005538511951677288"]},{"metric":{"namespace":"openshift-machine-config-operator","pod":"machine-config-controller-7889fd9566-cnrl5"},"value":[1676756404.382,"0.0018349443025075672"]},{"metric":{"namespace":"openshift-machine-config-operator","pod":"machine-config-daemon-jsm58"},"value":[1676756404.382,"0.0005280583709598016"]},{"metric":{"namespace":"openshift-machine-config-operator","pod":"machine-config-operator-65f78677d-9x5j7"},"value":[1676756404.382,"0.0024394816754998326"]},{"metric":{"namespace":"openshift-machine-config-operator","pod":"machine-config-server-kh9n5"},"value":[1676756404.382,"0.00007631225214096392"]},{"metric":{"namespace":"openshift-marketplace","pod":"amq-operator-m9dm6"},"value":[1676756404.382,"0.003205579120094151"]},{"metric":{"namespace":"openshift-marketplace","pod":"certified-operators-custom-v489m"},"value":[1676756404.382,"0.0027399297246534734"]},{"metric":{"namespace":"openshift-marketplace","pod":"marketplace-operator-67b994f978-jxf6d"},"value":[1676756404.382,"0.001033669028687281"]},{"metric":{"namespace":"openshift-marketplace","pod":"redhat-operators-custom-hfdtm"},"value":[1676756404.382,"0.002897135144735909"]},{"metric":{"namespace":"openshift-monitoring","pod":"cluster-monitoring-operator-6c97d77475-rr5bd"},"value":[1676756404.382,"0.0032581182458117034"]},{"metric":{"namespace":"openshift-monitoring","pod":"kube-state-metrics-6d556586b-wh4jk"},"value":[1676756404.382,"0.0017213893768730315"]},{"metric":{"namespace":"openshift-monitoring","pod":"node-exporter-56ckl"},"value":[1676756404.382,"0.003964170571152605"]},{"metric":{"namespace":"openshift-monitoring","pod":"openshift-state-metrics-6d48b64fdc-cj5qj"},"value":[1676756404.382,"0.0005774980699907237"]},{"metric":{"namespace":"openshift-monitoring","pod":"prometheus-adapter-5fc9989db8-n2r79"},"value":[1676756404.382,"0.0043598772888439035"]},{"metric":{"namespace":"openshift-monitoring","pod":"prometheus-adapter-67dc886cf8-8dkfj"},"value":[1676756404.382,"0.0027033542399433363"]},{"metric":{"namespace":"openshift-monitoring","pod":"prometheus-adapter-7c7f56df9b-r5v5p"},"value":[1676756404.382,"0.004238168056028674"]},{"metric":{"namespace":"openshift-monitoring","pod":"prometheus-k8s-0"},"value":[1676756404.382,"0.08101658350579743"]},{"metric":{"namespace":"openshift-monitoring","pod":"prometheus-operator-774464bb9d-db52x"},"value":[1676756404.382,"0.0008890436093132924"]},{"metric":{"namespace":"openshift-monitoring","pod":"prometheus-operator-admission-webhook-65fb64969d-kzssq"},"value":[1676756404.382,"0.0016809054772638132"]},{"metric":{"namespace":"openshift-monitoring","pod":"thanos-querier-64c8f658cb-9cv9z"},"value":[1676756404.382,"0.0020478478773443146"]},{"metric":{"namespace":"openshift-multus","pod":"multus-additional-cni-plugins-6rgkx"},"value":[1676756404.382,"0"]},{"metric":{"namespace":"openshift-multus","pod":"multus-admission-controller-d578b45c-njxjh"},"value":[1676756404.382,"0.00044698905787014174"]},{"metric":{"namespace":"openshift-multus","pod":"multus-cn4m2"},"value":[1676756404.382,"0.014231392949177465"]},{"metric":{"namespace":"openshift-multus","pod":"network-metrics-daemon-rd29w"},"value":[1676756404.382,"0.0006550818598741365"]},{"metric":{"namespace":"openshift-network-operator","pod":"network-operator-dd5599768-n2rxp"},"value":[1676756404.382,"0.003735638764660202"]},{"metric":{"namespace":"openshift-oauth-apiserver","pod":"apiserver-8c79cbfc9-46kw6"},"value":[1676756404.382,"0.023698162943623254"]},{"metric":{"namespace":"openshift-operator-lifecycle-manager","pod":"catalog-operator-866f7756fb-zsvrt"},"value":[1676756404.382,"0.0015788541296735687"]},{"metric":{"namespace":"openshift-operator-lifecycle-manager","pod":"olm-operator-66cc5f8489-z92rv"},"value":[1676756404.382,"0.006933335822207826"]},{"metric":{"namespace":"openshift-operator-lifecycle-manager","pod":"package-server-manager-758656947c-xfj7m"},"value":[1676756404.382,"0.0003249394153506505"]},{"metric":{"namespace":"openshift-operator-lifecycle-manager","pod":"packageserver-56966bd69b-w8wx5"},"value":[1676756404.382,"0.0018934285934722305"]},{"metric":{"namespace":"openshift-ovn-kubernetes","pod":"ovnkube-master-v7q4c"},"value":[1676756404.382,"0.007465365763271048"]},{"metric":{"namespace":"openshift-ovn-kubernetes","pod":"ovnkube-node-qwgn8"},"value":[1676756404.382,"0.015472485829970715"]},{"metric":{"namespace":"openshift-ptp","pod":"linuxptp-daemon-sqdhq"},"value":[1676756404.382,"0.0003786527496486488"]},{"metric":{"namespace":"openshift-ptp","pod":"ptp-operator-fd8dc897f-g288q"},"value":[1676756404.382,"0.000994002965230291"]},{"metric":{"namespace":"openshift-route-controller-manager","pod":"route-controller-manager-69d879d64f-xg9g9"},"value":[1676756404.382,"0.0012864301096945662"]},{"metric":{"namespace":"openshift-route-controller-manager","pod":"route-controller-manager-787bbf94b-nhczl"},"value":[1676756404.382,"0.0012316156551839112"]},{"metric":{"namespace":"openshift-service-ca","pod":"service-ca-784f878769-h2dqb"},"value":[1676756404.382,"0.0030219504776320223"]},{"metric":{"namespace":"openshift-service-ca-operator","pod":"service-ca-operator-6d8d654bdf-2ftbw"},"value":[1676756404.382,"0.0028150187633688034"]},{"metric":{"namespace":"openshift-sriov-network-operator","pod":"network-resources-injector-5w7qk"},"value":[1676756404.382,"0.00032921517223745043"]},{"metric":{"namespace":"openshift-sriov-network-operator","pod":"operator-webhook-bsqqf"},"value":[1676756404.382,"0.00016637874112461216"]},{"metric":{"namespace":"openshift-sriov-network-operator","pod":"sriov-device-plugin-mf68x"},"value":[1676756404.382,"0.00004258589009602212"]},{"metric":{"namespace":"openshift-sriov-network-operator","pod":"sriov-network-config-daemon-vdhtg"},"value":[1676756404.382,"0.009367096833097855"]},{"metric":{"namespace":"openshift-sriov-network-operator","pod":"sriov-network-operator-554fbd98f6-nrbgx"},"value":[1676756404.382,"0.0007932511955105387"]},{"metric":{"namespace":"vran-acceleration-operators","pod":"accelerator-discovery-26j5h"},"value":[1676756404.382,"0"]},{"metric":{"namespace":"vran-acceleration-operators","pod":"sriov-fec-controller-manager-5cffc8596c-x8swv"},"value":[1676756404.382,"0.0013262924800598365"]}]}}
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="amq-router",pod="amq-router-"): 0.0005092
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="amq-router",pod="interconnect-operator-"): 0.0023102
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="open-cluster-management-agent",pod="klusterlet-"): 0.0040711
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(pod="klusterlet-registration-agent-",namespace="open-cluster-management-agent"): 0.0036951
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="open-cluster-management-agent",pod="klusterlet-work-agent-"): 0.0063811
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="open-cluster-management-agent-addon",pod="cluster-proxy-service-proxy-"): 0.0001778
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="open-cluster-management-agent-addon",pod="config-policy-controller-"): 0.0012693
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="open-cluster-management-agent-addon",pod="governance-policy-framework-"): 0.0010865
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="open-cluster-management-agent-addon",pod="klusterlet-addon-workmgr-"): 0.0010528
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(pod="apiserver-",namespace="openshift-apiserver"): 0.0170936
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-apiserver-operator",pod="openshift-apiserver-operator-"): 0.0046410
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-authentication",pod="oauth-openshift-"): 0.0034770
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-authentication-operator",pod="authentication-operator-"): 0.0143725
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-bare-metal-events",pod="hw-event-proxy-operator-controller-manager-"): 0.0018367
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-cloud-controller-manager-operator",pod="cluster-cloud-controller-manager-operator-"): 0.0006819
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-cloud-credential-operator",pod="cloud-credential-operator-"): 0.0013999
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-cluster-csi-drivers",pod="shared-resource-csi-driver-node-"): 0.0003530
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(pod="shared-resource-csi-driver-operator-",namespace="openshift-cluster-csi-drivers"): 0.0024233
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(pod="shared-resource-csi-driver-webhook-",namespace="openshift-cluster-csi-drivers"): 0.0001025
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-cluster-machine-approver",pod="machine-approver-"): 0.0009461
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-cluster-node-tuning-operator",pod="cluster-node-tuning-operator-"): 0.0006282
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-cluster-node-tuning-operator",pod="tuned-"): 0.0008458
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-cluster-samples-operator",pod="cluster-samples-operator-"): 0.0011356
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-cluster-storage-operator",pod="cluster-storage-operator-"): 0.0027738
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-cluster-storage-operator",pod="csi-snapshot-controller-"): 0.0001255
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-cluster-storage-operator",pod="csi-snapshot-controller-operator-"): 0.0016361
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-cluster-storage-operator",pod="csi-snapshot-webhook-"): 0.0001081
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-cluster-version",pod="cluster-version-operator-"): 0.0083168
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(pod="openshift-config-operator-",namespace="openshift-config-operator"): 0.0043093
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-console-operator",pod="console-operator-"): 0.0041357
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(pod="controller-manager-",namespace="openshift-controller-manager"): 0.0033628
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-controller-manager",pod="controller-manager-"): 0.0033720
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-controller-manager-operator",pod="openshift-controller-manager-operator-"): 0.0043109
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-dns",pod="dns-default-"): 0.0028510
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-dns",pod="node-resolver-"): 0.0007857
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-dns-operator",pod="dns-operator-"): 0.0006552
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-etcd",pod="etcd-cnfdf35.telco5gran.eng.rdu2.redhat.com"): 0.0891085
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-etcd-operator",pod="etcd-operator-"): 0.0065949
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-image-registry",pod="cluster-image-registry-operator-"): 0.0016559
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-image-registry",pod="node-ca-"): 0.0002557
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-ingress",pod="router-default-"): 0.0009528
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-ingress-canary",pod="ingress-canary-"): 0.0000818
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-ingress-operator",pod="ingress-operator-"): 0.0016135
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-insights",pod="insights-operator-"): 0.0008920
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-kube-apiserver",pod="kube-apiserver-cnfdf35.telco5gran.eng.rdu2.redhat.com"): 0.2170075
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-kube-apiserver-operator",pod="kube-apiserver-operator-"): 0.0140198
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-kube-controller-manager",pod="kube-controller-manager-cnfdf35.telco5gran.eng.rdu2.redhat.com"): 0.0204688
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-kube-controller-manager-operator",pod="kube-controller-manager-operator-"): 0.0078788
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(pod="openshift-kube-scheduler-cnfdf35.telco5gran.eng.rdu2.redhat.com",namespace="openshift-kube-scheduler"): 0.0036147
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-kube-scheduler-operator",pod="openshift-kube-scheduler-operator-"): 0.0046392
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(pod="migrator-",namespace="openshift-kube-storage-version-migrator"): 0.0001432
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-kube-storage-version-migrator-operator",pod="kube-storage-version-migrator-operator-"): 0.0023904
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-local-storage",pod="local-storage-operator-"): 0.0003835
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(pod="cluster-logging-operator-",namespace="openshift-logging"): 0.0069007
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(pod="collector-",namespace="openshift-logging"): 0.0900131
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-machine-api",pod="cluster-autoscaler-operator-"): 0.0007489
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-machine-api",pod="cluster-baremetal-operator-"): 0.0003829
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-machine-api",pod="control-plane-machine-set-operator-"): 0.0004031
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-machine-api",pod="machine-api-operator-"): 0.0005539
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(pod="machine-config-controller-",namespace="openshift-machine-config-operator"): 0.0018349
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-machine-config-operator",pod="machine-config-daemon-"): 0.0005281
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-machine-config-operator",pod="machine-config-operator-"): 0.0024395
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-machine-config-operator",pod="machine-config-server-"): 0.0000763
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-marketplace",pod="amq-operator-"): 0.0032056
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-marketplace",pod="certified-operators-custom-"): 0.0027399
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-marketplace",pod="marketplace-operator-"): 0.0010337
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-marketplace",pod="redhat-operators-custom-"): 0.0028971
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-monitoring",pod="cluster-monitoring-operator-"): 0.0032581
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-monitoring",pod="kube-state-metrics-"): 0.0017214
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-monitoring",pod="node-exporter-"): 0.0039642
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-monitoring",pod="openshift-state-metrics-"): 0.0005775
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-monitoring",pod="prometheus-adapter-"): 0.0043599
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-monitoring",pod="prometheus-adapter-"): 0.0027034
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(pod="prometheus-adapter-",namespace="openshift-monitoring"): 0.0042382
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-monitoring",pod="prometheus-k8s-0"): 0.0810166
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-monitoring",pod="prometheus-operator-"): 0.0008890
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-monitoring",pod="prometheus-operator-admission-webhook-"): 0.0016809
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-monitoring",pod="thanos-querier-"): 0.0020478
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-multus",pod="multus-additional-cni-plugins-"): 0.0000000
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(pod="multus-admission-controller-",namespace="openshift-multus"): 0.0004470
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-multus",pod="multus-"): 0.0142314
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-multus",pod="network-metrics-daemon-"): 0.0006551
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-network-operator",pod="network-operator-"): 0.0037356
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-oauth-apiserver",pod="apiserver-"): 0.0236982
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-operator-lifecycle-manager",pod="catalog-operator-"): 0.0015789
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-operator-lifecycle-manager",pod="olm-operator-"): 0.0069333
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-operator-lifecycle-manager",pod="package-server-manager-"): 0.0003249
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-operator-lifecycle-manager",pod="packageserver-"): 0.0018934
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-ovn-kubernetes",pod="ovnkube-master-"): 0.0074654
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-ovn-kubernetes",pod="ovnkube-node-"): 0.0154725
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-ptp",pod="linuxptp-daemon-"): 0.0003787
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-ptp",pod="ptp-operator-"): 0.0009940
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-route-controller-manager",pod="route-controller-manager-"): 0.0012864
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-route-controller-manager",pod="route-controller-manager-"): 0.0012316
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-service-ca",pod="service-ca-"): 0.0030220
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(pod="service-ca-operator-",namespace="openshift-service-ca-operator"): 0.0028150
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(pod="network-resources-injector-",namespace="openshift-sriov-network-operator"): 0.0003292
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-sriov-network-operator",pod="operator-webhook-"): 0.0001664
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-sriov-network-operator",pod="sriov-device-plugin-"): 0.0000426
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="openshift-sriov-network-operator",pod="sriov-network-config-daemon-"): 0.0093671
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(pod="sriov-network-operator-",namespace="openshift-sriov-network-operator"): 0.0007933
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="vran-acceleration-operators",pod="accelerator-discovery-"): 0.0000000
+23:39:40    ranmetrics_cpu_infra_pods_steadyworkload_avg(namespace="vran-acceleration-operators",pod="sriov-fec-controller-manager-"): 0.0013263
+23:39:40  2023/02/18 16:39:34 Query avg over time cpu usage for each os daemon
+23:39:40  2023/02/18 16:39:34 Command in prom pod: [bash -c curl "-s" 'http://localhost:9090/api/v1/query' --data-urlencode 'query=avg_over_time(namedprocess_namegroup_cpu_rate{groupname!~"conmon"}[8h0m0s:30s] offset 1s)'; echo]
+23:39:40  2023/02/18 16:39:34 output: {"status":"success","data":{"resultType":"vector","result":[{"metric":{"groupname":"NetworkManager","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0.0002569477784445775"]},{"metric":{"groupname":"agetty","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0.0002319470838612177"]},{"metric":{"groupname":"auditd","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"6.94444444444445e-07"]},{"metric":{"groupname":"crio","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0.014749989564590237"]},{"metric":{"groupname":"dbus-daemon","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0.000056250555666689275"]},{"metric":{"groupname":"dnsmasq","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0.00002986101853086256"]},{"metric":{"groupname":"irqbalance","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0.003394439404446713"]},{"metric":{"groupname":"kubelet","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0.12499217728235075"]},{"metric":{"groupname":"ovs-vswitchd","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0.02907914292790636"]},{"metric":{"groupname":"ovsdb-server","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0.001861804587132378"]},{"metric":{"groupname":"polkitd","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0.0000034722222222222254"]},{"metric":{"groupname":"rdma-ndd","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0.0000048612500277833314"]},{"metric":{"groupname":"rpc.statd","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0"]},{"metric":{"groupname":"rpcbind","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"6.944444444444406e-07"]},{"metric":{"groupname":"rpm-ostree","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0"]},{"metric":{"groupname":"sshd","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0"]},{"metric":{"groupname":"sssd","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0.00002500027783334447"]},{"metric":{"groupname":"stalld","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0.020135384899805975"]},{"metric":{"groupname":"systemd","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0.00017708555600009146"]},{"metric":{"groupname":"systemd-journald","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0.00017777768570968042"]},{"metric":{"groupname":"systemd-logind","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0.000008333333333333327"]},{"metric":{"groupname":"systemd-udevd","instance":"cnfdf35.telco5gran.eng.rdu2.redhat.com"},"value":[1676756404.712,"0.0002076423618056948"]}]}}
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="NetworkManager"): 0.0002569
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="agetty"): 0.0002319
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="auditd"): 0.0000007
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="crio"): 0.0147500
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="dbus-daemon"): 0.0000563
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="dnsmasq"): 0.0000299
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="irqbalance"): 0.0033944
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="kubelet"): 0.1249922
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="ovs-vswitchd"): 0.0290791
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="ovsdb-server"): 0.0018618
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="polkitd"): 0.0000035
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="rdma-ndd"): 0.0000049
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="rpc.statd"): 0.0000000
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="rpcbind"): 0.0000007
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="rpm-ostree"): 0.0000000
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="sshd"): 0.0000000
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="sssd"): 0.0000250
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="stalld"): 0.0201354
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="systemd"): 0.0001771
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="systemd-journald"): 0.0001778
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="systemd-logind"): 0.0000083
+23:39:40    ranmetrics_cpu_os_daemon_steadyworkload_avg(groupname="systemd-udevd"): 0.0002076
+23:39:40  2023/02/18 16:39:34 Delete and wait for pods to be removed
+23:39:47  2023/02/18 16:39:46 pod is deleted: oslat-cxtxk
+23:39:47  2023/02/18 16:39:47 pod is deleted: oslat-kckrc
+23:39:47  2023/02/18 16:39:47 pod is deleted: stress-ng-8kjs8
+23:39:47  2023/02/18 16:39:47 pod is deleted: stress-ng-kr99n
+23:39:47  2023/02/18 16:39:47 pod is deleted: stress-ng-xs2x6
+23:39:47  2023/02/18 16:39:47 pod is deleted: stress-ng-gjlnx
+23:39:47  2023/02/18 16:39:47 pod is deleted: stress-ng-s5zl4
+23:39:47  2023/02/18 16:39:47 pod is deleted: stress-ng-w9cl5
+23:39:47  2023/02/18 16:39:47 pod is deleted: stress-ng-59chv
+23:39:47  2023/02/18 16:39:47 pod is deleted: stress-ng-5qhj7
+23:39:47  2023/02/18 16:39:47 pod is deleted: stress-ng-fqprh
+23:39:47  2023/02/18 16:39:47 pod is deleted: stress-ng-wdcgr
+23:39:47  2023/02/18 16:39:47 pod is deleted: stress-ng-qqrsr
+23:39:48  2023/02/18 16:39:47 pod is deleted: stress-ng-r2hjd
+23:39:48  2023/02/18 16:39:48 pod is deleted: stress-ng-5jsgn
+23:39:48  2023/02/18 16:39:48 pod is deleted: stress-ng-6rpgn
+23:39:48  2023/02/18 16:39:48 pod is deleted: stress-ng-s87wx
+23:39:48  2023/02/18 16:39:48 pod is deleted: stress-ng-z9qdk
+23:39:49  2023/02/18 16:39:48 pod is deleted: stress-ng-n544g
+23:39:49  2023/02/18 16:39:49 pod is deleted: stress-ng-lft2q
+23:39:49  2023/02/18 16:39:49 pod is deleted: stress-ng-vd4nn
+23:39:49  2023/02/18 16:39:49 pod is deleted: stress-ng-2w6j6
+23:39:49  2023/02/18 16:39:49 pod is deleted: stress-ng-4d5qd
+23:39:50  2023/02/18 16:39:49 pod is deleted: stress-ng-5w8sn
+23:39:50  2023/02/18 16:39:50 pod is deleted: stress-ng-rc7v7
+23:39:50  2023/02/18 16:39:50 pod is deleted: stress-ng-b2bsp
+23:39:50  2023/02/18 16:39:50 pod is deleted: stress-ng-smskf
+23:39:50  2023/02/18 16:39:50 pod is deleted: stress-ng-lkckf
+23:39:51  2023/02/18 16:39:50 pod is deleted: stress-ng-wj582
+23:39:51  2023/02/18 16:39:51 pod is deleted: stress-ng-bqmtx
+23:39:51  2023/02/18 16:39:51 pod is deleted: stress-ng-xqhwn
+23:39:51  2023/02/18 16:39:51 pod is deleted: stress-ng-kn29z
+23:39:51  2023/02/18 16:39:51 pod is deleted: stress-ng-8sxnp
+23:39:52  2023/02/18 16:39:51 pod is deleted: stress-ng-zd6dc
+23:39:52  2023/02/18 16:39:52 pod is deleted: stress-ng-r9cf5
+23:39:52  2023/02/18 16:39:52 pod is deleted: stress-ng-kxvr2
+23:39:52  2023/02/18 16:39:52 pod is deleted: stress-ng-pwtvt
+23:39:52  2023/02/18 16:39:52 pod is deleted: stress-ng-mhvfp
+23:39:53  2023/02/18 16:39:52 pod is deleted: stress-ng-v9mf7
+23:39:53  2023/02/18 16:39:53 pod is deleted: stress-ng-jrwt8
+23:39:53  2023/02/18 16:39:53 pod is deleted: stress-ng-spsxr
+23:39:53  2023/02/18 16:39:53 pod is deleted: stress-ng-bkbsv
+23:39:53  [38;5;10m• [28820.412 seconds][0m
+23:39:53  [38;5;243m------------------------------[0m
+23:39:53  [0m[1m[AfterSuite] [0m
+23:39:53  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/cpu/cpu_suite_test.go:57[0m
+23:39:53  2023/02/18 16:39:53 Deleting test namespace ran-test
+23:40:00  [38;5;10m[AfterSuite] PASSED [6.422 seconds][0m
+23:40:00  [38;5;243m------------------------------[0m
+23:40:00  [0m[1m[ReportAfterSuite] Autogenerated ReportAfterSuite for --junit-report[0m
+23:40:00  [38;5;243mautogenerated by Ginkgo[0m
+23:40:00  [38;5;10m[ReportAfterSuite] PASSED [0.001 seconds][0m
+23:40:00  [38;5;243m------------------------------[0m
+23:40:00  
+23:40:00  [38;5;10m[1mRan 6 of 6 Specs in 31758.603 seconds[0m
+23:40:00  [38;5;10m[1mSUCCESS![0m -- [38;5;10m[1m6 Passed[0m | [38;5;9m[1m0 Failed[0m | [38;5;11m[1m0 Pending[0m | [38;5;14m[1m0 Skipped[0m
+23:40:00  PASS
+23:40:00  [38;5;228mYou're using deprecated Ginkgo functionality:[0m
+23:40:00  [38;5;228m=============================================[0m
+23:40:00    [38;5;11m--ginkgo.slow-spec-threshold is deprecated --slow-spec-threshold has been deprecated and will be removed in a future version of Ginkgo.  This feature has proved to be more noisy than useful.  You can use --poll-progress-after, instead, to get more actionable feedback about potentially slow specs and understand where they might be getting stuck.[0m
+23:40:00  
+23:40:00  [38;5;243mTo silence deprecations that can be silenced set the following environment variable:[0m
+23:40:00    [38;5;243mACK_GINKGO_DEPRECATIONS=2.5.1[0m
+23:40:00  
+23:40:00  
+23:40:00  Ginkgo ran 1 suite in 8h49m32.765615129s
+23:40:00  Test Suite Passed
+23:40:00  + set +x
+23:40:00  /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+23:40:00  [0;34m[INFO] Save cnf-gotests to /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/[0m
+23:40:00  [0;34m[INFO] Parse and upload cpu util results[0m
+23:40:00  + [[ ! -f /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/ran-extra-vars_cnfdf35 ]]
+23:40:00  + touch /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/ran-extra-vars_cnfdf35
+23:40:00  + source /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/ran-extra-vars_cnfdf35
+23:40:00  + '[' -z /home/kni/clusterconfigs/cnfdf35/auth/kubeconfig ']'
+23:40:00  + '[' -z '' ']'
+23:40:00  + export OC_EXE=oc
+23:40:00  + OC_EXE=oc
+23:40:00  + '[' -z ']'
+23:40:00  ++ oc config view -o 'jsonpath={.clusters[].cluster.server}{"\n"}'
+23:40:00  + cluster=https://api.cnfdf35.sno.telco5gran.eng.rdu2.redhat.com:6443
+23:40:00  + cluster=cnfdf35.sno.telco5gran.eng.rdu2.redhat.com:6443
+23:40:00  + cluster=cnfdf35
+23:40:00  + echo 'export RAN_METRICS_CLUSTER="cnfdf35"'
+23:40:00  ++ oc version
+23:40:00  ++ grep Server
+23:40:00  ++ awk '{print $3}'
+23:40:00  + export_version='export RAN_METRICS_SW_VERSION="4.13.0-0.nightly-2023-02-16-120330"'
+23:40:00  ++ strings /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/ran-extra-vars_cnfdf35
+23:40:00  ++ grep RAN_METRICS_SW_VERSION
+23:40:00  + [[ -z '' ]]
+23:40:00  + echo 'export RAN_METRICS_SW_VERSION="4.13.0-0.nightly-2023-02-16-120330"'
+23:40:00  + MC_NS=openshift-machine-config-operator
+23:40:00  + '[' -z ']'
+23:40:00  ++ oc get node -l kubernetes.io/hostname -o name
+23:40:00  ++ awk -F / '{print $2}'
+23:40:00  + NODE=cnfdf35.telco5gran.eng.rdu2.redhat.com
+23:40:00  ++ oc get pods -n openshift-machine-config-operator -o wide
+23:40:00  ++ grep -E 'machine-config-daemon.*cnfdf35.telco5gran.eng.rdu2.redhat.com'
+23:40:00  ++ awk '{print $1}'
+23:40:00  + MACHINE_CONFIG_DAEMON=machine-config-daemon-jsm58
+23:40:00  ++ oc exec -n openshift-machine-config-operator machine-config-daemon-jsm58 -c machine-config-daemon -- chroot /rootfs lscpu
+23:40:01  + LSCPU='Architecture:        x86_64
+23:40:01  CPU op-mode(s):      32-bit, 64-bit
+23:40:01  Byte Order:          Little Endian
+23:40:01  CPU(s):              112
+23:40:01  On-line CPU(s) list: 0-111
+23:40:01  Thread(s) per core:  2
+23:40:01  Core(s) per socket:  28
+23:40:01  Socket(s):           2
+23:40:01  NUMA node(s):        2
+23:40:01  Vendor ID:           GenuineIntel
+23:40:01  BIOS Vendor ID:      Intel
+23:40:01  CPU family:          6
+23:40:01  Model:               106
+23:40:01  Model name:          Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz
+23:40:01  BIOS Model name:     Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz
+23:40:01  Stepping:            6
+23:40:01  CPU MHz:             2200.000
+23:40:01  BogoMIPS:            4400.00
+23:40:01  Virtualization:      VT-x
+23:40:01  L1d cache:           48K
+23:40:01  L1i cache:           32K
+23:40:01  L2 cache:            1280K
+23:40:01  L3 cache:            43008K
+23:40:01  NUMA node0 CPU(s):   0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102,104,106,108,110
+23:40:01  NUMA node1 CPU(s):   1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99,101,103,105,107,109,111
+23:40:01  Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 invpcid_single ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect wbnoinvd dtherm ida arat pln pts avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg tme avx512_vpopcntdq la57 rdpid fsrm md_clear pconfig flush_l1d arch_capabilities'
+23:40:01  ++ echo 'Architecture:        x86_64
+23:40:01  CPU op-mode(s):      32-bit, 64-bit
+23:40:01  Byte Order:          Little Endian
+23:40:01  CPU(s):              112
+23:40:01  On-line CPU(s) list: 0-111
+23:40:01  Thread(s) per core:  2
+23:40:01  Core(s) per socket:  28
+23:40:01  Socket(s):           2
+23:40:01  NUMA node(s):        2
+23:40:01  Vendor ID:           GenuineIntel
+23:40:01  BIOS Vendor ID:      Intel
+23:40:01  CPU family:          6
+23:40:01  Model:               106
+23:40:01  Model name:          Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz
+23:40:01  BIOS Model name:     Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz
+23:40:01  Stepping:            6
+23:40:01  CPU MHz:             2200.000
+23:40:01  BogoMIPS:            4400.00
+23:40:01  Virtualization:      VT-x
+23:40:01  L1d cache:           48K
+23:40:01  L1i cache:           32K
+23:40:01  L2 cache:            1280K
+23:40:01  L3 cache:            43008K
+23:40:01  NUMA node0 CPU(s):   0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102,104,106,108,110
+23:40:01  NUMA node1 CPU(s):   1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99,101,103,105,107,109,111
+23:40:01  Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 invpcid_single ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect wbnoinvd dtherm ida arat pln pts avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg tme avx512_vpopcntdq la57 rdpid fsrm md_clear pconfig flush_l1d arch_capabilities'
+23:40:01  ++ grep '^Model name'
+23:40:01  ++ awk '{print substr($0, index($0,$3))}'
+23:40:01  + CPU_TYPE='Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz'
+23:40:01  ++ echo 'Architecture:        x86_64
+23:40:01  CPU op-mode(s):      32-bit, 64-bit
+23:40:01  Byte Order:          Little Endian
+23:40:01  CPU(s):              112
+23:40:01  On-line CPU(s) list: 0-111
+23:40:01  Thread(s) per core:  2
+23:40:01  Core(s) per socket:  28
+23:40:01  Socket(s):           2
+23:40:01  NUMA node(s):        2
+23:40:01  Vendor ID:           GenuineIntel
+23:40:01  BIOS Vendor ID:      Intel
+23:40:01  CPU family:          6
+23:40:01  Model:               106
+23:40:01  Model name:          Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz
+23:40:01  BIOS Model name:     Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz
+23:40:01  Stepping:            6
+23:40:01  CPU MHz:             2200.000
+23:40:01  BogoMIPS:            4400.00
+23:40:01  Virtualization:      VT-x
+23:40:01  L1d cache:           48K
+23:40:01  L1i cache:           32K
+23:40:01  L2 cache:            1280K
+23:40:01  L3 cache:            43008K
+23:40:01  NUMA node0 CPU(s):   0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102,104,106,108,110
+23:40:01  NUMA node1 CPU(s):   1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99,101,103,105,107,109,111
+23:40:01  ++ grep Thread
+23:40:01  Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 invpcid_single ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect wbnoinvd dtherm ida arat pln pts avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg tme avx512_vpopcntdq la57 rdpid fsrm md_clear pconfig flush_l1d arch_capabilities'
+23:40:01  ++ awk '{print $4}'
+23:40:01  + HYPERTHREAD=2
+23:40:01  + echo 'export RAN_METRICS_CPU_TYPE="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz"'
+23:40:01  + echo 'export RAN_METRICS_HYPERTHREAD="2"'
+23:40:01  + '[' -z ']'
+23:40:01  ++ oc get nodes -o 'jsonpath={.items[0]..kernelVersion}'
+23:40:02  + KERNEL_RELEASE=4.18.0-372.41.1.rt7.198.el8_6.x86_64
+23:40:02  + KERNEL_REALTIME=false
+23:40:02  + [[ 4.18.0-372.41.1.rt7.198.el8_6.x86_64 =~ .*\.rt[0-9]+\..* ]]
+23:40:02  + KERNEL_REALTIME=true
+23:40:02  + echo 'export RAN_METRICS_KERNEL_VERSION="4.18.0-372.41.1.rt7.198.el8_6.x86_64"'
+23:40:02  + echo 'export RAN_METRICS_KERNEL_REALTIME="true"'
+23:40:02  export RAN_METRICS_CLUSTER="cnfdf35"
+23:40:02  export RAN_METRICS_SW_VERSION="4.13.0-0.nightly-2023-02-16-120330"
+23:40:02  export RAN_METRICS_CPU_TYPE="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz"
+23:40:02  export RAN_METRICS_HYPERTHREAD="2"
+23:40:02  export RAN_METRICS_KERNEL_VERSION="4.18.0-372.41.1.rt7.198.el8_6.x86_64"
+23:40:02  export RAN_METRICS_KERNEL_REALTIME="true"
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_total_idle_max{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h"} 1.0129407[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   318    0     0  100   318      0  11777 --:--:-- --:--:-- --:--:-- 11777
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_idle_max{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h"} 0.1913333[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   322    0     0  100   322      0  11925 --:--:-- --:--:-- --:--:-- 12384
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_idle_max{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h"} 0.8362741[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   323    0     0  100   323      0  12920 --:--:-- --:--:-- --:--:-- 12920
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_total_workloadlaunch_max{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h"} 3.5141913[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   328    0     0  100   328      0  12615 --:--:-- --:--:-- --:--:-- 12615
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_workloadlaunch_max{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h"} 2.5786667[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   332    0     0  100   332      0  12296 --:--:-- --:--:-- --:--:-- 12296
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_workloadlaunch_max{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h"} 1.1052743[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   333    0     0  100   333      0  11892 --:--:-- --:--:-- --:--:-- 11482
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_total_mustgather_max{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h"} 2.4245860[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   324    0     0  100   324      0  11571 --:--:-- --:--:-- --:--:-- 11571
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_mustgather_max{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h"} 0.3613333[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   328    0     0  100   328      0  12615 --:--:-- --:--:-- --:--:-- 12615
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_mustgather_max{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h"} 2.2359193[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   329    0     0  100   329      0  12185 --:--:-- --:--:-- --:--:-- 12653
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_total_promquery_max{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h"} 1.5235553[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   323    0     0  100   323      0  11962 --:--:-- --:--:-- --:--:-- 11962
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_promquery_max{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h"} 0.3213333[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   327    0     0  100   327      0  12111 --:--:-- --:--:-- --:--:-- 12111
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_promquery_max{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h"} 1.2888887[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   328    0     0  100   328      0  12148 --:--:-- --:--:-- --:--:-- 12148
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_total_steadyworkload_max{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h"} 1.6296700[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   328    0     0  100   328      0  12148 --:--:-- --:--:-- --:--:-- 12148
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_max{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h"} 0.4894312[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   332    0     0  100   332      0  12769 --:--:-- --:--:-- --:--:-- 12769
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_max{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h"} 1.4343366[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   333    0     0  100   333      0  12807 --:--:-- --:--:-- --:--:-- 12807
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="amq-router",pod="amq-router-"} 0.0005092[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   375    0     0  100   375      0  14423 --:--:-- --:--:-- --:--:-- 14423
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="amq-router",pod="interconnect-operator-"} 0.0023102[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   386    0     0  100   386      0  14846 --:--:-- --:--:-- --:--:-- 14846
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="open-cluster-management-agent",pod="klusterlet-"} 0.0040711[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   394    0     0  100   394      0  15153 --:--:-- --:--:-- --:--:-- 15153
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", pod="klusterlet-registration-agent-",namespace="open-cluster-management-agent"} 0.0036951[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   413    0     0  100   413      0  16520 --:--:-- --:--:-- --:--:-- 16520
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="open-cluster-management-agent",pod="klusterlet-work-agent-"} 0.0063811[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   405    0     0  100   405      0  16200 --:--:-- --:--:-- --:--:-- 16200
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="open-cluster-management-agent-addon",pod="cluster-proxy-service-proxy-"} 0.0001778[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   417    0     0  100   417      0  16038 --:--:-- --:--:-- --:--:-- 16038
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="open-cluster-management-agent-addon",pod="config-policy-controller-"} 0.0012693[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:02  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   414    0     0  100   414      0  15333 --:--:-- --:--:-- --:--:-- 15923
+23:40:02  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="open-cluster-management-agent-addon",pod="governance-policy-framework-"} 0.0010865[0m
+23:40:02    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:02                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   417    0     0  100   417      0  15444 --:--:-- --:--:-- --:--:-- 15444
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="open-cluster-management-agent-addon",pod="klusterlet-addon-workmgr-"} 0.0010528[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   414    0     0  100   414      0  15923 --:--:-- --:--:-- --:--:-- 15923
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", pod="apiserver-",namespace="openshift-apiserver"} 0.0170936[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   383    0     0  100   383      0  14730 --:--:-- --:--:-- --:--:-- 14730
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-apiserver-operator",pod="openshift-apiserver-operator-"} 0.0046410[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   411    0     0  100   411      0  15222 --:--:-- --:--:-- --:--:-- 15222
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-authentication",pod="oauth-openshift-"} 0.0034770[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   394    0     0  100   394      0  15153 --:--:-- --:--:-- --:--:-- 15153
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-authentication-operator",pod="authentication-operator-"} 0.0143725[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   411    0     0  100   411      0  14678 --:--:-- --:--:-- --:--:-- 14678
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-bare-metal-events",pod="hw-event-proxy-operator-controller-manager-"} 0.0018367[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   424    0     0  100   424      0  15703 --:--:-- --:--:-- --:--:-- 15142
+100   424    0     0  100   424      0  15703 --:--:-- --:--:-- --:--:-- 15142
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-cloud-controller-manager-operator",pod="cluster-cloud-controller-manager-operator-"} 0.0006819[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   439    0     0  100   439      0  16884 --:--:-- --:--:-- --:--:-- 16884
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-cloud-credential-operator",pod="cloud-credential-operator-"} 0.0013999[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   415    0     0  100   415      0  15961 --:--:-- --:--:-- --:--:-- 15961
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-cluster-csi-drivers",pod="shared-resource-csi-driver-node-"} 0.0003530[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   415    0     0  100   415      0  15961 --:--:-- --:--:-- --:--:-- 15961
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", pod="shared-resource-csi-driver-operator-",namespace="openshift-cluster-csi-drivers"} 0.0024233[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   419    0     0  100   419      0  16115 --:--:-- --:--:-- --:--:-- 16115
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", pod="shared-resource-csi-driver-webhook-",namespace="openshift-cluster-csi-drivers"} 0.0001025[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   418    0     0  100   418      0  15481 --:--:-- --:--:-- --:--:-- 15481
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-cluster-machine-approver",pod="machine-approver-"} 0.0009461[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   405    0     0  100   405      0  15576 --:--:-- --:--:-- --:--:-- 15576
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-cluster-node-tuning-operator",pod="cluster-node-tuning-operator-"} 0.0006282[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   421    0     0  100   421      0  15592 --:--:-- --:--:-- --:--:-- 15592
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-cluster-node-tuning-operator",pod="tuned-"} 0.0008458[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   398    0     0  100   398      0  15307 --:--:-- --:--:-- --:--:-- 15307
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-cluster-samples-operator",pod="cluster-samples-operator-"} 0.0011356[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   413    0     0  100   413      0  15296 --:--:-- --:--:-- --:--:-- 15296
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-cluster-storage-operator",pod="cluster-storage-operator-"} 0.0027738[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   413    0     0  100   413      0  15884 --:--:-- --:--:-- --:--:-- 15884
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-cluster-storage-operator",pod="csi-snapshot-controller-"} 0.0001255[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   412    0     0  100   412      0  15846 --:--:-- --:--:-- --:--:-- 15846
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-cluster-storage-operator",pod="csi-snapshot-controller-operator-"} 0.0016361[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   421    0     0  100   421      0  15592 --:--:-- --:--:-- --:--:-- 15592
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-cluster-storage-operator",pod="csi-snapshot-webhook-"} 0.0001081[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   409    0     0  100   409      0  14607 --:--:-- --:--:-- --:--:-- 14607
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-cluster-version",pod="cluster-version-operator-"} 0.0083168[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   404    0     0  100   404      0  15538 --:--:-- --:--:-- --:--:-- 15538
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", pod="openshift-config-operator-",namespace="openshift-config-operator"} 0.0043093[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   405    0     0  100   405      0  15000 --:--:-- --:--:-- --:--:-- 15000
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-console-operator",pod="console-operator-"} 0.0041357[0m
+23:40:03    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:03                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:03  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   397    0     0  100   397      0  14703 --:--:-- --:--:-- --:--:-- 14703
+23:40:03  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", pod="controller-manager-",namespace="openshift-controller-manager"} 0.0033628[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   401    0     0  100   401      0  14851 --:--:-- --:--:-- --:--:-- 15423
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-controller-manager",pod="controller-manager-"} 0.0033720[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   401    0     0  100   401      0  15423 --:--:-- --:--:-- --:--:-- 15423
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-controller-manager-operator",pod="openshift-controller-manager-operator-"} 0.0043109[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   429    0     0  100   429      0  16500 --:--:-- --:--:-- --:--:-- 16500
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-dns",pod="dns-default-"} 0.0028510[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   379    0     0  100   379      0  13535 --:--:-- --:--:-- --:--:-- 13535
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-dns",pod="node-resolver-"} 0.0007857[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   381    0     0  100   381      0  14111 --:--:-- --:--:-- --:--:-- 14653
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-dns-operator",pod="dns-operator-"} 0.0006552[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   389    0     0  100   389      0  14407 --:--:-- --:--:-- --:--:-- 14407
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-etcd",pod="etcd-cnfdf35.telco5gran.eng.rdu2.redhat.com"} 0.0891085[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   411    0     0  100   411      0  15807 --:--:-- --:--:-- --:--:-- 15222
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-etcd-operator",pod="etcd-operator-"} 0.0065949[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   391    0     0  100   391      0  14481 --:--:-- --:--:-- --:--:-- 14481
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-image-registry",pod="cluster-image-registry-operator-"} 0.0016559[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   410    0     0  100   410      0  15185 --:--:-- --:--:-- --:--:-- 15769
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-image-registry",pod="node-ca-"} 0.0002557[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   386    0     0  100   386      0  14296 --:--:-- --:--:-- --:--:-- 14296
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-ingress",pod="router-default-"} 0.0009528[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   386    0     0  100   386      0  15440 --:--:-- --:--:-- --:--:-- 15440
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-ingress-canary",pod="ingress-canary-"} 0.0000818[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   393    0     0  100   393      0  14555 --:--:-- --:--:-- --:--:-- 14555
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-ingress-operator",pod="ingress-operator-"} 0.0016135[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   397    0     0  100   397      0  14703 --:--:-- --:--:-- --:--:-- 14703
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-insights",pod="insights-operator-"} 0.0008920[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   390    0     0  100   390      0  15000 --:--:-- --:--:-- --:--:-- 15000
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-kube-apiserver",pod="kube-apiserver-cnfdf35.telco5gran.eng.rdu2.redhat.com"} 0.2170075[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   431    0     0  100   431      0  15962 --:--:-- --:--:-- --:--:-- 15962
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-kube-apiserver-operator",pod="kube-apiserver-operator-"} 0.0140198[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   411    0     0  100   411      0  15222 --:--:-- --:--:-- --:--:-- 15222
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-kube-controller-manager",pod="kube-controller-manager-cnfdf35.telco5gran.eng.rdu2.redhat.com"} 0.0204688[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   449    0     0  100   449      0  17269 --:--:-- --:--:-- --:--:-- 17269
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-kube-controller-manager-operator",pod="kube-controller-manager-operator-"} 0.0078788[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   429    0     0  100   429      0  15321 --:--:-- --:--:-- --:--:-- 15321
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", pod="openshift-kube-scheduler-cnfdf35.telco5gran.eng.rdu2.redhat.com",namespace="openshift-kube-scheduler"} 0.0036147[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   441    0     0  100   441      0  16961 --:--:-- --:--:-- --:--:-- 16961
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-kube-scheduler-operator",pod="openshift-kube-scheduler-operator-"} 0.0046392[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   421    0     0  100   421      0  15035 --:--:-- --:--:-- --:--:-- 15035
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", pod="migrator-",namespace="openshift-kube-storage-version-migrator"} 0.0001432[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   402    0     0  100   402      0  14357 --:--:-- --:--:-- --:--:-- 14357
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-kube-storage-version-migrator-operator",pod="kube-storage-version-migrator-operator-"} 0.0023904[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   441    0     0  100   441      0  15750 --:--:-- --:--:-- --:--:-- 16333
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-local-storage",pod="local-storage-operator-"} 0.0003835[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   400    0     0  100   400      0  15384 --:--:-- --:--:-- --:--:-- 15384
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", pod="cluster-logging-operator-",namespace="openshift-logging"} 0.0069007[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   396    0     0  100   396      0  14666 --:--:-- --:--:-- --:--:-- 14666
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", pod="collector-",namespace="openshift-logging"} 0.0900131[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   381    0     0  100   381      0  14653 --:--:-- --:--:-- --:--:-- 14653
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-machine-api",pod="cluster-autoscaler-operator-"} 0.0007489[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   403    0     0  100   403      0  14392 --:--:-- --:--:-- --:--:-- 14392
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-machine-api",pod="cluster-baremetal-operator-"} 0.0003829[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   402    0     0  100   402      0  15461 --:--:-- --:--:-- --:--:-- 16080
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-machine-api",pod="control-plane-machine-set-operator-"} 0.0004031[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   410    0     0  100   410      0  15769 --:--:-- --:--:-- --:--:-- 15769
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-machine-api",pod="machine-api-operator-"} 0.0005539[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   396    0     0  100   396      0  14666 --:--:-- --:--:-- --:--:-- 14666
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", pod="machine-config-controller-",namespace="openshift-machine-config-operator"} 0.0018349[0m
+23:40:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   413    0     0  100   413      0  14750 --:--:-- --:--:-- --:--:-- 14750
+23:40:04  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-machine-config-operator",pod="machine-config-daemon-"} 0.0005281[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   409    0     0  100   409      0  14607 --:--:-- --:--:-- --:--:-- 15148
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-machine-config-operator",pod="machine-config-operator-"} 0.0024395[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   411    0     0  100   411      0  15222 --:--:-- --:--:-- --:--:-- 15222
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-machine-config-operator",pod="machine-config-server-"} 0.0000763[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   409    0     0  100   409      0  15730 --:--:-- --:--:-- --:--:-- 15730
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-marketplace",pod="amq-operator-"} 0.0032056[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   388    0     0  100   388      0  13857 --:--:-- --:--:-- --:--:-- 13857
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-marketplace",pod="certified-operators-custom-"} 0.0027399[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   402    0     0  100   402      0  14357 --:--:-- --:--:-- --:--:-- 14357
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-marketplace",pod="marketplace-operator-"} 0.0010337[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   396    0     0  100   396      0  14666 --:--:-- --:--:-- --:--:-- 15230
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-marketplace",pod="redhat-operators-custom-"} 0.0028971[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   399    0     0  100   399      0  14777 --:--:-- --:--:-- --:--:-- 14777
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-monitoring",pod="cluster-monitoring-operator-"} 0.0032581[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   402    0     0  100   402      0  14888 --:--:-- --:--:-- --:--:-- 14888
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-monitoring",pod="kube-state-metrics-"} 0.0017214[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   393    0     0  100   393      0  14555 --:--:-- --:--:-- --:--:-- 14555
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-monitoring",pod="node-exporter-"} 0.0039642[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   388    0     0  100   388      0  14370 --:--:-- --:--:-- --:--:-- 14370
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-monitoring",pod="openshift-state-metrics-"} 0.0005775[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   398    0     0  100   398      0  15307 --:--:-- --:--:-- --:--:-- 15307
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-monitoring",pod="prometheus-adapter-"} 0.0043599[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   393    0     0  100   393      0  15720 --:--:-- --:--:-- --:--:-- 15720
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-monitoring",pod="prometheus-adapter-"} 0.0027034[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   393    0     0  100   393      0  14555 --:--:-- --:--:-- --:--:-- 14555
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", pod="prometheus-adapter-",namespace="openshift-monitoring"} 0.0042382[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   393    0     0  100   393      0  15115 --:--:-- --:--:-- --:--:-- 15115
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-monitoring",pod="prometheus-k8s-0"} 0.0810166[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   390    0     0  100   390      0  14444 --:--:-- --:--:-- --:--:-- 14444
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-monitoring",pod="prometheus-operator-"} 0.0008890[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   394    0     0  100   394      0  14592 --:--:-- --:--:-- --:--:-- 14592
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-monitoring",pod="prometheus-operator-admission-webhook-"} 0.0016809[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   412    0     0  100   412      0  14714 --:--:-- --:--:-- --:--:-- 14714
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-monitoring",pod="thanos-querier-"} 0.0020478[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   389    0     0  100   389      0  14407 --:--:-- --:--:-- --:--:-- 14407
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-multus",pod="multus-additional-cni-plugins-"} 0.0000000[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   400    0     0  100   400      0  15384 --:--:-- --:--:-- --:--:-- 16000
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", pod="multus-admission-controller-",namespace="openshift-multus"} 0.0004470[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   398    0     0  100   398      0  14740 --:--:-- --:--:-- --:--:-- 14740
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-multus",pod="multus-"} 0.0142314[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   377    0     0  100   377      0  13962 --:--:-- --:--:-- --:--:-- 13962
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-multus",pod="network-metrics-daemon-"} 0.0006551[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:05  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   393    0     0  100   393      0  14555 --:--:-- --:--:-- --:--:-- 14555
+23:40:05  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-network-operator",pod="network-operator-"} 0.0037356[0m
+23:40:05    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:05                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   397    0     0  100   397      0  15269 --:--:-- --:--:-- --:--:-- 15269
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-oauth-apiserver",pod="apiserver-"} 0.0236982[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   389    0     0  100   389      0  14961 --:--:-- --:--:-- --:--:-- 14961
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-operator-lifecycle-manager",pod="catalog-operator-"} 0.0015789[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   407    0     0  100   407      0  15074 --:--:-- --:--:-- --:--:-- 15074
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-operator-lifecycle-manager",pod="olm-operator-"} 0.0069333[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   403    0     0  100   403      0  14925 --:--:-- --:--:-- --:--:-- 14925
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-operator-lifecycle-manager",pod="package-server-manager-"} 0.0003249[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   413    0     0  100   413      0  15884 --:--:-- --:--:-- --:--:-- 15884
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-operator-lifecycle-manager",pod="packageserver-"} 0.0018934[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   404    0     0  100   404      0  15538 --:--:-- --:--:-- --:--:-- 15538
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-ovn-kubernetes",pod="ovnkube-master-"} 0.0074654[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   393    0     0  100   393      0  15115 --:--:-- --:--:-- --:--:-- 15115
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-ovn-kubernetes",pod="ovnkube-node-"} 0.0154725[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   391    0     0  100   391      0  13964 --:--:-- --:--:-- --:--:-- 13964
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-ptp",pod="linuxptp-daemon-"} 0.0003787[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   383    0     0  100   383      0  14730 --:--:-- --:--:-- --:--:-- 14730
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-ptp",pod="ptp-operator-"} 0.0009940[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   380    0     0  100   380      0  15200 --:--:-- --:--:-- --:--:-- 15200
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-route-controller-manager",pod="route-controller-manager-"} 0.0012864[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   413    0     0  100   413      0  15296 --:--:-- --:--:-- --:--:-- 15884
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-route-controller-manager",pod="route-controller-manager-"} 0.0012316[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   413    0     0  100   413      0  16520 --:--:-- --:--:-- --:--:-- 16520
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-service-ca",pod="service-ca-"} 0.0030220[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   385    0     0  100   385      0  14807 --:--:-- --:--:-- --:--:-- 14807
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", pod="service-ca-operator-",namespace="openshift-service-ca-operator"} 0.0028150[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   403    0     0  100   403      0  14925 --:--:-- --:--:-- --:--:-- 14925
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", pod="network-resources-injector-",namespace="openshift-sriov-network-operator"} 0.0003292[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   413    0     0  100   413      0  15296 --:--:-- --:--:-- --:--:-- 15296
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-sriov-network-operator",pod="operator-webhook-"} 0.0001664[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   403    0     0  100   403      0  14925 --:--:-- --:--:-- --:--:-- 14925
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-sriov-network-operator",pod="sriov-device-plugin-"} 0.0000426[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   406    0     0  100   406      0  15037 --:--:-- --:--:-- --:--:-- 15037
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="openshift-sriov-network-operator",pod="sriov-network-config-daemon-"} 0.0093671[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   414    0     0  100   414      0  15333 --:--:-- --:--:-- --:--:-- 15333
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", pod="sriov-network-operator-",namespace="openshift-sriov-network-operator"} 0.0007933[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   409    0     0  100   409      0  15730 --:--:-- --:--:-- --:--:-- 15730
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="vran-acceleration-operators",pod="accelerator-discovery-"} 0.0000000[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   403    0     0  100   403      0  14925 --:--:-- --:--:-- --:--:-- 14925
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_infra_pods_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", namespace="vran-acceleration-operators",pod="sriov-fec-controller-manager-"} 0.0013263[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   410    0     0  100   410      0  15769 --:--:-- --:--:-- --:--:-- 15769
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="NetworkManager"} 0.0002569[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   360    0     0  100   360      0  13846 --:--:-- --:--:-- --:--:-- 13846
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="agetty"} 0.0002319[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:06  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   352    0     0  100   352      0  13538 --:--:-- --:--:-- --:--:-- 13538
+23:40:06  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="auditd"} 0.0000007[0m
+23:40:06    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:06                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:07  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   352    0     0  100   352      0  12571 --:--:-- --:--:-- --:--:-- 12137
+23:40:07  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="crio"} 0.0147500[0m
+23:40:07    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:07                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:07  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   350    0     0  100   350      0  13461 --:--:-- --:--:-- --:--:-- 13461
+23:40:07  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="dbus-daemon"} 0.0000563[0m
+23:40:07    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:07                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:07  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   357    0     0  100   357      0  13222 --:--:-- --:--:-- --:--:-- 13222
+23:40:07  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="dnsmasq"} 0.0000299[0m
+23:40:07    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:07                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:07  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   353    0     0  100   353      0  13576 --:--:-- --:--:-- --:--:-- 13576
+23:40:07  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="irqbalance"} 0.0033944[0m
+23:40:07    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:07                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:07  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   356    0     0  100   356      0  13185 --:--:-- --:--:-- --:--:-- 13185
+23:40:07  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="kubelet"} 0.1249922[0m
+23:40:07    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:07                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:07  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   353    0     0  100   353      0  13074 --:--:-- --:--:-- --:--:-- 13074
+23:40:07  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="ovs-vswitchd"} 0.0290791[0m
+23:40:07    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:07                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:07  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   358    0     0  100   358      0  12785 --:--:-- --:--:-- --:--:-- 12785
+23:40:07  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="ovsdb-server"} 0.0018618[0m
+23:40:07    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:07                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:07  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   358    0     0  100   358      0  13259 --:--:-- --:--:-- --:--:-- 13259
+23:40:07  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="polkitd"} 0.0000035[0m
+23:40:07    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:07                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:07  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   353    0     0  100   353      0  11766 --:--:-- --:--:-- --:--:-- 12172
+23:40:07  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="rdma-ndd"} 0.0000049[0m
+23:40:07    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:07                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:07  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   354    0     0  100   354      0  13111 --:--:-- --:--:-- --:--:-- 13615
+23:40:07  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="rpc.statd"} 0.0000000[0m
+23:40:07    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:07                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:07  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   355    0     0  100   355      0  13653 --:--:-- --:--:-- --:--:-- 13653
+23:40:07  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="rpcbind"} 0.0000007[0m
+23:40:07    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:07                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:07  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   353    0     0  100   353      0  13074 --:--:-- --:--:-- --:--:-- 13576
+23:40:07  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="rpm-ostree"} 0.0000000[0m
+23:40:07    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:07                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:07  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   356    0     0  100   356      0  13185 --:--:-- --:--:-- --:--:-- 13185
+23:40:07  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="sshd"} 0.0000000[0m
+23:40:07    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:07                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:07  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   350    0     0  100   350      0  12962 --:--:-- --:--:-- --:--:-- 12962
+23:40:07  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="sssd"} 0.0000250[0m
+23:40:07    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:07                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:07  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   350    0     0  100   350      0  12962 --:--:-- --:--:-- --:--:-- 12962
+23:40:07  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="stalld"} 0.0201354[0m
+23:40:07    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:07                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:07  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   352    0     0  100   352      0  13538 --:--:-- --:--:-- --:--:-- 13538
+23:40:07  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="systemd"} 0.0001771[0m
+23:40:07    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:07                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:07  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   353    0     0  100   353      0  13074 --:--:-- --:--:-- --:--:-- 13074
+23:40:07  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="systemd-journald"} 0.0001778[0m
+23:40:07    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:07                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:07  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   362    0     0  100   362      0  13923 --:--:-- --:--:-- --:--:-- 13923
+23:40:07  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="systemd-logind"} 0.0000083[0m
+23:40:07    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:07                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:08  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   360    0     0  100   360      0  13333 --:--:-- --:--:-- --:--:-- 13333
+23:40:08  [0;34m[INFO] Pushing ranmetrics_cpu_os_daemon_steadyworkload_avg{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", duration="8h", groupname="systemd-udevd"} 0.0002076[0m
+23:40:08    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:08                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:08  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   359    0     0  100   359      0  13296 --:--:-- --:--:-- --:--:-- 13296
+23:40:08  [0;36mScript took 32388 seconds[0m
+23:40:08  export RAN_METRICS_CLUSTER="cnfdf35"
+23:40:08  export RAN_METRICS_SW_VERSION="4.13.0-0.nightly-2023-02-16-120330"
+23:40:08  export RAN_METRICS_CPU_TYPE="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz"
+23:40:08  export RAN_METRICS_HYPERTHREAD="2"
+23:40:08  export RAN_METRICS_KERNEL_VERSION="4.18.0-372.41.1.rt7.198.el8_6.x86_64"
+23:40:08  export RAN_METRICS_KERNEL_REALTIME="true"
+23:40:08  Posting time: 32388, tags pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", pipeline_stage="test_cpu_util"
+23:40:08    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:08                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:08  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   335    0     0  100   335      0  12884 --:--:-- --:--:-- --:--:-- 13400
+23:40:08    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:40:08                                   Dload  Upload   Total   Spent    Left  Speed
+23:40:08  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   349    0     0  100   349      0  13960 --:--:-- --:--:-- --:--:-- 13960
+23:40:31  removed '/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/ran-extra-vars_cnfdf35'
