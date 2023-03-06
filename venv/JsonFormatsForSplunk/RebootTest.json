@@ -1,0 +1,32 @@
+{
+    "ocp_version":"String",
+    "ocp_build":"String",
+    "test_type":"reboot",
+    "os_architecture":"String",
+    "os_family":"String",
+    "os_distro_major_version":"String",
+    "os_distro_version":"String",
+    "os_distro_release":"String",
+    "python_version":"String",
+    "selinux_status":"String",
+    "cpu":"String",
+    "node_name":"String",
+    "reboot_type":"String",
+    "kernel":"String",
+    "sideloaded":"boolean",
+    "operator_version":"number",
+    "iterations":
+   [
+    {
+        "iteration":"number",
+        "stages":
+        {
+            "node_pingable":"number", 
+            "oc_reachable":"number", 
+            "workload_recovery":"number", 
+            "cluster_recovery":"number"
+        },
+        "total_minutes":"number"
+    }
+   ]
+}

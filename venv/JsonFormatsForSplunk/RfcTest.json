@@ -1,0 +1,23 @@
+{
+    "ocp_version":"String",
+    "ocp_build":"String",
+    "test_type":"rfc2544",
+    "os_architecture":"String",
+    "os_family":"String",
+    "os_distro_major_version":"String",
+    "os_distro_version":"String",
+    "os_distro_release":"String",
+    "python_version":"String",
+    "selinux_status":"String",
+    "cpu":"String",
+    "node_name":"String",
+    "histogram":"String",
+    "kernel":"String",
+    "duration":"String",
+    "nic":"String",
+    "frame_size":"number",
+    "throughput":"number",
+    "min_delay":"number",
+    "max_delay":"number",
+    "avg_delay":"number"
+}

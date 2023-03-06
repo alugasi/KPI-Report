@@ -1,5 +1,7 @@
 #!/usr/bin/env python
-# -j ExtractTestsResults/cyclicts/cyclict-16768892981189055.json -i ecosystem-qe-dev -t 94eeb2f9-8e5f-4c86-adec-336b3368c74e
+
+### Parameters:
+# python3 splunkHecPush.py -j ExtractTestsResults/cpuUtil/cpu_util-16771728269714382.json -i ecosystem-qe-dev -t 94eeb2f9-8e5f-4c86-adec-336b3368c74e
 
 
 import json
@@ -56,11 +58,6 @@ def main():
                         default=None,
                         help='splunk HEC token')
     args = parser.parse_args()
-
-    # titan58Splunk = SplunkHEC(
-    #     'f6d98cda-b6c1-4e8b-b46a-93e421efe051',
-    #     'https://titan58.lab.eng.tlv2.redhat.com',
-    #     '8088')
 
     splunk = SplunkHEC(args.token, SPLUNK_URL, HEC_PORT)
     print(splunk.send(args.index, args.json_path))

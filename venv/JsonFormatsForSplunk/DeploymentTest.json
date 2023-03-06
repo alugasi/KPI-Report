@@ -1,0 +1,24 @@
+{
+    "ocp_version":"String",
+    "ocp_build":"String",
+    "test_type":"deployment",
+    "os_architecture":"String",
+    "os_family":"String",
+    "os_distro_major_version":"String",
+    "os_distro_version":"String",
+    "os_distro_release":"String",
+    "python_version":"String",
+    "selinux_status":"String",
+    "cpu":"String",
+    "node_name":"String",
+    "operator_source":"String",
+    "stages":
+    [
+        {
+            "stage_name":"string", 
+            "time":"number"
+        }
+    ],
+    "total_minutes":"number",
+    "reboot_count":"number"
+}

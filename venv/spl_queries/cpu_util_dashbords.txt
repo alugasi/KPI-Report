@@ -1,0 +1,28 @@
+
+#### general metrics ####
+
+info:get max cpu for idle for specific ocp version
+query:index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"  | spath path=scenarios{0}.types{}{}.max_cpu output=max_cpu_max_idle | search max_cpu_max_idle="*"| top limit=1 max_cpu_max_idle
+
+info:get max cpu for workloadlaunch for specific ocp version
+query:index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"  | spath path=scenarios{4}.types{}{}.max_cpu output=max_cpu_max_workloadlaunch | search max_cpu_max_workloadlaunch="*"| top limit=1 max_cpu_max_workloadlaunch
+
+info:get max cpu for mustgather for specific ocp version
+query:index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"  | spath path=scenarios{1}.types{}{}.max_cpu output=max_cpu_max_mustgather | search max_cpu_max_mustgather="*"| top limit=1 max_cpu_max_mustgather
+
+info:get max cpu for promquery for specific ocp version
+query:index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"  | spath path=scenarios{2}.types{}{}.max_cpu output=max_cpu_max_promquery | search max_cpu_max_promquery="*" | top limit=1 max_cpu_max_promquery
+
+info:get max cpu for steadyworkload for specific ocp ocp_version
+query:index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"  | spath path=scenarios{3}.types{}{}.max_cpu output=max_cpu_max_steadyworkload | search max_cpu_max_steadyworkload="*" | top limit=1 max_cpu_max_steadyworkload
+
+info:get max avg cpu total for steadyworkload for specific ocp ocp_version
+query:index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"  | spath path=scenarios{3}.avg_cpu_total output=max_avg_cpu_total | search max_avg_cpu_total="*"| top limit=1 max_avg_cpu_total
+
+#### Max overall platform CPU usage - release over release ####
+
+
+
+### helpers
+info: get specific scenario details
+index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"  | spath path=scenarios{?} output=scenarios_seperated | search scenarios_seperated="*"
