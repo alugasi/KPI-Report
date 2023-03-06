@@ -3,6 +3,7 @@ import json
 import os
 import sys
 import time
+from Utils import *
 
 
 ############################################################################
@@ -20,49 +21,65 @@ else:
     is_ptp = False
 
 if not is_ptp:
-    #json object
-    json_object =\
-    {
-        "OCP_Main_Version":float(os.environ["main_version_RFC"]),\
-        "OCP_Minor_Version":os.environ["minor_version_RFC"],\
-        "TYPE":"RFC2544",\
-        "Node_Name":os.environ["cluster_RFC"],\
-        "Histogram":os.environ["hist_RFC"],\
-        "Kernel":os.environ["kernel_RFC"],\
-        "Duration":float(os.environ["duration_RFC"]),\
-        "Nic":os.environ["nic_RFC"],\
-        "Frame_Size":int(float(os.environ["framesize_RFC"])),\
-        "Throughput":float(os.environ["throuput_RFC"]),\
-        "Min_Delay":float(os.environ["min_RFC"]),\
-        "Max_Delay":float(os.environ["max_RFC"]),\
-        "Avg_Delay":float(os.environ["avg_RFC"])
-    }
-    json_file_path = "RFC2544/RFC2544-"
-else :
-    #json object
-    json_object =\
-    {
-        "OCP_Main_Version":float(os.environ["main_version_PTP"]),\
-        "OCP_Minor_Version":os.environ["minor_version_PTP"],\
-        "TYPE":"PTP",\
-        "Node_Name":os.environ["cluster_PTP"],\
-        "Config":os.environ["config_PTP"],\
-        "Kernel":os.environ["kernel_PTP"],\
-        "Duration":float(os.environ["duration_PTP"]),\
-        "Nic":os.environ["nic_PTP"],\
-        "Ptp4l_Avg_Offset":float(os.environ["ptp4l_avg_offset_PTP"]),\
-        "Ptp4l_Max_Offset":int(os.environ["ptp4l_max_offset_PTP"]),\
-        "Ptp4l_Min_Offset":int(os.environ["ptp4l_min_offset_PTP"]),\
-        "Phc2sys_Avg_Offset":float(os.environ["phc2sys_avg_offset_PTP"]),\
-        "Phc2sys_Max_Offset":int(os.environ["phc2sys_max_offset_PTP"]),\
-        "Phc2sys_Min_Offset":int(os.environ["phc2sys_min_offset_PTP"])
-    }
-    json_file_path = "PTP/PTP-"
 
+    frame_size = int(float(os.environ.get("framesize_RFC"))) if os.environ.get("framesize_RFC") else None
+    throughput = float(os.environ.get("throuput_RFC")) if os.environ.get("throuput_RFC") else None
+    min_delay = float(os.environ.get("min_RFC") ) if os.environ.get("min_RFC") else None
+    max_delay = float(os.environ.get("max_RFC")) if os.environ.get("max_RFC") else None
+    avg_delay = float(os.environ.get("avg_RFC")) if os.environ.get("avg_RFC") else None
+    #json object
+    results_dict =\
+    {
+        "ocp_version":os.environ.get("ocp_version_RFC"),\
+        "ocp_build":os.environ.get("ocp_build_RFC"),\
+        "cpu":os.environ.get("cpu_PTP"),\
+        "test_type":"rfc2544",\
+        "node_name":os.environ.get("cluster_RFC"),\
+        "histogram":os.environ.get("hist_RFC"),\
+        "kernel":os.environ.get("kernel_RFC"),\
+        "duration":os.environ.get("duration_RFC"),\
+        "nic":os.environ.get("nic_RFC"),\
+        "frame_size":frame_size,\
+        "throughput":throughput,\
+        "min_delay":min_delay,\
+        "max_delay":max_delay,\
+        "avg_delay":avg_delay
+    }
+    json_file_path = "RFC2544/rfc2544-"
+else :
+    ptp4l_avg_offset = float(os.environ.get("ptp4l_avg_offset_PTP")) if os.environ.get("ptp4l_avg_offset_PTP") else None
+    ptp4l_max_offset = float(os.environ.get("ptp4l_max_offset_PTP")) if os.environ.get("ptp4l_max_offset_PTP") else None
+    ptp4l_min_offset = float(os.environ.get("ptp4l_min_offset_PTP")) if os.environ.get("ptp4l_min_offset_PTP") else None
+    phc2sys_avg_offset = float(os.environ.get("phc2sys_avg_offset_PTP")) if os.environ.get("phc2sys_avg_offset_PTP") else None
+    phc2sys_max_offset = float(os.environ.get("phc2sys_max_offset_PTP")) if os.environ.get("phc2sys_max_offset_PTP") else None
+    phc2sys_min_offset = float(os.environ.get("phc2sys_min_offset_PTP")) if os.environ.get("phc2sys_min_offset_PTP") else None
+    #json object
+    results_dict =\
+    {
+        "ocp_version":os.environ.get("ocp_version_PTP"),\
+        "ocp_build":os.environ.get("ocp_build_PTP"),\
+        "cpu":os.environ.get("cpu_PTP"),\
+        "test_type":"ptp",\
+        "node_name":os.environ.get("cluster_PTP"),\
+        "config":os.environ.get("config_PTP"),\
+        "kernel":os.environ.get("kernel_PTP"),\
+        "duration":os.environ.get("duration_PTP"),\
+        "nic":os.environ.get("nic_PTP"),\
+        "ptp4l_avg_offset":ptp4l_avg_offset,\
+        "ptp4l_max_offset":ptp4l_max_offset,\
+        "ptp4l_min_offset":ptp4l_min_offset,\
+        "phc2sys_avg_offset":phc2sys_avg_offset,\
+        "phc2sys_max_offset":phc2sys_max_offset,\
+        "phc2sys_min_offset":phc2sys_min_offset
+    }
+    json_file_path = "PTP/ptp-"
+
+#extract ansible fields values
+results_dict = assign_anisble_fields(results_dict=results_dict)
 
 # open a file and write the JSON data to it
 #add uniuqe id to file name (using unix time)
 timestamp = str(time.time()).replace('.', '')
 
 with open(json_file_path+timestamp+".json", "w") as json_file:
-    json.dump(json_object, json_file)
+    json.dump(results_dict, json_file)

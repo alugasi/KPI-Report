@@ -12,6 +12,8 @@
 #
 ############################################################################
 
+# load function to export ansible extracted fields
+source ExportAnsibleVars.sh
 
 #Global params
 IS_CYCLICT=$1
@@ -35,13 +37,14 @@ function extract_metrics() {
 
     #extract global params:
     kernel=$(echo ${min_list[0]} | grep -o 'kernel_version="[^"]*"' | cut -d'"' -f2)
-    duration=$(echo ${min_list[0]} | grep -o 'duration="[^"]*"'| grep -o '[0-9]*')
+    duration=$(echo ${min_list[0]} | grep -o 'duration="[^"]*"'| cut -d'=' -f2)
     cluster=$(echo ${min_list[0]} | grep -o 'cluster="[^"]*"' | cut -d'"' -f2)
     sideloaded=$(echo ${min_list[0]} | grep -o 'kernel_realtime="[^"]*"' | cut -d'"' -f2)
-    oc_minor_version=$(echo ${min_list[0]} | grep -o 'sw_version="[^"]*"' | cut -d'"' -f2)
-    
+    ocp_build=$(echo ${min_list[0]} | grep -o 'sw_version="[^"]*"' | cut -d'"' -f2)
+    cpu=$(echo ${min_list[0]} | grep -o 'cpu_type="[^"]*"' | cut -d'"' -f2)
+
     #extract oc main version
-    oc_main_version=$(echo $oc_minor_version | cut -d"." -f1-2)
+    ocp_version=$(echo $ocp_build | cut -d"." -f1-2)
 
     #extract cores/threads values lists from metrics lines arrays
     min_str=""
@@ -67,14 +70,18 @@ function export_metrics() {
     export kernel
     export cluster
     export sideloaded
-    export oc_minor_version
-    export oc_main_version
+    export ocp_build
+    export ocp_version
+    export cpu
 
     #export metrics:
     export min_str
     export max_str
     export avg_str
     export avail_str
+
+    #export ansible fields:
+    export_ansible_vars
 }
 
 function handle_availability() {

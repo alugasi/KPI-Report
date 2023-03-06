@@ -8,17 +8,21 @@
 # Global Params:
 #   $1= rfc/ptp indicator
 #   $2= test results path
-#   $3= kernel version
-#   $4= nic for rfc or config for ptp
+#   $3= nic for rfc or config for ptp
 #
 ############################################################################
 
 
+# load function to export ansible extracted fields
+source ExportAnsibleVars.sh
+
+#export ansible fields
+export_ansible_vars
+
 #Global params
-CONVERT_TO_HOURS=3600
 IS_RFC=$1
 TEST_RESULTS_PATH=$2
-KERNEL=$3
+KERNEL=$OS_KERNEL_VERSION
 
 function extract_RFC() {
     #function input
@@ -34,14 +38,13 @@ function extract_RFC() {
 
     #extract global params:
     cluster_RFC=$(echo $throuput_line | grep -o 'cluster="[^"]*"' | cut -d'"' -f2)
-    minor_version_RFC=$(echo $throuput_line | grep -o 'sw_version="[^"]*"' | cut -d'"' -f2)
+    ocp_build_RFC=$(echo $throuput_line | grep -o 'sw_version="[^"]*"' | cut -d'"' -f2)
     duration_RFC=$(echo $throuput_line | grep -o 'duration="[^"]*"' | cut -d'"' -f2)
     framesize_RFC=$(echo $throuput_line | grep -o 'framesize="[^"]*"' | cut -d'"' -f2)
+    cpu_RFC=$(echo $throuput_line | grep -o 'cpu_type="[^"]*"' | cut -d'"' -f2)
     
-    #extract hours from duration
-    duration_RFC=$(( duration_RFC / CONVERT_TO_HOURS))
     #extract main version from full version
-    main_version_RFC=$(echo $minor_version_RFC | cut -d"." -f1-2)
+    ocp_version_RFC=$(echo $ocp_build_RFC | cut -d"." -f1-2)
 
     #extract RFC2544 metrics from RFC2455 metrics lines
     throuput_RFC=$(echo $throuput_line | grep -o '} [0-9]*\.[0-9]* to url ' | cut -d' ' -f2)
@@ -60,12 +63,13 @@ function export_RFC() {
     ######export variables######
     #export globals
     export cluster_RFC
-    export minor_version_RFC
+    export ocp_build_RFC
     export duration_RFC
-    export main_version_RFC
+    export ocp_version_RFC
     export nic_RFC
     export kernel_RFC
     export framesize_RFC
+    export cpu_RFC
 
     #export RFC2544 metrics
     export throuput_RFC
@@ -73,6 +77,7 @@ function export_RFC() {
     export max_RFC
     export avg_RFC
     export hist_RFC
+
 }
 
 function handle_RFC() {
@@ -105,21 +110,20 @@ function extract_PTP() {
 
     #extract global params:
     cluster_PTP=$(echo $ptp4l_avg_offset_line | grep -o 'cluster="[^"]*"' | cut -d'"' -f2)
-    minor_version_PTP=$(echo $ptp4l_avg_offset_line | grep -o 'sw_version="[^"]*"' | cut -d'"' -f2)
+    ocp_build_PTP=$(echo $ptp4l_avg_offset_line | grep -o 'sw_version="[^"]*"' | cut -d'"' -f2)
     duration_PTP=$(echo $ptp4l_avg_offset_line | grep -o 'duration="[^"]*"' | cut -d'"' -f2)
     nic_PTP=$(echo $ptp4l_avg_offset_line | grep -o 'nic1="[^"]*"' | cut -d'"' -f2)
+    cpu_PTP=$(echo $ptp4l_avg_offset_line | grep -o 'cpu_type="[^"]*"' | cut -d'"' -f2)
 
-    #extract hours from duration
-    duration_PTP=$(echo $duration_PTP | grep -o '[^A-Z,^a-z]*')
     #extract main version from full version
-    main_version_PTP=$(echo $minor_version_PTP | cut -d"." -f1-2)
+    ocp_version_PTP=$(echo $ocp_build_PTP | cut -d"." -f1-2)
     #extract PTP metrics from PTP metrics lines
-    ptp4l_avg_offset_PTP=$(echo $ptp4l_avg_offset_line | grep -o '} [0-9]*\.[0-9]* to url ' | cut -d' ' -f2)
-    ptp4l_max_offset_PTP=$(echo $ptp4l_max_offset_line | grep -o '} [0-9]*\ to url ' | cut -d' ' -f2)
-    ptp4l_min_offset_PTP=$(echo $ptp4l_min_offset_line | grep -o '} [0-9]*\ to url ' | cut -d' ' -f2)
-    phc2sys_avg_offset_PTP=$(echo $phc2sys_avg_offset_line | grep -o '} [0-9]*\.[0-9]* to url ' | cut -d' ' -f2)
-    phc2sys_max_offset_PTP=$(echo $phc2sys_max_offset_line | grep -o '} [0-9]*\ to url ' | cut -d' ' -f2)
-    phc2sys_min_offset_PTP=$(echo $phc2sys_min_offset_line | grep -o '} [0-9]*\ to url ' | cut -d' ' -f2)
+    ptp4l_avg_offset_PTP=$(echo $ptp4l_avg_offset_line | grep -o '} [0-9]*\.*[0-9]* to url ' | cut -d' ' -f2)
+    ptp4l_max_offset_PTP=$(echo $ptp4l_max_offset_line | grep -o '} [0-9]*\.*[0-9]* to url ' | cut -d' ' -f2)
+    ptp4l_min_offset_PTP=$(echo $ptp4l_min_offset_line | grep -o '} [0-9]*\.*[0-9]* to url ' | cut -d' ' -f2)
+    phc2sys_avg_offset_PTP=$(echo $phc2sys_avg_offset_line | grep -o '} [0-9]*\.*[0-9]* to url ' | cut -d' ' -f2)
+    phc2sys_max_offset_PTP=$(echo $phc2sys_max_offset_line | grep -o '} [0-9]*\.*[0-9]* to url ' | cut -d' ' -f2)
+    phc2sys_min_offset_PTP=$(echo $phc2sys_min_offset_line | grep -o '} [0-9]*\.*[0-9]* to url ' | cut -d' ' -f2)
 }
 
 function export_PTP() {
@@ -127,11 +131,12 @@ function export_PTP() {
     #export globals
     export config_PTP
     export cluster_PTP
-    export minor_version_PTP
+    export ocp_build_PTP
     export duration_PTP
-    export main_version_PTP
+    export ocp_version_PTP
     export nic_PTP
     export kernel_PTP
+    export cpu_PTP
 
     #export PTP metrics
     export ptp4l_avg_offset_PTP
@@ -158,7 +163,7 @@ function handle_PTP() {
 
 if [ $IS_RFC -eq 1 ]; 
 then
-    handle_RFC $4
+    handle_RFC $3
 else
-    handle_PTP "$4"
+    handle_PTP "$3"
 fi

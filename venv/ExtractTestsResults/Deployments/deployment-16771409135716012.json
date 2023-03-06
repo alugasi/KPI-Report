@@ -1,0 +1,1 @@
+{"ocp_version": "4.10", "ocp_build": "4.10.52", "type": "deployment", "node_name": "cnfdf34", "operator_source": "stage", "stages": [{"stage_name": "deploy_sno_du_node", "time": 2905}, {"stage_name": "wait_for_du_profile", "time": 3166}], "total_minutes": 101.18333333333334, "reboot_count": 4}

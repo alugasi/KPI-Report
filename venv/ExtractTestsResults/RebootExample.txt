@@ -1,0 +1,947 @@
+08:30:41  + rm -fr cnf-gotests
+08:30:41  + git clone https://gitlab.cee.redhat.com/cnf/cnf-gotests.git
+08:30:41  Cloning into 'cnf-gotests'...
+08:30:44  + export KUBECONFIG=/home/kni/clusterconfigs/cnfdf35/auth/kubeconfig
+08:30:44  + KUBECONFIG=/home/kni/clusterconfigs/cnfdf35/auth/kubeconfig
+08:30:44  + SCRIPTS_DIR=/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/scripts
+08:30:44  + ./scripts/test_reboot.sh reboot=6
+08:30:44  /usr/local/bin/go
+08:30:45  {
+08:30:45      "Name": "registry.kni-qe-40.ptp.lab.eng.bos.redhat.com:5000/ran-test/oslat",
+08:30:45      "Digest": "sha256:c0838ad6fd5eb0dba4e2cf4550c41dfd3510732501c98363cef47b45955b84f0",
+08:30:45      "RepoTags": [
+08:30:45          "latest"
+08:30:45      ],
+08:30:45      "Created": "2021-11-25T14:09:29.3425584Z",
+08:30:45      "DockerVersion": "",
+08:30:45      "Labels": {
+08:30:45          "io.buildah.version": "1.23.1",
+08:30:45          "org.label-schema.build-date": "20210915",
+08:30:45          "org.label-schema.license": "GPLv2",
+08:30:45          "org.label-schema.name": "CentOS Base Image",
+08:30:45          "org.label-schema.schema-version": "1.0",
+08:30:45          "org.label-schema.vendor": "CentOS"
+08:30:45      },
+08:30:45      "Architecture": "amd64",
+08:30:45      "Os": "linux",
+08:30:45      "Layers": [
+08:30:45          "sha256:a1d0c75327776413fa0db9ed3adcdbadedc95a662eb1d360dad82bb913f8a1d1",
+08:30:45          "sha256:89f50ab4627d816c8b22287139ebe407b86a99e90f6a808da2069268bc2ac3e8",
+08:30:45          "sha256:64ba37e0dc4e5ba90d97d63c24f8b4d5864491fc5414e28384f014c880de1818",
+08:30:45          "sha256:7167432fe13b17e6565ec0a4baa64ea4f89d17051a9df2420767409709c25f8f",
+08:30:45          "sha256:da2b07d88fc0746f7110fb2dbf97893a5aa5facf8a52d1bef7d79e697cecd484"
+08:30:45      ],
+08:30:45      "Env": [
+08:30:45          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+08:30:45      ]
+08:30:45  }
+08:30:45  {
+08:30:45      "Name": "registry.kni-qe-40.ptp.lab.eng.bos.redhat.com:5000/ran-test/stress-ng",
+08:30:45      "Digest": "sha256:c80909489339054f9b6d6144538acc803a5d06736243fcbe6f4e6c5639a35f6c",
+08:30:45      "RepoTags": [
+08:30:45          "2.0"
+08:30:45      ],
+08:30:45      "Created": "2021-06-01T19:44:18.957464457Z",
+08:30:45      "DockerVersion": "",
+08:30:45      "Labels": {
+08:30:45          "io.buildah.version": "1.20.1",
+08:30:45          "org.label-schema.build-date": "20201204",
+08:30:45          "org.label-schema.license": "GPLv2",
+08:30:45          "org.label-schema.name": "CentOS Base Image",
+08:30:45          "org.label-schema.schema-version": "1.0",
+08:30:45          "org.label-schema.vendor": "CentOS"
+08:30:45      },
+08:30:45      "Architecture": "amd64",
+08:30:45      "Os": "linux",
+08:30:45      "Layers": [
+08:30:45          "sha256:7a0437f04f83f084b7ed68ad9c4a4947e12fc4e1b006b38129bac89114ec3621",
+08:30:45          "sha256:2cbd6ce7c90c9bb75546b8518c33fb1291e89eef35c1172ddbf6035841b51245",
+08:30:45          "sha256:af419e957c8037bbc200ad165f1393effc8bc19b826785ca2c256d52f7ac5c32",
+08:30:45          "sha256:29ff22612958b925e75d7284c954082bb3d6d2753dbe53075ad2e3ab6d97ca32",
+08:30:45          "sha256:4983e42de9350d95bd65087bfe178753a43d9395374fe422381223e9a6faf581"
+08:30:45      ],
+08:30:45      "Env": [
+08:30:45          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+08:30:45      ]
+08:30:45  }
+08:30:46  {
+08:30:46      "Name": "registry.kni-qe-40.ptp.lab.eng.bos.redhat.com:5000/ran-test/cnf-tests",
+08:30:46      "Digest": "sha256:a85a76fa1430aecef14f19c3293c92860aca5427d7fff093257b013103614277",
+08:30:46      "RepoTags": [
+08:30:46          "4.8"
+08:30:46      ],
+08:30:46      "Created": "2022-09-07T15:56:59.83874783Z",
+08:30:46      "DockerVersion": "",
+08:30:46      "Labels": {
+08:30:46          "License": "GPLv2+",
+08:30:46          "architecture": "x86_64",
+08:30:46          "build-date": "2022-08-25T03:40:16.181535",
+08:30:46          "com.redhat.build-host": "cpt-1001.osbs.prod.upshift.rdu2.redhat.com",
+08:30:46          "com.redhat.component": "openshift-enterprise-base-container",
+08:30:46          "com.redhat.license_terms": "https://www.redhat.com/agreements",
+08:30:46          "description": "This is the base image from which all OpenShift Container Platform images inherit.",
+08:30:46          "distribution-scope": "public",
+08:30:46          "io.buildah.version": "1.24.2",
+08:30:46          "io.k8s.description": "ART equivalent image openshift-4.8-openshift-enterprise-base - rhel-8/base-repos",
+08:30:46          "io.k8s.display-name": "4.8-base",
+08:30:46          "io.openshift.build.commit.author": "",
+08:30:46          "io.openshift.build.commit.date": "",
+08:30:46          "io.openshift.build.commit.id": "ab604657b15b2a795416035a9213563b79e4aabb",
+08:30:46          "io.openshift.build.commit.message": "",
+08:30:46          "io.openshift.build.commit.ref": "release-4.8",
+08:30:46          "io.openshift.build.commit.url": "https://github.com/openshift/images/commit/ad38e116f3533e0e78621a2887d8b70cde7cba31",
+08:30:46          "io.openshift.build.name": "",
+08:30:46          "io.openshift.build.namespace": "",
+08:30:46          "io.openshift.build.source-context-dir": "",
+08:30:46          "io.openshift.build.source-location": "https://github.com/openshift-kni/cnf-features-deploy",
+08:30:46          "io.openshift.ci.from.base": "sha256:8cd238c846bf6d75334cd71cfce77cef32676f8c59c0e861e3e4f8ead81d5b2d",
+08:30:46          "io.openshift.expose-services": "",
+08:30:46          "io.openshift.maintainer.component": "Release",
+08:30:46          "io.openshift.maintainer.product": "OpenShift Container Platform",
+08:30:46          "io.openshift.tags": "openshift",
+08:30:46          "maintainer": "Federico Paolinelli \u003cfpaoline@redhat.com\u003e",
+08:30:46          "name": "openshift/ose-base",
+08:30:46          "release": "202208241844.p0.gad38e11.assembly.stream",
+08:30:46          "summary": "Provides the latest release of the Red Hat Extended Life Base Image.",
+08:30:46          "url": "https://access.redhat.com/containers/#/registry.access.redhat.com/openshift/ose-base/images/v4.8.0-202208241844.p0.gad38e11.assembly.stream",
+08:30:46          "vcs-ref": "ab604657b15b2a795416035a9213563b79e4aabb",
+08:30:46          "vcs-type": "git",
+08:30:46          "vcs-url": "https://github.com/openshift-kni/cnf-features-deploy",
+08:30:46          "vendor": "Red Hat, Inc.",
+08:30:46          "version": "v4.8.0"
+08:30:46      },
+08:30:46      "Architecture": "amd64",
+08:30:46      "Os": "linux",
+08:30:46      "Layers": [
+08:30:46          "sha256:cadc283046514317dd4ecd1438530437d99cc92bf73080fb9e12e76751108de0",
+08:30:46          "sha256:fd464176d200a96c67f45dd10129481cbb797d604395b3240f80fcef996f5f4c",
+08:30:46          "sha256:b988c8c7898a0efb6582c467c495fa2fcaa724f579f260307433effd55074aba",
+08:30:46          "sha256:a967c739d6f4b2cda9d3d85bbb13c06d5762b28ae6b16842092ba9e4ce984a2d",
+08:30:46          "sha256:39644210bcd714b9b5a0f0d698034e8028b4bccf490db1bf39346882abfd26f9",
+08:30:46          "sha256:56b2d846ec2d0c5149d7c5968427408bd6d7c1648ab1d012c78bc888626d1867"
+08:30:46      ],
+08:30:46      "Env": [
+08:30:46          "__doozer=merge",
+08:30:46          "BUILD_RELEASE=202208241844.p0.gad38e11.assembly.stream",
+08:30:46          "BUILD_VERSION=v4.8.0",
+08:30:46          "OS_GIT_MAJOR=4",
+08:30:46          "OS_GIT_MINOR=8",
+08:30:46          "OS_GIT_PATCH=0",
+08:30:46          "OS_GIT_TREE_STATE=clean",
+08:30:46          "OS_GIT_VERSION=4.8.0-202208241844.p0.gad38e11.assembly.stream-ad38e11",
+08:30:46          "SOURCE_GIT_TREE_STATE=clean",
+08:30:46          "OS_GIT_COMMIT=ad38e11",
+08:30:46          "SOURCE_DATE_EPOCH=1622627932",
+08:30:46          "SOURCE_GIT_COMMIT=ad38e116f3533e0e78621a2887d8b70cde7cba31",
+08:30:46          "SOURCE_GIT_TAG=ad38e11",
+08:30:46          "SOURCE_GIT_URL=https://github.com/openshift/images",
+08:30:46          "GODEBUG=x509ignoreCN=0,madvdontneed=1",
+08:30:46          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+08:30:46          "container=oci",
+08:30:46          "OPENSHIFT_CI=true",
+08:30:46          "BUILD_LOGLEVEL=0",
+08:30:46          "SUITES_PATH=/usr/bin/",
+08:30:46          "OPENSHIFT_BUILD_NAME=cnf-tests",
+08:30:46          "OPENSHIFT_BUILD_NAMESPACE=ci-op-tjh8lmv3"
+08:30:46      ]
+08:30:46  }
+08:30:46  + [[ ! -f /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/ran-extra-vars_cnfdf35 ]]
+08:30:46  + touch /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/ran-extra-vars_cnfdf35
+08:30:46  + source /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/ran-extra-vars_cnfdf35
+08:30:46  + '[' -z /home/kni/clusterconfigs/cnfdf35/auth/kubeconfig ']'
+08:30:46  + '[' -z '' ']'
+08:30:46  + export OC_EXE=oc
+08:30:46  + OC_EXE=oc
+08:30:46  + '[' -z ']'
+08:30:46  ++ oc config view -o 'jsonpath={.clusters[].cluster.server}{"\n"}'
+08:30:46  + cluster=https://api.cnfdf35.sno.telco5gran.eng.rdu2.redhat.com:6443
+08:30:46  + cluster=cnfdf35.sno.telco5gran.eng.rdu2.redhat.com:6443
+08:30:46  + cluster=cnfdf35
+08:30:46  + echo 'export RAN_METRICS_CLUSTER="cnfdf35"'
+08:30:46  ++ oc version
+08:30:46  ++ grep Server
+08:30:46  ++ awk '{print $3}'
+08:30:46  + export_version='export RAN_METRICS_SW_VERSION="4.13.0-0.nightly-2023-02-16-120330"'
+08:30:46  ++ strings /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/ran-extra-vars_cnfdf35
+08:30:46  ++ grep RAN_METRICS_SW_VERSION
+08:30:46  + [[ -z '' ]]
+08:30:46  + echo 'export RAN_METRICS_SW_VERSION="4.13.0-0.nightly-2023-02-16-120330"'
+08:30:46  + MC_NS=openshift-machine-config-operator
+08:30:46  + '[' -z ']'
+08:30:46  ++ oc get node -l kubernetes.io/hostname -o name
+08:30:46  ++ awk -F / '{print $2}'
+08:30:46  + NODE=cnfdf35.telco5gran.eng.rdu2.redhat.com
+08:30:46  ++ oc get pods -n openshift-machine-config-operator -o wide
+08:30:46  ++ grep -E 'machine-config-daemon.*cnfdf35.telco5gran.eng.rdu2.redhat.com'
+08:30:46  ++ awk '{print $1}'
+08:30:46  + MACHINE_CONFIG_DAEMON=machine-config-daemon-jsm58
+08:30:46  ++ oc exec -n openshift-machine-config-operator machine-config-daemon-jsm58 -c machine-config-daemon -- chroot /rootfs lscpu
+08:30:47  + LSCPU='Architecture:        x86_64
+08:30:47  CPU op-mode(s):      32-bit, 64-bit
+08:30:47  Byte Order:          Little Endian
+08:30:47  CPU(s):              112
+08:30:47  On-line CPU(s) list: 0-111
+08:30:47  Thread(s) per core:  2
+08:30:47  Core(s) per socket:  28
+08:30:47  Socket(s):           2
+08:30:47  NUMA node(s):        2
+08:30:47  Vendor ID:           GenuineIntel
+08:30:47  BIOS Vendor ID:      Intel
+08:30:47  CPU family:          6
+08:30:47  Model:               106
+08:30:47  Model name:          Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz
+08:30:47  BIOS Model name:     Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz
+08:30:47  Stepping:            6
+08:30:47  CPU MHz:             2600.003
+08:30:47  BogoMIPS:            4400.00
+08:30:47  Virtualization:      VT-x
+08:30:47  L1d cache:           48K
+08:30:47  L1i cache:           32K
+08:30:47  L2 cache:            1280K
+08:30:47  L3 cache:            43008K
+08:30:47  NUMA node0 CPU(s):   0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102,104,106,108,110
+08:30:47  NUMA node1 CPU(s):   1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99,101,103,105,107,109,111
+08:30:47  Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 invpcid_single ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect wbnoinvd dtherm ida arat pln pts avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg tme avx512_vpopcntdq la57 rdpid fsrm md_clear pconfig flush_l1d arch_capabilities'
+08:30:47  ++ echo 'Architecture:        x86_64
+08:30:47  CPU op-mode(s):      32-bit, 64-bit
+08:30:47  Byte Order:          Little Endian
+08:30:47  CPU(s):              112
+08:30:47  On-line CPU(s) list: 0-111
+08:30:47  Thread(s) per core:  2
+08:30:47  Core(s) per socket:  28
+08:30:47  Socket(s):           2
+08:30:47  NUMA node(s):        2
+08:30:47  Vendor ID:           GenuineIntel
+08:30:47  BIOS Vendor ID:      Intel
+08:30:47  CPU family:          6
+08:30:47  Model:               106
+08:30:47  Model name:          Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz
+08:30:47  BIOS Model name:     Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz
+08:30:47  Stepping:            6
+08:30:47  CPU MHz:             2600.003
+08:30:47  BogoMIPS:            4400.00
+08:30:47  Virtualization:      VT-x
+08:30:47  L1d cache:           48K
+08:30:47  L1i cache:           32K
+08:30:47  L2 cache:            1280K
+08:30:47  L3 cache:            43008K
+08:30:47  NUMA node0 CPU(s):   0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102,104,106,108,110
+08:30:47  NUMA node1 CPU(s):   1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99,101,103,105,107,109,111
+08:30:47  Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 invpcid_single ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect wbnoinvd dtherm ida arat pln pts avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg tme avx512_vpopcntdq la57 rdpid fsrm md_clear pconfig flush_l1d arch_capabilities'
+08:30:47  ++ grep '^Model name'
+08:30:47  ++ awk '{print substr($0, index($0,$3))}'
+08:30:47  + CPU_TYPE='Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz'
+08:30:47  ++ echo 'Architecture:        x86_64
+08:30:47  CPU op-mode(s):      32-bit, 64-bit
+08:30:47  Byte Order:          Little Endian
+08:30:47  CPU(s):              112
+08:30:47  On-line CPU(s) list: 0-111
+08:30:47  Thread(s) per core:  2
+08:30:47  Core(s) per socket:  28
+08:30:47  Socket(s):           2
+08:30:47  NUMA node(s):        2
+08:30:47  Vendor ID:           GenuineIntel
+08:30:47  BIOS Vendor ID:      Intel
+08:30:47  CPU family:          6
+08:30:47  Model:               106
+08:30:47  Model name:          Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz
+08:30:47  BIOS Model name:     Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz
+08:30:47  Stepping:            6
+08:30:47  CPU MHz:             2600.003
+08:30:47  BogoMIPS:            4400.00
+08:30:47  Virtualization:      VT-x
+08:30:47  L1d cache:           48K
+08:30:47  L1i cache:           32K
+08:30:47  L2 cache:            1280K
+08:30:47  L3 cache:            43008K
+08:30:47  NUMA node0 CPU(s):   0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102,104,106,108,110
+08:30:47  NUMA node1 CPU(s):   1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99,101,103,105,107,109,111
+08:30:47  Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 invpcid_single ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect wbnoinvd dtherm ida arat pln pts avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg tme avx512_vpopcntdq la57 rdpid fsrm md_clear pconfig flush_l1d arch_capabilities'
+08:30:47  ++ grep Thread
+08:30:47  ++ awk '{print $4}'
+08:30:47  + HYPERTHREAD=2
+08:30:47  + echo 'export RAN_METRICS_CPU_TYPE="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz"'
+08:30:47  + echo 'export RAN_METRICS_HYPERTHREAD="2"'
+08:30:47  + '[' -z ']'
+08:30:47  ++ oc get nodes -o 'jsonpath={.items[0]..kernelVersion}'
+08:30:47  + KERNEL_RELEASE=4.18.0-372.41.1.rt7.198.el8_6.x86_64
+08:30:47  + KERNEL_REALTIME=false
+08:30:47  + [[ 4.18.0-372.41.1.rt7.198.el8_6.x86_64 =~ .*\.rt[0-9]+\..* ]]
+08:30:47  + KERNEL_REALTIME=true
+08:30:47  + echo 'export RAN_METRICS_KERNEL_VERSION="4.18.0-372.41.1.rt7.198.el8_6.x86_64"'
+08:30:47  + echo 'export RAN_METRICS_KERNEL_REALTIME="true"'
+08:30:47  export RAN_METRICS_CLUSTER="cnfdf35"
+08:30:47  export RAN_METRICS_SW_VERSION="4.13.0-0.nightly-2023-02-16-120330"
+08:30:47  export RAN_METRICS_CPU_TYPE="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz"
+08:30:47  export RAN_METRICS_HYPERTHREAD="2"
+08:30:47  export RAN_METRICS_KERNEL_VERSION="4.18.0-372.41.1.rt7.198.el8_6.x86_64"
+08:30:47  export RAN_METRICS_KERNEL_REALTIME="true"
+08:30:47  /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+08:30:47  [0;34m[INFO] Set up test environment[0m
+08:30:47  go mod tidy && \
+08:30:47  go mod vendor
+08:30:49  Installing needed dependencies
+08:30:49  hack/install-ginkgo.sh
+08:30:49  /home/kni/go/bin/ginkgo
+08:30:49  [0;34m[INFO] Find ginkgo executable[0m
+08:30:49  [0;34m[INFO] Run reboot tests 6 times[0m
+08:30:58  Running Suite: RAN reboot tests - /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot
+08:30:58  =====================================================================================================================
+08:30:58  Random Seed: [1m1676874649[0m
+08:30:58  
+08:30:58  Will run [1m2[0m of [1m2[0m specs
+08:30:58  [38;5;243m------------------------------[0m
+08:30:58  [0m[1m[BeforeSuite] [0m
+08:30:58  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/reboot_suite_test.go:38[0m
+08:30:58  2023/02/20 01:30:57 All nodes are Ready
+08:30:58  2023/02/20 01:30:57 Creating test namespace ran-test
+08:30:58  [38;5;10m[BeforeSuite] PASSED [0.155 seconds][0m
+08:30:58  [38;5;243m------------------------------[0m
+08:30:58  [0mSNO Reboot [38;5;243msoft reboot with workloads running [0m[1mcluster and workload pods should be recovered after reboot[0m
+08:30:58  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:63[0m
+08:30:58  2023/02/20 01:30:58 Exec command on cnfdf35.telco5gran.eng.rdu2.redhat.com: [uname -r]
+08:30:58  2023/02/20 01:30:58 Kernel version: 4.18.0-372.41.1.rt7.198.el8_6.x86_64
+08:30:58  2023/02/20 01:30:58 Creating up to 2 oslat pods with total 35 cpus
+08:31:05  2023/02/20 01:31:04 2 oslat pods with total 35 cpus are created and running
+08:31:05  2023/02/20 01:31:04 Creating up to 40 stress-ng pods with total 72 cpus
+08:31:54  2023/02/20 01:31:47 40 stress-ng pods with total 72 cpus are created and running
+08:31:54  2023/02/20 01:31:47 Waiting up to 3m0s for all pods in cluster to be healthy
+08:32:04  2023/02/20 01:32:03 All pods in cluster are healthy
+08:32:04  2023/02/20 01:32:04 Exec command on cnfdf35.telco5gran.eng.rdu2.redhat.com: [chroot /rootfs systemctl reboot]
+08:32:04  2023/02/20 01:32:04 Waiting for node cnfdf35.telco5gran.eng.rdu2.redhat.com to be unreachable via ping
+08:32:18  2023/02/20 01:32:17 Node cnfdf35.telco5gran.eng.rdu2.redhat.com is unreachable
+08:32:18  2023/02/20 01:32:17 Waiting for node to be reachable via ping
+08:36:11  2023/02/20 01:36:03 Node cnfdf35.telco5gran.eng.rdu2.redhat.com is reachable
+08:36:11    ranmetrics_soft_reboot_1_node_reachable: 239
+08:36:11  2023/02/20 01:36:03 Waiting for cluster to be reachable
+08:36:39    ranmetrics_soft_reboot_2_cluster_reachable: 33
+08:36:39  2023/02/20 01:36:36 Cluster is reachable
+08:36:39  2023/02/20 01:36:36 All mcps are updated 
+08:36:39  2023/02/20 01:36:36 All nodes are Ready
+08:36:39  2023/02/20 01:36:36 Waiting up to 45m0s for all pods in namespaces [ran-test] to be healthy for 30s
+08:39:18    ranmetrics_soft_reboot_3_workload_recover: 131
+08:39:18  2023/02/20 01:39:18 All pods in namespaces [ran-test] are healthy for 30s
+08:39:18  2023/02/20 01:39:18 Waiting up to 30m0s for all pods in cluster to be healthy for 1m0s
+08:41:26    ranmetrics_soft_reboot_4_cluster_recover: 84
+08:41:26    ranmetrics_soft_reboot_total: 488
+08:41:26  2023/02/20 01:41:12 All pods in cluster are healthy for 1m0s
+08:41:26  2023/02/20 01:41:12 Sleep for 5 minutes after reboot - quiet time
+08:46:20  [38;5;10m• [914.342 seconds][0m
+08:46:20  [38;5;243m------------------------------[0m
+08:46:20  [0mSNO Reboot [38;5;243mpower cycle with workloads running [0m[1mcluster and workload pods should be recovered after power comes back[0m
+08:46:20  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:79[0m
+08:46:20  2023/02/20 01:46:12 Waiting up to 3m0s for all pods in cluster to be healthy
+08:46:26  2023/02/20 01:46:26 All pods in cluster are healthy
+08:46:26  2023/02/20 01:46:26 run command 'which [ipmitool]'
+08:46:26  2023/02/20 01:46:26 run command 'ipmitool [-I lanplus -U root -P calvin -H 10.8.35.66 chassis power status]'
+08:46:27  2023/02/20 01:46:27 run command 'ipmitool [-I lanplus -U root -P calvin -H 10.8.35.66 chassis power off]'
+08:47:07  2023/02/20 01:47:02 Lost connection to cluster
+08:47:35  2023/02/20 01:47:32 run command 'ipmitool [-I lanplus -U root -P calvin -H 10.8.35.66 chassis power status]'
+08:47:35  2023/02/20 01:47:33 run command 'ipmitool [-I lanplus -U root -P calvin -H 10.8.35.66 chassis power on]'
+08:47:35  2023/02/20 01:47:33 Waiting for node to be reachable via ping
+08:51:29    ranmetrics_power_cycle_1_node_reachable: 231
+08:51:29  2023/02/20 01:51:23 Node cnfdf35.telco5gran.eng.rdu2.redhat.com is reachable
+08:51:29  2023/02/20 01:51:23 Waiting for cluster to be reachable
+08:52:02    ranmetrics_power_cycle_2_cluster_reachable: 36
+08:52:02  2023/02/20 01:52:00 Cluster is reachable
+08:52:02  2023/02/20 01:52:00 All mcps are updated 
+08:52:02  2023/02/20 01:52:00 All nodes are Ready
+08:52:02  2023/02/20 01:52:00 Waiting up to 45m0s for all pods in namespaces [ran-test] to be healthy for 30s
+08:54:40    ranmetrics_power_cycle_3_workload_recover: 126
+08:54:40  2023/02/20 01:54:36 All pods in namespaces [ran-test] are healthy for 30s
+08:54:40  2023/02/20 01:54:36 Waiting up to 30m0s for all pods in cluster to be healthy for 1m0s
+08:56:04    2023/02/20 01:56:03 All pods in cluster are healthy for 1m0s
+08:56:04  ranmetrics_power_cycle_4_cluster_recover: 56
+08:56:04    ranmetrics_power_cycle_total: 450
+08:56:04  2023/02/20 01:56:03 Sleep for 5 minutes after reboot - quiet time
+09:01:13  [38;5;10m• [891.148 seconds][0m
+09:01:13  [38;5;243m------------------------------[0m
+09:01:13  [0m[1m[AfterSuite] [0m
+09:01:13  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/reboot_suite_test.go:55[0m
+09:01:13  2023/02/20 02:01:03 Deleting test namespace ran-test
+09:01:24  [38;5;10m[AfterSuite] PASSED [19.200 seconds][0m
+09:01:24  [38;5;243m------------------------------[0m
+09:01:24  [0m[1m[ReportAfterSuite] Autogenerated ReportAfterSuite for --junit-report[0m
+09:01:24  [38;5;243mautogenerated by Ginkgo[0m
+09:01:24  [38;5;10m[ReportAfterSuite] PASSED [0.001 seconds][0m
+09:01:24  [38;5;243m------------------------------[0m
+09:01:24  
+09:01:24  [38;5;10m[1mRan 2 of 2 Specs in 1824.846 seconds[0m
+09:01:24  [38;5;10m[1mSUCCESS![0m -- [38;5;10m[1m2 Passed[0m | [38;5;9m[1m0 Failed[0m | [38;5;11m[1m0 Pending[0m | [38;5;14m[1m0 Skipped[0m
+09:01:24  PASS
+09:01:24  [38;5;228mYou're using deprecated Ginkgo functionality:[0m
+09:01:24  [38;5;228m=============================================[0m
+09:01:24    [38;5;11m--ginkgo.slow-spec-threshold is deprecated --slow-spec-threshold has been deprecated and will be removed in a future version of Ginkgo.  This feature has proved to be more noisy than useful.  You can use --poll-progress-after, instead, to get more actionable feedback about potentially slow specs and understand where they might be getting stuck.[0m
+09:01:24  
+09:01:24  [38;5;243mTo silence deprecations that can be silenced set the following environment variable:[0m
+09:01:24    [38;5;243mACK_GINKGO_DEPRECATIONS=2.5.1[0m
+09:01:24  
+09:01:24  
+09:01:24  Ginkgo ran 1 suite in 30m33.593051417s
+09:01:24  Test Suite Passed
+09:01:24  [0;34m[INFO] Save /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_1.xml to /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/[0m
+09:01:24  cp: '/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_1.xml' and '/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_1.xml' are the same file
+09:01:24  [0;34m[INFO] Parse and upload test results from /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_1.xml[0m
+09:01:24  [0;34m[INFO] Pushing ranmetrics_soft_reboot_1_node_reachable{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 239 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:01:24    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:01:24                                   Dload  Upload   Total   Spent    Left  Speed
+09:01:24  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   307    0     0  100   307      0  11370 --:--:-- --:--:-- --:--:-- 11370
+09:01:24  [0;34m[INFO] Pushing ranmetrics_soft_reboot_2_cluster_reachable{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 33 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:01:24    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:01:24                                   Dload  Upload   Total   Spent    Left  Speed
+09:01:24  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   309    0     0  100   309      0  11444 --:--:-- --:--:-- --:--:-- 11444
+09:01:24  [0;34m[INFO] Pushing ranmetrics_soft_reboot_3_workload_recover{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 131 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:01:24    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:01:24                                   Dload  Upload   Total   Spent    Left  Speed
+09:01:24  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   309    0     0  100   309      0  11444 --:--:-- --:--:-- --:--:-- 11444
+09:01:24  [0;34m[INFO] Pushing ranmetrics_soft_reboot_4_cluster_recover{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 84 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:01:24    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:01:24                                   Dload  Upload   Total   Spent    Left  Speed
+09:01:24  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   307    0     0  100   307      0  11370 --:--:-- --:--:-- --:--:-- 11370
+09:01:24  [0;34m[INFO] Pushing ranmetrics_soft_reboot_total{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 488 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:01:24    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:01:24                                   Dload  Upload   Total   Spent    Left  Speed
+09:01:24  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   296    0     0  100   296      0  10962 --:--:-- --:--:-- --:--:-- 10962
+09:01:24  [0;34m[INFO] Pushing ranmetrics_power_cycle_1_node_reachable{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 231 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:01:24    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:01:24                                   Dload  Upload   Total   Spent    Left  Speed
+09:01:24  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   307    0     0  100   307      0  11370 --:--:-- --:--:-- --:--:-- 11370
+09:01:24  [0;34m[INFO] Pushing ranmetrics_power_cycle_2_cluster_reachable{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 36 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:01:24    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:01:24                                   Dload  Upload   Total   Spent    Left  Speed
+09:01:24  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   309    0     0  100   309      0  11444 --:--:-- --:--:-- --:--:-- 11035
+100   309    0     0  100   309      0  11444 --:--:-- --:--:-- --:--:-- 11035
+09:01:24  [0;34m[INFO] Pushing ranmetrics_power_cycle_3_workload_recover{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 126 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:01:24    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:01:24                                   Dload  Upload   Total   Spent    Left  Speed
+09:01:24  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   309    0     0  100   309      0  11444 --:--:-- --:--:-- --:--:-- 11444
+09:01:24  [0;34m[INFO] Pushing ranmetrics_power_cycle_4_cluster_recover{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 56 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:01:24    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:01:24                                   Dload  Upload   Total   Spent    Left  Speed
+09:01:24  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   307    0     0  100   307      0  11807 --:--:-- --:--:-- --:--:-- 11807
+09:01:24  [0;34m[INFO] Pushing ranmetrics_power_cycle_total{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 450 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:01:24    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:01:24                                   Dload  Upload   Total   Spent    Left  Speed
+09:01:24  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   296    0     0  100   296      0  10571 --:--:-- --:--:-- --:--:-- 10571
+09:06:33  Running Suite: RAN reboot tests - /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot
+09:06:33  =====================================================================================================================
+09:06:33  Random Seed: [1m1676876783[0m
+09:06:33  
+09:06:33  Will run [1m2[0m of [1m2[0m specs
+09:06:33  [38;5;243m------------------------------[0m
+09:06:33  [0m[1m[BeforeSuite] [0m
+09:06:33  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/reboot_suite_test.go:38[0m
+09:06:33  2023/02/20 02:06:32 All nodes are Ready
+09:06:33  2023/02/20 02:06:32 Creating test namespace ran-test
+09:06:33  [38;5;10m[BeforeSuite] PASSED [0.153 seconds][0m
+09:06:33  [38;5;243m------------------------------[0m
+09:06:33  [0mSNO Reboot [38;5;243msoft reboot with workloads running [0m[1mcluster and workload pods should be recovered after reboot[0m
+09:06:33  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:63[0m
+09:06:33  2023/02/20 02:06:32 Exec command on cnfdf35.telco5gran.eng.rdu2.redhat.com: [uname -r]
+09:06:33  2023/02/20 02:06:32 Kernel version: 4.18.0-372.41.1.rt7.198.el8_6.x86_64
+09:06:33  2023/02/20 02:06:32 Creating up to 2 oslat pods with total 35 cpus
+09:06:39  2023/02/20 02:06:38 2 oslat pods with total 35 cpus are created and running
+09:06:39  2023/02/20 02:06:38 Creating up to 40 stress-ng pods with total 72 cpus
+09:07:27  2023/02/20 02:07:20 40 stress-ng pods with total 72 cpus are created and running
+09:07:27  2023/02/20 02:07:20 Waiting up to 3m0s for all pods in cluster to be healthy
+09:07:38  2023/02/20 02:07:36 All pods in cluster are healthy
+09:07:38  2023/02/20 02:07:37 Exec command on cnfdf35.telco5gran.eng.rdu2.redhat.com: [chroot /rootfs systemctl reboot]
+09:07:38  2023/02/20 02:07:37 Waiting for node cnfdf35.telco5gran.eng.rdu2.redhat.com to be unreachable via ping
+09:07:51  2023/02/20 02:07:50 Node cnfdf35.telco5gran.eng.rdu2.redhat.com is unreachable
+09:07:51  2023/02/20 02:07:50 Waiting for node to be reachable via ping
+09:11:46    ranmetrics_soft_reboot_1_node_reachable: 240
+09:11:46  2023/02/20 02:11:37 Node cnfdf35.telco5gran.eng.rdu2.redhat.com is reachable
+09:11:46  2023/02/20 02:11:37 Waiting for cluster to be reachable
+09:12:14    ranmetrics_soft_reboot_2_cluster_reachable: 36
+09:12:14  2023/02/20 02:12:13 Cluster is reachable
+09:12:14  2023/02/20 02:12:13 All mcps are updated 
+09:12:14  2023/02/20 02:12:13 All nodes are Ready
+09:12:14  2023/02/20 02:12:13 Waiting up to 45m0s for all pods in namespaces [ran-test] to be healthy for 30s
+09:14:37    2023/02/20 02:14:36 All pods in namespaces [ran-test] are healthy for 30s
+09:14:37  ranmetrics_soft_reboot_3_workload_recover: 112
+09:14:37  2023/02/20 02:14:36 Waiting up to 30m0s for all pods in cluster to be healthy for 1m0s
+09:17:00    ranmetrics_soft_reboot_4_cluster_recover: 101
+09:17:00    ranmetrics_soft_reboot_total: 490
+09:17:00  2023/02/20 02:16:47 All pods in cluster are healthy for 1m0s
+09:17:00  2023/02/20 02:16:47 Sleep for 5 minutes after reboot - quiet time
+09:21:55  [38;5;10m• [915.562 seconds][0m
+09:21:55  [38;5;243m------------------------------[0m
+09:21:55  [0mSNO Reboot [38;5;243mpower cycle with workloads running [0m[1mcluster and workload pods should be recovered after power comes back[0m
+09:21:55  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:79[0m
+09:21:55  2023/02/20 02:21:47 Waiting up to 3m0s for all pods in cluster to be healthy
+09:22:02  2023/02/20 02:22:01 All pods in cluster are healthy
+09:22:02  2023/02/20 02:22:01 run command 'which [ipmitool]'
+09:22:02  2023/02/20 02:22:01 run command 'ipmitool [-I lanplus -U root -P calvin -H 10.8.35.66 chassis power status]'
+09:22:02  2023/02/20 02:22:02 run command 'ipmitool [-I lanplus -U root -P calvin -H 10.8.35.66 chassis power off]'
+09:22:42  2023/02/20 02:22:38 Lost connection to cluster
+09:23:10  2023/02/20 02:23:08 run command 'ipmitool [-I lanplus -U root -P calvin -H 10.8.35.66 chassis power status]'
+09:23:10  2023/02/20 02:23:08 run command 'ipmitool [-I lanplus -U root -P calvin -H 10.8.35.66 chassis power on]'
+09:23:10  2023/02/20 02:23:09 Waiting for node to be reachable via ping
+09:27:04    ranmetrics_power_cycle_1_node_reachable: 231
+09:27:04  2023/02/20 02:26:59 Node cnfdf35.telco5gran.eng.rdu2.redhat.com is reachable
+09:27:04  2023/02/20 02:26:59 Waiting for cluster to be reachable
+09:27:37    ranmetrics_power_cycle_2_cluster_reachable: 36
+09:27:37  2023/02/20 02:27:35 Cluster is reachable
+09:27:37  2023/02/20 02:27:35 All mcps are updated 
+09:27:37  2023/02/20 02:27:35 All nodes are Ready
+09:27:37  2023/02/20 02:27:35 Waiting up to 45m0s for all pods in namespaces [ran-test] to be healthy for 30s
+09:30:31    ranmetrics_power_cycle_3_workload_recover: 135
+09:30:31  2023/02/20 02:30:20 All pods in namespaces [ran-test] are healthy for 30s
+09:30:31  2023/02/20 02:30:20 Waiting up to 30m0s for all pods in cluster to be healthy for 1m0s
+09:32:09    ranmetrics_power_cycle_4_cluster_recover: 73
+09:32:09    ranmetrics_power_cycle_total: 476
+09:32:09  2023/02/20 02:32:04 All pods in cluster are healthy for 1m0s
+09:32:09  2023/02/20 02:32:04 Sleep for 5 minutes after reboot - quiet time
+09:37:18  [38;5;10m• [916.498 seconds][0m
+09:37:18  [38;5;243m------------------------------[0m
+09:37:18  [0m[1m[AfterSuite] [0m
+09:37:18  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/reboot_suite_test.go:55[0m
+09:37:18  2023/02/20 02:37:04 Deleting test namespace ran-test
+09:37:22  [38;5;10m[AfterSuite] PASSED [18.177 seconds][0m
+09:37:22  [38;5;243m------------------------------[0m
+09:37:22  [0m[1m[ReportAfterSuite] Autogenerated ReportAfterSuite for --junit-report[0m
+09:37:22  [38;5;243mautogenerated by Ginkgo[0m
+09:37:22  [38;5;10m[ReportAfterSuite] PASSED [0.001 seconds][0m
+09:37:22  [38;5;243m------------------------------[0m
+09:37:22  
+09:37:22  [38;5;10m[1mRan 2 of 2 Specs in 1850.390 seconds[0m
+09:37:22  [38;5;10m[1mSUCCESS![0m -- [38;5;10m[1m2 Passed[0m | [38;5;9m[1m0 Failed[0m | [38;5;11m[1m0 Pending[0m | [38;5;14m[1m0 Skipped[0m
+09:37:22  PASS
+09:37:22  [38;5;228mYou're using deprecated Ginkgo functionality:[0m
+09:37:22  [38;5;228m=============================================[0m
+09:37:22    [38;5;11m--ginkgo.slow-spec-threshold is deprecated --slow-spec-threshold has been deprecated and will be removed in a future version of Ginkgo.  This feature has proved to be more noisy than useful.  You can use --poll-progress-after, instead, to get more actionable feedback about potentially slow specs and understand where they might be getting stuck.[0m
+09:37:22  
+09:37:22  [38;5;243mTo silence deprecations that can be silenced set the following environment variable:[0m
+09:37:22    [38;5;243mACK_GINKGO_DEPRECATIONS=2.5.1[0m
+09:37:22  
+09:37:22  
+09:37:22  Ginkgo ran 1 suite in 30m59.291736111s
+09:37:22  Test Suite Passed
+09:37:22  [0;34m[INFO] Save /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_2.xml to /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/[0m
+09:37:22  cp: '/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_2.xml' and '/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_2.xml' are the same file
+09:37:22  [0;34m[INFO] Parse and upload test results from /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_2.xml[0m
+09:37:22  [0;34m[INFO] Pushing ranmetrics_soft_reboot_1_node_reachable{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 240 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:37:22    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:37:22                                   Dload  Upload   Total   Spent    Left  Speed
+09:37:22  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   307    0     0  100   307      0  11370 --:--:-- --:--:-- --:--:-- 11370
+09:37:22  [0;34m[INFO] Pushing ranmetrics_soft_reboot_2_cluster_reachable{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 36 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:37:22    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:37:22                                   Dload  Upload   Total   Spent    Left  Speed
+09:37:22  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   309    0     0  100   309      0  11444 --:--:-- --:--:-- --:--:-- 11444
+09:37:22  [0;34m[INFO] Pushing ranmetrics_soft_reboot_3_workload_recover{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 112 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:37:22    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:37:22                                   Dload  Upload   Total   Spent    Left  Speed
+09:37:22  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   309    0     0  100   309      0  11884 --:--:-- --:--:-- --:--:-- 11884
+09:37:22  [0;34m[INFO] Pushing ranmetrics_soft_reboot_4_cluster_recover{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 101 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:37:22    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:37:22                                   Dload  Upload   Total   Spent    Left  Speed
+09:37:22  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   308    0     0  100   308      0  11407 --:--:-- --:--:-- --:--:-- 11407
+09:37:22  [0;34m[INFO] Pushing ranmetrics_soft_reboot_total{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 490 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:37:22    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:37:22                                   Dload  Upload   Total   Spent    Left  Speed
+09:37:22  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   296    0     0  100   296      0  10962 --:--:-- --:--:-- --:--:-- 10962
+09:37:22  [0;34m[INFO] Pushing ranmetrics_power_cycle_1_node_reachable{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 231 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:37:22    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:37:22                                   Dload  Upload   Total   Spent    Left  Speed
+09:37:22  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   307    0     0  100   307      0  11807 --:--:-- --:--:-- --:--:-- 11807
+09:37:22  [0;34m[INFO] Pushing ranmetrics_power_cycle_2_cluster_reachable{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 36 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:37:22    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:37:22                                   Dload  Upload   Total   Spent    Left  Speed
+09:37:22  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   309    0     0  100   309      0  11884 --:--:-- --:--:-- --:--:-- 11884
+09:37:22  [0;34m[INFO] Pushing ranmetrics_power_cycle_3_workload_recover{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 135 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:37:22    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:37:22                                   Dload  Upload   Total   Spent    Left  Speed
+09:37:22  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   309    0     0  100   309      0  11884 --:--:-- --:--:-- --:--:-- 11884
+09:37:22  [0;34m[INFO] Pushing ranmetrics_power_cycle_4_cluster_recover{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 73 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:37:23    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:37:23                                   Dload  Upload   Total   Spent    Left  Speed
+09:37:23  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   307    0     0  100   307      0  11370 --:--:-- --:--:-- --:--:-- 11370
+09:37:23  [0;34m[INFO] Pushing ranmetrics_power_cycle_total{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 476 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+09:37:23    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+09:37:23                                   Dload  Upload   Total   Spent    Left  Speed
+09:37:23  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   296    0     0  100   296      0  10962 --:--:-- --:--:-- --:--:-- 10962
+09:42:32  Running Suite: RAN reboot tests - /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot
+09:42:32  =====================================================================================================================
+09:42:32  Random Seed: [1m1676878942[0m
+09:42:32  
+09:42:32  Will run [1m2[0m of [1m2[0m specs
+09:42:32  [38;5;243m------------------------------[0m
+09:42:32  [0m[1m[BeforeSuite] [0m
+09:42:32  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/reboot_suite_test.go:38[0m
+09:42:32  2023/02/20 02:42:31 All nodes are Ready
+09:42:32  2023/02/20 02:42:31 Creating test namespace ran-test
+09:42:32  [38;5;10m[BeforeSuite] PASSED [0.154 seconds][0m
+09:42:32  [38;5;243m------------------------------[0m
+09:42:32  [0mSNO Reboot [38;5;243msoft reboot with workloads running [0m[1mcluster and workload pods should be recovered after reboot[0m
+09:42:32  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:63[0m
+09:42:32  2023/02/20 02:42:31 Exec command on cnfdf35.telco5gran.eng.rdu2.redhat.com: [uname -r]
+09:42:32  2023/02/20 02:42:32 Kernel version: 4.18.0-372.41.1.rt7.198.el8_6.x86_64
+09:42:32  2023/02/20 02:42:32 Creating up to 2 oslat pods with total 35 cpus
+09:42:39  2023/02/20 02:42:38 2 oslat pods with total 35 cpus are created and running
+09:42:39  2023/02/20 02:42:38 Creating up to 40 stress-ng pods with total 72 cpus
+09:43:19  2023/02/20 02:43:18 40 stress-ng pods with total 72 cpus are created and running
+09:43:19  2023/02/20 02:43:18 Waiting up to 3m0s for all pods in cluster to be healthy
+09:43:35  2023/02/20 02:43:35 All pods in cluster are healthy
+09:43:35  2023/02/20 02:43:35 Exec command on cnfdf35.telco5gran.eng.rdu2.redhat.com: [chroot /rootfs systemctl reboot]
+09:43:35  2023/02/20 02:43:35 Waiting for node cnfdf35.telco5gran.eng.rdu2.redhat.com to be unreachable via ping
+09:43:49  2023/02/20 02:43:48 Node cnfdf35.telco5gran.eng.rdu2.redhat.com is unreachable
+09:43:49  2023/02/20 02:43:48 Waiting for node to be reachable via ping
+09:49:13    ranmetrics_soft_reboot_1_node_reachable: 330
+09:49:13  2023/02/20 02:49:05 Node cnfdf35.telco5gran.eng.rdu2.redhat.com is reachable
+09:49:13  2023/02/20 02:49:05 Waiting for cluster to be reachable
+09:49:46    ranmetrics_soft_reboot_2_cluster_reachable: 36
+09:49:46  2023/02/20 02:49:41 Cluster is reachable
+09:49:46  2023/02/20 02:49:43 All mcps are updated 
+09:49:46  2023/02/20 02:49:43 All nodes are Ready
+09:49:46  2023/02/20 02:49:43 Waiting up to 45m0s for all pods in namespaces [ran-test] to be healthy for 30s
+09:52:55    ranmetrics_soft_reboot_3_workload_recover: 151
+09:52:55  2023/02/20 02:52:43 All pods in namespaces [ran-test] are healthy for 30s
+09:52:55  2023/02/20 02:52:43 Waiting up to 30m0s for all pods in cluster to be healthy for 1m0s
+10:23:28  2023/02/20 03:23:18 timed out waiting for the condition
+10:23:28    [38;5;9m[FAILED][0m in [It] - /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:143 [38;5;243m@ 02/20/23 03:23:18.011[0m
+10:23:28  [38;5;9m• [FAILED] [2446.325 seconds][0m
+10:23:28  [0mSNO Reboot [38;5;243msoft reboot with workloads running [38;5;9m[1m[It] cluster and workload pods should be recovered after reboot[0m
+10:23:28  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:63[0m
+10:23:28  
+10:23:28    [38;5;9m[FAILED] Expected
+10:23:28        <map[string]map[string]string | len:1>: {
+10:23:28            "openshift-marketplace": {
+10:23:28                "amq-operator-knqss": "pod condition is not Ready. Message: ",
+10:23:28            },
+10:23:28        }
+10:23:28    to be empty[0m
+10:23:28    [38;5;9mIn [1m[It][0m[38;5;9m at: [1m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:143[0m [38;5;243m@ 02/20/23 03:23:18.011[0m
+10:23:28  [38;5;243m------------------------------[0m
+10:23:28  [38;5;14mS [SKIPPED] [0.000 seconds][0m
+10:23:28  [0mSNO Reboot [38;5;243mpower cycle with workloads running [38;5;14m[1m[It] cluster and workload pods should be recovered after power comes back[0m
+10:23:28  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:79[0m
+10:23:28  
+10:23:28    [38;5;14m[SKIPPED] Spec skipped because an earlier spec in an ordered container failed[0m
+10:23:28    [38;5;14mIn [1m[It][0m[38;5;14m at: [1m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:79[0m [38;5;243m@ 02/20/23 03:23:18.011[0m
+10:23:28  [38;5;243m------------------------------[0m
+10:23:28  [0m[1m[AfterSuite] [0m
+10:23:28  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/reboot_suite_test.go:55[0m
+10:23:28  2023/02/20 03:23:18 Deleting test namespace ran-test
+10:23:41  [38;5;10m[AfterSuite] PASSED [21.615 seconds][0m
+10:23:41  [38;5;243m------------------------------[0m
+10:23:41  [0m[1m[ReportAfterSuite] Autogenerated ReportAfterSuite for --junit-report[0m
+10:23:41  [38;5;243mautogenerated by Ginkgo[0m
+10:23:41  [38;5;10m[ReportAfterSuite] PASSED [0.001 seconds][0m
+10:23:41  [38;5;243m------------------------------[0m
+10:23:41  
+10:23:41  [38;5;9m[1mSummarizing 1 Failure:[0m
+10:23:41    [38;5;9m[FAIL][0m [0mSNO Reboot [38;5;243msoft reboot with workloads running [38;5;9m[1m[It] cluster and workload pods should be recovered after reboot[0m
+10:23:41    [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:143[0m
+10:23:41  
+10:23:41  [38;5;9m[1mRan 1 of 2 Specs in 2468.094 seconds[0m
+10:23:41  [38;5;9m[1mFAIL![0m -- [38;5;10m[1m0 Passed[0m | [38;5;9m[1m1 Failed[0m | [38;5;11m[1m0 Pending[0m | [38;5;14m[1m1 Skipped[0m
+10:23:41  --- FAIL: TestReboot (2468.10s)
+10:23:41  FAIL
+10:23:41  [38;5;228mYou're using deprecated Ginkgo functionality:[0m
+10:23:41  [38;5;228m=============================================[0m
+10:23:41    [38;5;11m--ginkgo.slow-spec-threshold is deprecated --slow-spec-threshold has been deprecated and will be removed in a future version of Ginkgo.  This feature has proved to be more noisy than useful.  You can use --poll-progress-after, instead, to get more actionable feedback about potentially slow specs and understand where they might be getting stuck.[0m
+10:23:41  
+10:23:41  [38;5;243mTo silence deprecations that can be silenced set the following environment variable:[0m
+10:23:41    [38;5;243mACK_GINKGO_DEPRECATIONS=2.5.1[0m
+10:23:41  
+10:23:41  
+10:23:41  Ginkgo ran 1 suite in 41m16.811718128s
+10:23:41  
+10:23:41  Test Suite Failed
+10:23:41  [0;34m[INFO] Save /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_3.xml to /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/[0m
+10:23:41  cp: '/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_3.xml' and '/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_3.xml' are the same file
+10:23:41  [0;34m[INFO] Parse and upload test results from /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_3.xml[0m
+10:23:41  [0;34m[INFO] Pushing ranmetrics_soft_reboot_1_node_reachable{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 330 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+10:23:41    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+10:23:41                                   Dload  Upload   Total   Spent    Left  Speed
+10:23:41  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   307    0     0  100   307      0  11370 --:--:-- --:--:-- --:--:-- 11370
+10:23:41  [0;34m[INFO] Pushing ranmetrics_soft_reboot_2_cluster_reachable{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 36 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+10:23:41    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+10:23:41                                   Dload  Upload   Total   Spent    Left  Speed
+10:23:41  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   309    0     0  100   309      0  11035 --:--:-- --:--:-- --:--:-- 11035
+10:23:41  [0;34m[INFO] Pushing ranmetrics_soft_reboot_3_workload_recover{pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330"} 151 to url http://ran-metrics.ptp.lab.eng.bos.redhat.com:9091/metrics/job/pipeline1/[0m
+10:23:41    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+10:23:41                                   Dload  Upload   Total   Spent    Left  Speed
+10:23:41  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   309    0     0  100   309      0  11035 --:--:-- --:--:-- --:--:-- 11035
+10:28:50  Running Suite: RAN reboot tests - /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot
+10:28:50  =====================================================================================================================
+10:28:50  Random Seed: [1m1676881719[0m
+10:28:50  
+10:28:50  Will run [1m2[0m of [1m2[0m specs
+10:28:50  [38;5;243m------------------------------[0m
+10:28:50  [0m[1m[BeforeSuite] [0m
+10:28:50  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/reboot_suite_test.go:38[0m
+10:28:50  2023/02/20 03:28:48 All nodes are Ready
+10:28:50  2023/02/20 03:28:48 Creating test namespace ran-test
+10:28:50  [38;5;10m[BeforeSuite] PASSED [0.149 seconds][0m
+10:28:50  [38;5;243m------------------------------[0m
+10:28:50  [0mSNO Reboot [38;5;243msoft reboot with workloads running [0m[1mcluster and workload pods should be recovered after reboot[0m
+10:28:50  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:63[0m
+10:28:50  2023/02/20 03:28:48 Exec command on cnfdf35.telco5gran.eng.rdu2.redhat.com: [uname -r]
+10:28:50  2023/02/20 03:28:48 Kernel version: 4.18.0-372.41.1.rt7.198.el8_6.x86_64
+10:28:50  2023/02/20 03:28:48 Creating up to 2 oslat pods with total 35 cpus
+10:28:55  2023/02/20 03:28:55 2 oslat pods with total 35 cpus are created and running
+10:28:55  2023/02/20 03:28:55 Creating up to 40 stress-ng pods with total 72 cpus
+10:29:43  2023/02/20 03:29:40 40 stress-ng pods with total 72 cpus are created and running
+10:29:43  2023/02/20 03:29:40 Waiting up to 3m0s for all pods in cluster to be healthy
+10:33:37  2023/02/20 03:33:26 timed out waiting for the condition
+10:33:37    [38;5;14m[SKIPPED][0m in [BeforeEach] - /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:57 [38;5;243m@ 02/20/23 03:33:26.874[0m
+10:33:37  [38;5;14mS [SKIPPED] [278.380 seconds][0m
+10:33:37  [38;5;14m[1mSNO Reboot [BeforeEach] [38;5;243msoft reboot with workloads running [0mcluster and workload pods should be recovered after reboot[0m
+10:33:37    [38;5;14m[BeforeEach][0m [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:53[0m
+10:33:37    [38;5;243m[It] /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:63[0m
+10:33:37  
+10:33:37    [38;5;14m[SKIPPED] Some pods are unhealthy before reboot:  map[openshift-marketplace:map[amq-operator-knqss:pod condition is not Ready. Message: ]]
+10:33:37    [0m
+10:33:37    [38;5;14mIn [1m[BeforeEach][0m[38;5;14m at: [1m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:57[0m [38;5;243m@ 02/20/23 03:33:26.874[0m
+10:33:37  [38;5;243m------------------------------[0m
+10:33:37  [0mSNO Reboot [38;5;243mpower cycle with workloads running [0m[1mcluster and workload pods should be recovered after power comes back[0m
+10:33:37  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:79[0m
+10:33:37  2023/02/20 03:33:26 Waiting up to 3m0s for all pods in cluster to be healthy
+10:37:16  2023/02/20 03:37:13 timed out waiting for the condition
+10:37:16    [38;5;14m[SKIPPED][0m in [BeforeEach] - /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:57 [38;5;243m@ 02/20/23 03:37:13.5[0m
+10:37:16  [38;5;14mS [SKIPPED] [226.626 seconds][0m
+10:37:16  [38;5;14m[1mSNO Reboot [BeforeEach] [38;5;243mpower cycle with workloads running [0mcluster and workload pods should be recovered after power comes back[0m
+10:37:16    [38;5;14m[BeforeEach][0m [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:53[0m
+10:37:16    [38;5;243m[It] /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:79[0m
+10:37:16  
+10:37:16    [38;5;14m[SKIPPED] Some pods are unhealthy before reboot:  map[openshift-marketplace:map[amq-operator-knqss:pod condition is not Ready. Message: ]]
+10:37:16    [0m
+10:37:16    [38;5;14mIn [1m[BeforeEach][0m[38;5;14m at: [1m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:57[0m [38;5;243m@ 02/20/23 03:37:13.5[0m
+10:37:16  [38;5;243m------------------------------[0m
+10:37:16  [0m[1m[AfterSuite] [0m
+10:37:16  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/reboot_suite_test.go:55[0m
+10:37:16  2023/02/20 03:37:13 Deleting test namespace ran-test
+10:37:39  [38;5;10m[AfterSuite] PASSED [23.622 seconds][0m
+10:37:39  [38;5;243m------------------------------[0m
+10:37:39  [0m[1m[ReportAfterSuite] Autogenerated ReportAfterSuite for --junit-report[0m
+10:37:39  [38;5;243mautogenerated by Ginkgo[0m
+10:37:39  [38;5;10m[ReportAfterSuite] PASSED [0.001 seconds][0m
+10:37:39  [38;5;243m------------------------------[0m
+10:37:39  
+10:37:39  [38;5;10m[1mRan 0 of 2 Specs in 528.777 seconds[0m
+10:37:39  [38;5;10m[1mSUCCESS![0m -- [38;5;10m[1m0 Passed[0m | [38;5;9m[1m0 Failed[0m | [38;5;11m[1m0 Pending[0m | [38;5;14m[1m2 Skipped[0m
+10:37:39  PASS
+10:37:39  [38;5;228mYou're using deprecated Ginkgo functionality:[0m
+10:37:39  [38;5;228m=============================================[0m
+10:37:39    [38;5;11m--ginkgo.slow-spec-threshold is deprecated --slow-spec-threshold has been deprecated and will be removed in a future version of Ginkgo.  This feature has proved to be more noisy than useful.  You can use --poll-progress-after, instead, to get more actionable feedback about potentially slow specs and understand where they might be getting stuck.[0m
+10:37:39  
+10:37:39  [38;5;243mTo silence deprecations that can be silenced set the following environment variable:[0m
+10:37:39    [38;5;243mACK_GINKGO_DEPRECATIONS=2.5.1[0m
+10:37:39  
+10:37:39  
+10:37:39  Ginkgo ran 1 suite in 8m57.347718512s
+10:37:39  Test Suite Passed
+10:37:39  [0;34m[INFO] Save /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_4.xml to /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/[0m
+10:37:39  cp: '/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_4.xml' and '/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_4.xml' are the same file
+10:37:39  [0;34m[INFO] Parse and upload test results from /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_4.xml[0m
+10:42:48  Running Suite: RAN reboot tests - /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot
+10:42:48  =====================================================================================================================
+10:42:48  Random Seed: [1m1676882557[0m
+10:42:48  
+10:42:48  Will run [1m2[0m of [1m2[0m specs
+10:42:48  [38;5;243m------------------------------[0m
+10:42:48  [0m[1m[BeforeSuite] [0m
+10:42:48  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/reboot_suite_test.go:38[0m
+10:42:48  2023/02/20 03:42:45 All nodes are Ready
+10:42:48  2023/02/20 03:42:45 Creating test namespace ran-test
+10:42:48  [38;5;10m[BeforeSuite] PASSED [0.154 seconds][0m
+10:42:48  [38;5;243m------------------------------[0m
+10:42:48  [0mSNO Reboot [38;5;243msoft reboot with workloads running [0m[1mcluster and workload pods should be recovered after reboot[0m
+10:42:48  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:63[0m
+10:42:48  2023/02/20 03:42:46 Exec command on cnfdf35.telco5gran.eng.rdu2.redhat.com: [uname -r]
+10:42:48  2023/02/20 03:42:46 Kernel version: 4.18.0-372.41.1.rt7.198.el8_6.x86_64
+10:42:48  2023/02/20 03:42:46 Creating up to 2 oslat pods with total 35 cpus
+10:42:53  2023/02/20 03:42:52 2 oslat pods with total 35 cpus are created and running
+10:42:53  2023/02/20 03:42:52 Creating up to 40 stress-ng pods with total 72 cpus
+10:43:41  2023/02/20 03:43:33 40 stress-ng pods with total 72 cpus are created and running
+10:43:41  2023/02/20 03:43:33 Waiting up to 3m0s for all pods in cluster to be healthy
+10:47:35  2023/02/20 03:47:20 timed out waiting for the condition
+10:47:35    [38;5;14m[SKIPPED][0m in [BeforeEach] - /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:57 [38;5;243m@ 02/20/23 03:47:20.194[0m
+10:47:35  [38;5;14mS [SKIPPED] [274.198 seconds][0m
+10:47:35  [38;5;14m[1mSNO Reboot [BeforeEach] [38;5;243msoft reboot with workloads running [0mcluster and workload pods should be recovered after reboot[0m
+10:47:35    [38;5;14m[BeforeEach][0m [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:53[0m
+10:47:35    [38;5;243m[It] /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:63[0m
+10:47:35  
+10:47:35    [38;5;14m[SKIPPED] Some pods are unhealthy before reboot:  map[openshift-marketplace:map[amq-operator-knqss:pod condition is not Ready. Message: ]]
+10:47:35    [0m
+10:47:35    [38;5;14mIn [1m[BeforeEach][0m[38;5;14m at: [1m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:57[0m [38;5;243m@ 02/20/23 03:47:20.194[0m
+10:47:35  [38;5;243m------------------------------[0m
+10:47:35  [0mSNO Reboot [38;5;243mpower cycle with workloads running [0m[1mcluster and workload pods should be recovered after power comes back[0m
+10:47:35  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:79[0m
+10:47:35  2023/02/20 03:47:20 Waiting up to 3m0s for all pods in cluster to be healthy
+10:51:14  2023/02/20 03:51:06 timed out waiting for the condition
+10:51:14    [38;5;14m[SKIPPED][0m in [BeforeEach] - /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:57 [38;5;243m@ 02/20/23 03:51:06.817[0m
+10:51:14  [38;5;14mS [SKIPPED] [226.623 seconds][0m
+10:51:14  [38;5;14m[1mSNO Reboot [BeforeEach] [38;5;243mpower cycle with workloads running [0mcluster and workload pods should be recovered after power comes back[0m
+10:51:14    [38;5;14m[BeforeEach][0m [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:53[0m
+10:51:14    [38;5;243m[It] /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:79[0m
+10:51:14  
+10:51:14    [38;5;14m[SKIPPED] Some pods are unhealthy before reboot:  map[openshift-marketplace:map[amq-operator-knqss:pod condition is not Ready. Message: ]]
+10:51:14    [0m
+10:51:14    [38;5;14mIn [1m[BeforeEach][0m[38;5;14m at: [1m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:57[0m [38;5;243m@ 02/20/23 03:51:06.817[0m
+10:51:14  [38;5;243m------------------------------[0m
+10:51:14  [0m[1m[AfterSuite] [0m
+10:51:14  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/reboot_suite_test.go:55[0m
+10:51:14  2023/02/20 03:51:07 Deleting test namespace ran-test
+10:51:33  [38;5;10m[AfterSuite] PASSED [24.621 seconds][0m
+10:51:33  [38;5;243m------------------------------[0m
+10:51:33  [0m[1m[ReportAfterSuite] Autogenerated ReportAfterSuite for --junit-report[0m
+10:51:33  [38;5;243mautogenerated by Ginkgo[0m
+10:51:33  [38;5;10m[ReportAfterSuite] PASSED [0.001 seconds][0m
+10:51:33  [38;5;243m------------------------------[0m
+10:51:33  
+10:51:33  [38;5;10m[1mRan 0 of 2 Specs in 525.598 seconds[0m
+10:51:33  [38;5;10m[1mSUCCESS![0m -- [38;5;10m[1m0 Passed[0m | [38;5;9m[1m0 Failed[0m | [38;5;11m[1m0 Pending[0m | [38;5;14m[1m2 Skipped[0m
+10:51:33  PASS
+10:51:33  [38;5;228mYou're using deprecated Ginkgo functionality:[0m
+10:51:33  [38;5;228m=============================================[0m
+10:51:33    [38;5;11m--ginkgo.slow-spec-threshold is deprecated --slow-spec-threshold has been deprecated and will be removed in a future version of Ginkgo.  This feature has proved to be more noisy than useful.  You can use --poll-progress-after, instead, to get more actionable feedback about potentially slow specs and understand where they might be getting stuck.[0m
+10:51:33  
+10:51:33  [38;5;243mTo silence deprecations that can be silenced set the following environment variable:[0m
+10:51:33    [38;5;243mACK_GINKGO_DEPRECATIONS=2.5.1[0m
+10:51:33  
+10:51:33  
+10:51:33  Ginkgo ran 1 suite in 8m54.304837606s
+10:51:33  Test Suite Passed
+10:51:33  [0;34m[INFO] Save /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_5.xml to /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/[0m
+10:51:33  cp: '/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_5.xml' and '/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_5.xml' are the same file
+10:51:33  [0;34m[INFO] Parse and upload test results from /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_5.xml[0m
+10:56:42  Running Suite: RAN reboot tests - /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot
+10:56:42  =====================================================================================================================
+10:56:42  Random Seed: [1m1676883391[0m
+10:56:42  
+10:56:42  Will run [1m2[0m of [1m2[0m specs
+10:56:42  [38;5;243m------------------------------[0m
+10:56:42  [0m[1m[BeforeSuite] [0m
+10:56:42  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/reboot_suite_test.go:38[0m
+10:56:42  2023/02/20 03:56:40 All nodes are Ready
+10:56:42  2023/02/20 03:56:40 Creating test namespace ran-test
+10:56:42  [38;5;10m[BeforeSuite] PASSED [0.169 seconds][0m
+10:56:42  [38;5;243m------------------------------[0m
+10:56:42  [0mSNO Reboot [38;5;243msoft reboot with workloads running [0m[1mcluster and workload pods should be recovered after reboot[0m
+10:56:42  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:63[0m
+10:56:42  2023/02/20 03:56:40 Exec command on cnfdf35.telco5gran.eng.rdu2.redhat.com: [uname -r]
+10:56:42  2023/02/20 03:56:40 Kernel version: 4.18.0-372.41.1.rt7.198.el8_6.x86_64
+10:56:42  2023/02/20 03:56:40 Creating up to 2 oslat pods with total 35 cpus
+10:56:47  2023/02/20 03:56:46 2 oslat pods with total 35 cpus are created and running
+10:56:47  2023/02/20 03:56:46 Creating up to 40 stress-ng pods with total 72 cpus
+10:57:35  2023/02/20 03:57:30 40 stress-ng pods with total 72 cpus are created and running
+10:57:35  2023/02/20 03:57:30 Waiting up to 3m0s for all pods in cluster to be healthy
+11:01:29  2023/02/20 04:01:16 timed out waiting for the condition
+11:01:29    [38;5;14m[SKIPPED][0m in [BeforeEach] - /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:57 [38;5;243m@ 02/20/23 04:01:16.732[0m
+11:01:29  [38;5;14mS [SKIPPED] [276.491 seconds][0m
+11:01:29  [38;5;14m[1mSNO Reboot [BeforeEach] [38;5;243msoft reboot with workloads running [0mcluster and workload pods should be recovered after reboot[0m
+11:01:29    [38;5;14m[BeforeEach][0m [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:53[0m
+11:01:29    [38;5;243m[It] /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:63[0m
+11:01:29  
+11:01:29    [38;5;14m[SKIPPED] Some pods are unhealthy before reboot:  map[openshift-marketplace:map[amq-operator-knqss:pod condition is not Ready. Message: ]]
+11:01:29    [0m
+11:01:29    [38;5;14mIn [1m[BeforeEach][0m[38;5;14m at: [1m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:57[0m [38;5;243m@ 02/20/23 04:01:16.732[0m
+11:01:29  [38;5;243m------------------------------[0m
+11:01:29  [0mSNO Reboot [38;5;243mpower cycle with workloads running [0m[1mcluster and workload pods should be recovered after power comes back[0m
+11:01:29  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:79[0m
+11:01:29  2023/02/20 04:01:16 Waiting up to 3m0s for all pods in cluster to be healthy
+11:05:08  2023/02/20 04:05:03 timed out waiting for the condition
+11:05:08    [38;5;14m[SKIPPED][0m in [BeforeEach] - /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:57 [38;5;243m@ 02/20/23 04:05:03.359[0m
+11:05:08  [38;5;14mS [SKIPPED] [226.626 seconds][0m
+11:05:08  [38;5;14m[1mSNO Reboot [BeforeEach] [38;5;243mpower cycle with workloads running [0mcluster and workload pods should be recovered after power comes back[0m
+11:05:08    [38;5;14m[BeforeEach][0m [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:53[0m
+11:05:08    [38;5;243m[It] /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:79[0m
+11:05:08  
+11:05:08    [38;5;14m[SKIPPED] Some pods are unhealthy before reboot:  map[openshift-marketplace:map[amq-operator-knqss:pod condition is not Ready. Message: ]]
+11:05:08    [0m
+11:05:08    [38;5;14mIn [1m[BeforeEach][0m[38;5;14m at: [1m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/tests/sno_reboot.go:57[0m [38;5;243m@ 02/20/23 04:05:03.359[0m
+11:05:08  [38;5;243m------------------------------[0m
+11:05:08  [0m[1m[AfterSuite] [0m
+11:05:08  [38;5;243m/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/cnf-gotests/test/ran/reboot/reboot_suite_test.go:55[0m
+11:05:08  2023/02/20 04:05:03 Deleting test namespace ran-test
+11:05:21  [38;5;10m[AfterSuite] PASSED [17.618 seconds][0m
+11:05:21  [38;5;243m------------------------------[0m
+11:05:21  [0m[1m[ReportAfterSuite] Autogenerated ReportAfterSuite for --junit-report[0m
+11:05:21  [38;5;243mautogenerated by Ginkgo[0m
+11:05:21  [38;5;10m[ReportAfterSuite] PASSED [0.001 seconds][0m
+11:05:21  [38;5;243m------------------------------[0m
+11:05:21  
+11:05:21  [38;5;10m[1mRan 0 of 2 Specs in 520.905 seconds[0m
+11:05:21  [38;5;10m[1mSUCCESS![0m -- [38;5;10m[1m0 Passed[0m | [38;5;9m[1m0 Failed[0m | [38;5;11m[1m0 Pending[0m | [38;5;14m[1m2 Skipped[0m
+11:05:21  PASS
+11:05:21  [38;5;228mYou're using deprecated Ginkgo functionality:[0m
+11:05:21  [38;5;228m=============================================[0m
+11:05:21    [38;5;11m--ginkgo.slow-spec-threshold is deprecated --slow-spec-threshold has been deprecated and will be removed in a future version of Ginkgo.  This feature has proved to be more noisy than useful.  You can use --poll-progress-after, instead, to get more actionable feedback about potentially slow specs and understand where they might be getting stuck.[0m
+11:05:21  
+11:05:21  [38;5;243mTo silence deprecations that can be silenced set the following environment variable:[0m
+11:05:21    [38;5;243mACK_GINKGO_DEPRECATIONS=2.5.1[0m
+11:05:21  
+11:05:21  
+11:05:21  Ginkgo ran 1 suite in 8m49.523920559s
+11:05:21  Test Suite Passed
+11:05:21  [0;34m[INFO] Save /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_6.xml to /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/[0m
+11:05:21  cp: '/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_6.xml' and '/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_6.xml' are the same file
+11:05:21  [0;34m[INFO] Parse and upload test results from /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/artifacts/reboot_cnfdf35_6.xml[0m
+11:10:30  /var/lib/jenkins/workspace/ocp-far-edge-vran-deployment
+11:10:30  [0;36mScript took 9576 seconds[0m
+11:10:30  export RAN_METRICS_CLUSTER="cnfdf35"
+11:10:30  export RAN_METRICS_SW_VERSION="4.13.0-0.nightly-2023-02-16-120330"
+11:10:30  export RAN_METRICS_CPU_TYPE="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz"
+11:10:30  export RAN_METRICS_HYPERTHREAD="2"
+11:10:30  export RAN_METRICS_KERNEL_VERSION="4.18.0-372.41.1.rt7.198.el8_6.x86_64"
+11:10:30  export RAN_METRICS_KERNEL_REALTIME="true"
+11:10:30  Posting time: 9576, tags pipeline="ci", rc="0", cluster="cnfdf35", cpu_type="Intel(R) Xeon(R) Gold 6330N CPU @ 2.20GHz", formal_test="false", hyperthread="2", kernel_realtime="true", kernel_version="4.18.0-372.41.1.rt7.198.el8_6.x86_64", sw_version="4.13.0-0.nightly-2023-02-16-120330", pipeline_stage="test_reboot"
+11:10:30    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+11:10:30                                   Dload  Upload   Total   Spent    Left  Speed
+11:10:30  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   332    0     0  100   332      0  12769 --:--:-- --:--:-- --:--:-- 12769
+11:10:30    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+11:10:30                                   Dload  Upload   Total   Spent    Left  Speed
+11:10:30  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   344    0     0  100   344      0  12285 --:--:-- --:--:-- --:--:-- 12285
+11:10:41  removed '/var/lib/jenkins/workspace/ocp-far-edge-vran-deployment/ran-extra-vars_cnfdf35'

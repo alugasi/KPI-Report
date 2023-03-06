@@ -2,7 +2,7 @@
 import json
 import os
 import time
-import ast
+from Utils import *
 
 
 
@@ -17,7 +17,7 @@ import ast
 
 #GLOBAL PARAMS:
 SCENARIOS_LIST = ["idle", "workloadlaunch", "mustgather", "promquery", "steadyworkload"]
-JSON_DIR = "cpuUtil/cpuUtil-"
+JSON_DIR = "cpuUtil/cpu_util-"
 
 
 ############################################################################
@@ -38,15 +38,15 @@ def extract_global_params(results_dict:dict):
     returns: python dict
     """
 
-    results_dict["OCP_Main_Version"] = os.environ.get("oc_main_version")
-    results_dict["OCP_Minor_Version"] = os.environ.get("oc_minor_version")
-    results_dict["TYPE"] = "cpu util"
-    results_dict["Node_Name"] = os.environ.get("cluster")
-    results_dict["Duration"] = float(os.environ.get("duration"))
-    results_dict["Kernel"] = os.environ.get("kernel")
+    results_dict["ocp_version"] = os.environ.get("ocp_version")
+    results_dict["ocp_build"] = os.environ.get("ocp_build")
+    results_dict["cpu"] = os.environ.get("cpu")
+    results_dict["test_type"] = "cpu_util"
+    results_dict["node_name"] = os.environ.get("cluster")
+    results_dict["kernel"] = os.environ.get("kernel")
 
     #'sideloaded' env variable is the kernel_real_time value when it equall true it means that sideloaded is false
-    results_dict["Side_Loaded"] = "false" if os.environ.get("sideloaded")=="true" else "true"
+    results_dict["sideloaded"] = None if not os.environ.get("sideloaded") else "false" if os.environ.get("sideloaded")=="true" else "true"
 
     return results_dict
 
@@ -65,91 +65,87 @@ def extract_scenarios_by_types_metrics(results_dict:dict):
         array_str=os.environ.get(scenario)
         scenario_dict = array_str.split(" ")
         scenario_record = {}
-        scenario_record["Scenario_Name"] = scenario
+        scenario_record["scenario_name"] = scenario
         types_list = []
-        Max_CPU = 0
 
         for type_cpu in scenario_dict:
             splited_type_cpu = type_cpu.split(":")
-            types_list.append({"Type_Name": splited_type_cpu[0], "CPU": float(splited_type_cpu[1])})
-            Max_CPU+=float(splited_type_cpu[1])
+            types_list.append({"type_name": splited_type_cpu[0], "max_cpu": float(splited_type_cpu[1])})
 
-        scenario_record["Types"] = types_list
-        scenario_record["MAX_CPU"] = Max_CPU
-
+        scenario_record["types"] = types_list
+        # get components metrics for steady workload
+        if scenario == "steadyworkload":
+            scenario_record = extract_components(steady_workload_dict=scenario_record)
         scenarios_list.append(scenario_record)
 
-    results_dict["Scenarios"] = scenarios_list
+    results_dict["scenarios"] = scenarios_list
 
     return results_dict
 
 
-def extract_os_service_components_metrics(results_dict:dict, acum_sum:float):
+def extract_os_daemon_components_metrics(steady_workload_dict:dict, acum_sum:float):
     """
-    Read the os service components metrics and write them to a the result dict that\n
+    Read the os daemon components metrics and write them to a the steady_workload_dict that\n
     will be used to create the test's results json file.\n
     params:\n
-        -results_dict(dict)-test metrics dict\n
-        -acum_sum(float)-acumulate sum of the cpu, used for calculate avg steadyworkload cpu
-    returns: python dict, float, int 
+        -steady_workload_dict(dict)-test steady workload metrics dict\n
+        -acum_sum(float)-acumulate sum of the cpu, used for calculate total avg steadyworkload cpu
+    returns: python dict, float
     """
-    os_service_list = []
-    os_services = os.environ.get("Os_ServiceGroup").split(" ")
-    number_services = 0
+    os_daemon_list = []
+    os_services = os.environ.get("os_daemon").split(" ")
     for service in os_services:
         if service:
-            number_services +=1
             service_parsed = service.split(":")
             metric = float(service_parsed[1])
-            os_service_list.append({"GroupName":service_parsed[0], "CPU":metric})
+            os_daemon_list.append({"group_name":service_parsed[0], "avg_cpu":metric})
             acum_sum+=metric
 
-    results_dict["Components_OsServiceGroup"] = os_service_list
+    steady_workload_dict["components_os_daemon"] = os_daemon_list
 
-    return results_dict, acum_sum, number_services
+    return steady_workload_dict, acum_sum
 
 
-def  extract_platformpod_components_metrics(results_dict:dict, acum_sum:float):
+def  extract_infra_pods_components_metrics(steady_workload_dict:dict, acum_sum:float):
     """
-    Read the platform pod components metrics and write them to a the result dict that\n
+    Read the infra pods components metrics and write them to a the steady_workload_dict that\n
     will be used to create the test's results json file.\n
     params:\n
-        -results_dict(dict)-test metrics dict\n
-        -acum_sum(float)-acumulate sum of the cpu, used for calculate avg steadyworkload cpu
-    returns: python dict, float, int 
+        -steady_workload_dict(dict)-test steady workload metrics dict\n
+        -acum_sum(float)-acumulate sum of the cpu, used for calculate total avg steadyworkload cpu
+    returns: python dict, float
     """
-    platformpod_list = []
-    platformpods = os.environ.get("PlatformPod").split(" ")
-    number_services = 0
-    for component in platformpods:
+    infra_pods_list = []
+    infra_pods = os.environ.get("infra_pods").split(" ")
+    for component in infra_pods:
         if component:
-            number_services +=1
             component_parsed = component.split(":")
             metric = float(component_parsed[2])
-            platformpod_list.append({"NameSpace":component_parsed[0], "Pod":component_parsed[1], "CPU":metric})
+            infra_pods_list.append({"namespace":component_parsed[0], "pod":component_parsed[1], "avg_cpu":metric})
             acum_sum+=metric
 
-    results_dict["Components_PlatformPod"] = platformpod_list
+    steady_workload_dict["components_infra_pods"] = infra_pods_list
 
-    return results_dict, acum_sum, number_services
+    return steady_workload_dict, acum_sum
 
 
-def extract_components(results_dict:dict):
+def extract_components(steady_workload_dict:dict):
     """
-    Read the components metrics and write them to a the result dict that\n
+    Read the components metrics and write them to a the steady_workload_dict that\n
     will be used to create the test's results json file.\n
     It also calculate the avg steadyworkload\n
     params:\n
-        -results_dict(dict)-test metrics dict\n
+        -steady_workload_dict(dict)-test steady workload metrics dict\n
     returns: python dict 
     """
-    #extract os servieces metrics
-    results_dict, acum_sum, number__os_services = extract_os_service_components_metrics(results_dict=results_dict, acum_sum=0.0)
-    #extract platform pod metrics
-    results_dict, acum_sum, number__platformpod_services = extract_platformpod_components_metrics(results_dict=results_dict, acum_sum=acum_sum)
-    results_dict["Steady_Avg_cpu"] = acum_sum/(number__os_services+number__platformpod_services)
+    #extract os daemon servieces metrics
+    steady_workload_dict, acum_sum = extract_os_daemon_components_metrics(steady_workload_dict=steady_workload_dict, acum_sum=0.0)
+    #extract infra pod metrics
+    steady_workload_dict, acum_sum = extract_infra_pods_components_metrics(steady_workload_dict=steady_workload_dict, acum_sum=acum_sum)
+    steady_workload_dict["avg_cpu_total"] = acum_sum
+    steady_workload_dict["duration"] = os.environ.get("duration").replace("\"", "") if os.environ.get("duration") else None
 
-    return results_dict
+    return steady_workload_dict
 
 
 
@@ -161,9 +157,12 @@ def extract_components(results_dict:dict):
 #                                                                          #
 ############################################################################
 
+#extract global params
 results_dict = extract_global_params(results_dict={})
+#extract scenarios metrics
 results_dict = extract_scenarios_by_types_metrics(results_dict=results_dict)
-results_dict = extract_components(results_dict=results_dict)
+#extract ansible fields values
+results_dict = assign_anisble_fields(results_dict=results_dict)
 
 #create json object
 #add uniuqe id to file name (using unix time)

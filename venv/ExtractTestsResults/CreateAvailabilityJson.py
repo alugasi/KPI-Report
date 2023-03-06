@@ -3,7 +3,7 @@ import json
 import os
 import sys
 import time
-
+from Utils import *
 
 
 ############################################################################
@@ -39,7 +39,7 @@ def extract_metrics_values(max_list:list, min_list:list, avg_list:list, avail_li
     thread = 0
     for max, min, avg, avail in zip(max_list, min_list, avg_list, avail_list):
         number_of_nines = calc_nines(avail=str(avail))
-        metrics_list.append({"Index": thread,"Max_Latency":max, "Min_Latency":min, "Avg_Latency":avg, "Availability": avail, "Number_Of_Nines": number_of_nines})
+        metrics_list.append({"index": thread,"max_latency":max, "min_latency":min, "avg_latency":avg, "availability": avail, "number_of_nines": number_of_nines})
         thread += 1
     return metrics_list
 
@@ -51,10 +51,14 @@ def read_lists_of_latencies():
     returns: 3 lists of latencies, and availability list
     """
     # read lists from env variables and convert to int
-    min_list = [int(x) for x in os.environ.get("min_str").split(" ") if x]
-    max_list = [int(x) for x in os.environ.get("max_str").split(" ") if x]
-    avg_list = [float(x) for x in os.environ.get("avg_str").split(" ") if x]
-    avail_list = [float(x) for x in os.environ.get("avail_str").split(" ") if x]
+    if os.environ.get("min_str"):
+        min_list = [int(x) for x in os.environ.get("min_str").split(" ") if x]
+    if os.environ.get("max_str"):
+        max_list = [int(x) for x in os.environ.get("max_str").split(" ") if x]
+    if os.environ.get("avg_str"):
+        avg_list = [float(x) for x in os.environ.get("avg_str").split(" ") if x]
+    if os.environ.get("avail_str"):
+        avail_list = [float(x) for x in os.environ.get("avail_str").split(" ") if x]
     # return the lists
     return min_list, max_list, avg_list, avail_list
 
@@ -86,16 +90,17 @@ def get_global_params(results_dict:dict):
     returns: the results dict
     """
     #read global params
-    results_dict["OCP_Main_Version"] = os.environ.get("oc_main_version")
-    results_dict["OCP_Minor_Version"] = os.environ.get("oc_minor_version")
-    results_dict["Node_Name"] = os.environ.get("cluster")
-    results_dict["Duration"] = float(os.environ.get("duration"))
-    results_dict["Kernel"] = os.environ.get("kernel")
+    results_dict["ocp_version"] = os.environ.get("ocp_version")
+    results_dict["ocp_build"] = os.environ.get("ocp_build")
+    results_dict["cpu"] = os.environ.get("cpu")
+    results_dict["node_name"] = os.environ.get("cluster")
+    results_dict["duration"] = os.environ.get("duration").replace("\"","") if os.environ.get("duration") else None
+    results_dict["kernel"] = os.environ.get("kernel")
 
     #'sideloaded' env variable is the kernel_real_time value when it equall true it means that sideloaded is false
-    results_dict["Side_Loaded"] = "false" if os.environ.get("sideloaded")=="true" else "true"
+    results_dict["sideloaded"] = None if not os.environ.get("sideloaded") else "false" if os.environ.get("sideloaded")=="true" else "true"
     #TODO:remmember to change when info will be in the test results!
-    results_dict["Operator_Version"] = sys.argv[2]
+    results_dict["operator_version"] = sys.argv[2]
 
     # return the results dict
     return results_dict
@@ -115,22 +120,24 @@ def get_global_params(results_dict:dict):
 #check if OSLAT/Cyclict
 if len(sys.argv) > 1 and sys.argv[1].lower() == "true":
     is_oslat = True
-    type="OSLAT"
+    type="oslat"
     json_file_path="oslats/oslat-"
 else:
     is_oslat = False
-    type="Cyclict"
-    json_file_path="cyclicts/cyclict-"
+    type="cyclictest"
+    json_file_path="cyclicts/cyclictest-"
 
 results_dict = {}
-results_dict["Type"] = type
+results_dict["test_type"] = type
 
 #read global params
 results_dict = get_global_params(results_dict=results_dict)
 #read latencies lists and convert to int lists
 min_list, max_list,  avg_list, avail_list = read_lists_of_latencies()
 #exract metrics values
-results_dict["Test_Units"] = extract_metrics_values(max_list=max_list, min_list=min_list, avg_list=avg_list, avail_list=avail_list)
+results_dict["test_units"] = extract_metrics_values(max_list=max_list, min_list=min_list, avg_list=avg_list, avail_list=avail_list)
+#extract ansible fields values
+results_dict = assign_anisble_fields(results_dict=results_dict)
 
 #create json object
 #add uniuqe id to file name (using unix time)
