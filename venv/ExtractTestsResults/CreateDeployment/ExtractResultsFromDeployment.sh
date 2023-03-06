@@ -11,7 +11,7 @@
 ############################################################################
 
 # load function to export ansible extracted fields
-source ExportAnsibleVars.sh
+source ../Utils/ExportAnsibleVars.sh
 
 #Global Params:
 TEST_RESULTS_PATH=$1

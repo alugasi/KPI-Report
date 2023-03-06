@@ -13,7 +13,7 @@
 ############################################################################
 
 # load function to export ansible extracted fields
-source ExportAnsibleVars.sh
+source ../Utils/ExportAnsibleVars.sh
 
 #Global params
 IS_CYCLICT=$1

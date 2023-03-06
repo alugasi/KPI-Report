@@ -3,7 +3,10 @@ import json
 import os
 import sys
 import time
-from Utils import *
+
+# add the parent directory to the system path
+sys.path.append("..")
+from Utils.Utils import *
 
 
 ############################################################################
@@ -121,11 +124,11 @@ def get_global_params(results_dict:dict):
 if len(sys.argv) > 1 and sys.argv[1].lower() == "true":
     is_oslat = True
     type="oslat"
-    json_file_path="oslats/oslat-"
+    json_file_path="../JsonTestsFolders/oslats/oslat-"
 else:
     is_oslat = False
     type="cyclictest"
-    json_file_path="cyclicts/cyclictest-"
+    json_file_path="../JsonTestsFolders/cyclicts/cyclictest-"
 
 results_dict = {}
 results_dict["test_type"] = type

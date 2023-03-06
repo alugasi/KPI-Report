@@ -14,7 +14,7 @@
 
 
 # load function to export ansible extracted fields
-source ExportAnsibleVars.sh
+source ../Utils/ExportAnsibleVars.sh
 
 #export ansible fields
 export_ansible_vars

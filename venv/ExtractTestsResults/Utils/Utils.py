@@ -23,25 +23,4 @@ def assign_anisble_fields(results_dict:dict):
     return results_dict
 
 
-def validate_field_exist(field:str):
-    """
-    validate that a field is not none,\n
-    in case it is. return True else False\n
-    params:\n
-        -field(str)= the field we want to validate, usually was read from an evnironment variable from the calling script.\n
-    returns: bool indicator.
-    """
-    return True if field else False
-
-
-def assign_none_for_missing(results_dict:dict, field_name:str):
-    """
-    In case the field is missing it assign a None value for it in the results dict\n
-    params:\n
-        -results_dict(dict)-test metrics dict\n
-        -field_name(str)-the missing field key in the dict.\n
-    returns: python dict.
-    """
-    results_dict[field_name]=None
-    return results_dict
 

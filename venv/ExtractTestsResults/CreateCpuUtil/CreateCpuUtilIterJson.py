@@ -2,7 +2,11 @@
 import json
 import os
 import time
-from Utils import *
+import sys
+
+# add the parent directory to the system path
+sys.path.append("..")
+from Utils.Utils import *
 
 
 
@@ -17,7 +21,7 @@ from Utils import *
 
 #GLOBAL PARAMS:
 SCENARIOS_LIST = ["idle", "workloadlaunch", "mustgather", "promquery", "steadyworkload"]
-JSON_DIR = "cpuUtil/cpu_util-"
+JSON_DIR = "../JsonTestsFolders/cpuUtil/cpu_util-"
 
 
 ############################################################################

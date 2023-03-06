@@ -2,7 +2,11 @@
 import json
 import os
 import time
-from Utils import *
+import sys
+
+# add the parent directory to the system path
+sys.path.append("..")
+from Utils.Utils import *
 
 
 ######################################################################################
@@ -14,7 +18,7 @@ from Utils import *
 ######################################################################################
 
 #GLOBAL PARAMS:
-JSON_DIR="Deployments/deployment-"
+JSON_DIR="../JsonTestsFolders/Deployments/deployment-"
 
 ############################################################################
 #                                                                          #

@@ -13,7 +13,7 @@
 #    -SELINUX_STATUS
 #
 # The fields were extracted by Peri's ansible playbook. It is crucial to call the requested extract results scripts from the jenkins logs
-# after calling Peri's ansible playbook.
+# after calling Peri's ansible playbook(dont appear in this repo at this moment).
 #
 ######################################################################################################################################################
 function export_ansible_vars(){

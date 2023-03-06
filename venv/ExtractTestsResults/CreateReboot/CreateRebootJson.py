@@ -2,7 +2,11 @@
 import json
 import os
 import time
-from Utils import *
+import sys
+
+# add the parent directory to the system path
+sys.path.append("..")
+from Utils.Utils import *
 
 
 
@@ -18,7 +22,7 @@ from Utils import *
 #GLOBAL PARAMS:
 SOFT_REBOOT_STAGES = ["soft_node_reachable", "soft_cluster_reachable", "soft_workload_recover", "soft_cluster_recover", "soft_total"]
 POWER_CYCLE_STAGES = ["power_cycle_node_reachable", "power_cycle_cluster_reachable", "power_cycle_workload_recover", "power_cycle_cluster_recover", "power_cycle_total"] 
-JSON_DIR = "reboots/reboot-"
+JSON_DIR = "../JsonTestsFolders/reboots/reboot-"
 
 ############################################################################
 #                                                                          #
