@@ -2,14 +2,11 @@
 Git repository for the "KPI automation scripts and splunk pushing and quries scripts.
 
 ## Overview
-
 The repository contains scripts mainly for:
-    -extracting tests results metrics and parameters, format them and create json 
-     files with the formatted extracted data.
-
-    -pushing the json files to splunk instance(under this index=ecosystem-qe-dev) as new events records for later analysing and reporting.
-
-    -queries for creating different dashboards based on the collected KPIs.
+    a)extracting tests results metrics and parameters, format them and create json 
+    files with the formatted extracted data.
+    b)pushing the json files to splunk instance(under this index=ecosystem-qe-dev) as new events records for later analysing and reporting.
+    c)queries for creating different dashboards based on the collected KPIs.
 
 ## Goal
 The main goal of this repo is to be served as a POC for the Splunk alternative for autamtically collacting and storing tests results and creating dashboards,
@@ -63,7 +60,7 @@ rather then menually collecting the results and store them in spreadsheets and l
 
 ## Notes and future plans:
     1. Some of the fields cannot be extracted from the jenkins logs. Those fields are divided to 2 groups:
-        - Fields that can be extracted via exsited ansible playbook and to be exported as env variables to the driver script(kpiRunMenu.sh).
-        - Fields that need to be inserted manuelly at this moment.
+        a)Fields that can be extracted via exsited ansible playbook and to be exported as env variables to the driver script(kpiRunMenu.sh).
+        b) Fields that need to be inserted manuelly at this moment.
     2. The test json formats are not permant and may change in the future, we are looking for adding more valuable data!.
     3. The repo is still not integrated as part of jenkins pipeline.
