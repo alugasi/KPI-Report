@@ -11,12 +11,12 @@ The repository contains scripts mainly for:
 
     -queries for creating different dashboards based on the collected KPIs.
 
-### goal
+## goal
 The main goal of this repo is to be served as a POC for the Splunk alternative for autamtically collacting and storing tests results and creating dashboards,
 rather then menually collecting the results and store them in spreadsheets and later produce reports from them using Google data studio.
 
 
-# Project structure
+## Project structure
 
 ├── venv                                                        ## folder that conatin all the required files for the virtuall environment and the repo files
 │   ├──ExtractTestsResults                                      ##contains different folders with script for extracting the metrics from jenkins logs and store them in json files
@@ -59,7 +59,7 @@ rather then menually collecting the results and store them in spreadsheets and l
 │   ├──pyvenv.cfg                                               ## virtual environmet config file
 │   ├──splunkHecPush.py                                         ## script for pushing json files to splunk
 
-##### Notes and future plans:
+## Notes and future plans:
     1. Some of the fields cannot be extracted from the jenkins logs. Those fields are divided to 2 groups:
         - Fields that can be extracted via exsited ansible playbook and to be exported as env variables to the driver script(kpiRunMenu.sh).
         - Fields that need to be inserted manuelly at this moment.
