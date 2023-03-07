@@ -15,36 +15,36 @@ rather then menually collecting the results and store them in spreadsheets and l
 
 ## Project structure
 
-├── venv                                                        ## folder that conatin all the required files for the virtuall environment and the repo files<br>
-│   ├──ExtractTestsResults                                      ##contains different folders with script for extracting the metrics from jenkins logs and store them in json files<br>
-│   │   │   ├──CreateAvailability                               ## folder with scripts for creating json file from oslat and cyclictest jenkins log<br>
-│   │   │   │   │   ├──CreateAvailabilityJson.py                ## create json file from extracted fields<br>
-│   │   │   │   │   ├──extractResultsFromAvailability.sh        ## extract fields from jenkins log<br>
-│   │   │   ├──CreateCpuUtil                                    ## folder with scripts for creating json file from cpu util jenkins log<br>
-│   │   │   │   │   ├──CreateCpuUtilIterJson.py                 ## create json file from extracted fields<br>
-│   │   │   │   │   ├──extractResultsFromCPUUtil.sh             ## extract fields from jenkins log<br>
-│   │   │   ├──CreateDeployment                                 ## folder with scripts for creating json file from deployment jenkins log<br>
-│   │   │   │   │   ├──CreateDeploymentJson.py                  ## create json file from extracted fields<br>
-│   │   │   │   │   ├──ExtractResultsFromDeployment.sh          ## extract fields from jenkins log<br>
-│   │   │   ├──CreateNetwork                                    ## folder with scripts for creating json file from rfc and ptp jenkins log<br>
-│   │   │   │   │   ├──CreateNetworkJson.py                     ## create json file from extracted fields<br>
-│   │   │   │   │   ├──extractResultsFromNetwork.sh             ## extract fields from jenkins log<br>
-│   │   │   ├──CreateReboot                                     ## folder with scripts for creating json file from reboot jenkins log<br>
-│   │   │   │   │   ├──CreateRebootJson.py                      ## create json file from extracted fields<br>
-│   │   │   │   │   ├──extractResultsFromReboot.sh              ## extract fields from jenkins log<br>
-│   │   │   ├──JenkinsLogs                                      ## folder that contains test jenkins logs samples<br>
-│   │   │   ├──JsonTestsFolders                                 ## folder that contains different json files that were created from a given jenkins logs/spreadsheets<br>
-│   │   │   ├──Utils                                            ## folder with different utils scripts<br>
-│   │   │   │   │   ├──ExportAnsibleVars.sh                     ## script for exporting job parameters that were extracted via ansible playbook(still not in the repo)<br>
-│   │   │   │   │   ├──Utils.py                                 ## utils module <br>
-│   │   │   ├──kpiRunMenu.sh                                    ## driver script for selecting the requried test metrics extraction(still not fully aotumated)<br>
+├── venv                                                       ## folder that conatin all the required files for the virtuall environment and the repo files<br>
+│   ├──ExtractTestsResults                                     ##contains different folders with script for extracting the metrics from jenkins logs and store them in json files<br>
+│   │   ├──CreateAvailability                                  ## folder with scripts for creating json file from oslat and cyclictest jenkins log<br>
+│   │   │   ├──CreateAvailabilityJson.py                       ## create json file from extracted fields<br>
+│   │   │   ├──extractResultsFromAvailability.sh               ## extract fields from jenkins log<br>
+│   │   ├──CreateCpuUtil                                       ## folder with scripts for creating json file from cpu util jenkins log<br>
+│   │   │   ├──CreateCpuUtilIterJson.py                        ## create json file from extracted fields<br>
+│   │   │   ├──extractResultsFromCPUUtil.sh                    ## extract fields from jenkins log<br>
+│   │   ├──CreateDeployment                                    ## folder with scripts for creating json file from deployment jenkins log<br>
+│   │   │   ├──CreateDeploymentJson.py                         ## create json file from extracted fields<br>
+│   │   │   ├──ExtractResultsFromDeployment.sh                 ## extract fields from jenkins log<br>
+│   │   ├──CreateNetwork                                       ## folder with scripts for creating json file from rfc and ptp jenkins log<br>
+│   │   │   ├──CreateNetworkJson.py                            ## create json file from extracted fields<br>
+│   │   │   ├──extractResultsFromNetwork.sh                    ## extract fields from jenkins log<br>
+│   │   ├──CreateReboot                                        ## folder with scripts for creating json file from reboot jenkins log<br>
+│   │   │   ├──CreateRebootJson.py                             ## create json file from extracted fields<br>
+│   │   │   ├──extractResultsFromReboot.sh                     ## extract fields from jenkins log<br>
+│   │   ├──JenkinsLogs                                         ## folder that contains test jenkins logs samples<br>
+│   │   ├──JsonTestsFolders                                    ## folder that contains different json files that were created from a given jenkins logs/spreadsheets<br>
+│   │   ├──Utils                                                ## folder with different utils scripts<br>
+│   │   │   ├──ExportAnsibleVars.sh                             ## script for exporting job parameters that were extracted via ansible playbook(still not in the repo)<br>
+│   │   │   ├──Utils.py                                         ## utils module <br>
+│   │   ├──kpiRunMenu.sh                                        ## driver script for selecting the requried test metrics extraction(still not fully aotumated)<br>
 │   ├──JsonFormatsForSplunk                                     ##  folder that contain all the corrent json formats for the tests that are pushed to splunk<br>
-│   │   │   ├──AvailabilityTest.json                            ## json format for cyclictest and oslat<br>
-│   │   │   ├──CpuUtilTest.json                                 ## json format for cpu util test<br>
-│   │   │   ├──DeploymentTest.json                              ## json format for deployment test<br>
-│   │   │   ├──PtpTest.json                                     ## json format for ptp test<br>
-│   │   │   ├──RebootTest.json                                  ## json format for reboot test<br>
-│   │   │   ├──RfcTest.json                                     ## json format for rfc2544 test<br>
+│   │   ├──AvailabilityTest.json                                ## json format for cyclictest and oslat<br>
+│   │   ├──CpuUtilTest.json                                     ## json format for cpu util test<br>
+│   │   ├──DeploymentTest.json                                  ## json format for deployment test<br>
+│   │   ├──PtpTest.json                                         ## json format for ptp test<br>
+│   │   ├──RebootTest.json                                      ## json format for reboot test<br>
+│   │   ├──RfcTest.json                                         ## json format for rfc2544 test<br>
 │   ├──bin                                                      ## virtual environmet files<br>
 │   ├──lib/python3.10/site-packages                             ## virtual environmet files<br>
 │   ├── spl_queries                                             ## folder that contain files with queries for creating the different dashboards<br>
