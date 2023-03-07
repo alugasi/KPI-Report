@@ -57,8 +57,6 @@ rather then menually collecting the results and store them in spreadsheets and l
 │   ├──splunkHecPush.py                                         ## script for pushing json files to splunk<br>
 
 ## Notes and future plans
-    a) Some of the fields cannot be extracted from the jenkins logs. Those fields are divided to 2 groups:<br>
-        i)Fields that can be extracted via exsited ansible playbook and to be exported as env variables to the driver script(kpiRunMenu.sh).<br>
-        ii) Fields that need to be inserted manuelly at this moment.<br>
-    b) The test json formats are not permant and may change in the future, we are looking for adding more valuable data!.<br>
-    c) The repo is still not integrated as part of jenkins pipeline.<br>
+    a) Some of the fields cannot be extracted from the jenkins logs. Those fields are divided to 2 groups: Fields that can be extracted via exsited ansible playbook and to be exported as env variables to the driver script(kpiRunMenu.sh). Fields that need to be inserted manuelly at this moment.
+    b) The test json formats are not permanent and may change in the future, we are looking for adding more valuable data!.
+    c) The repo is still not integrated as part of jenkins pipeline.
