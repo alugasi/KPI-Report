@@ -2,27 +2,78 @@
 #### general metrics ####
 
 info:get max cpu for idle for specific ocp version
-query:index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"  | spath path=scenarios{0}.types{}{}.max_cpu output=max_cpu_max_idle | search max_cpu_max_idle="*"| top limit=1 max_cpu_max_idle
+query:index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"  | eval cpu_max_idle=spath(_raw, "scenarios{0}.types{}{}.max_cpu") | stats max(cpu_max_idle)
 
 info:get max cpu for workloadlaunch for specific ocp version
-query:index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"  | spath path=scenarios{4}.types{}{}.max_cpu output=max_cpu_max_workloadlaunch | search max_cpu_max_workloadlaunch="*"| top limit=1 max_cpu_max_workloadlaunch
+query:index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"  | eval cpu_max_workloadlaunch=spath(_raw,"scenarios{4}.types{}{}.max_cpu") | stats max(cpu_max_workloadlaunch)
 
 info:get max cpu for mustgather for specific ocp version
-query:index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"  | spath path=scenarios{1}.types{}{}.max_cpu output=max_cpu_max_mustgather | search max_cpu_max_mustgather="*"| top limit=1 max_cpu_max_mustgather
+query:index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"  | eval cpu_max_mustgather=spath(_raw, "scenarios{1}.types{}{}.max_cpu") | stats max(cpu_max_mustgather)
 
 info:get max cpu for promquery for specific ocp version
-query:index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"  | spath path=scenarios{2}.types{}{}.max_cpu output=max_cpu_max_promquery | search max_cpu_max_promquery="*" | top limit=1 max_cpu_max_promquery
+query:index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"  | eval cpu_max_promquery=spath(_raw, "scenarios{2}.types{}{}.max_cpu") | stats max(cpu_max_promquery)
 
 info:get max cpu for steadyworkload for specific ocp ocp_version
-query:index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"  | spath path=scenarios{3}.types{}{}.max_cpu output=max_cpu_max_steadyworkload | search max_cpu_max_steadyworkload="*" | top limit=1 max_cpu_max_steadyworkload
+query:index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"  | eval cpu_max_steadyworkload=spath(_raw, "scenarios{3}.types{}{}.max_cpu") | stats max(cpu_max_steadyworkload)
 
 info:get max avg cpu total for steadyworkload for specific ocp ocp_version
-query:index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"  | spath path=scenarios{3}.avg_cpu_total output=max_avg_cpu_total | search max_avg_cpu_total="*"| top limit=1 max_avg_cpu_total
+query:index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"   | eval avg_cpu_total=spath(_raw, "scenarios{3}.avg_cpu_total") | stats max(avg_cpu_total)
+
+###charts queries###
 
 #### Max overall platform CPU usage - release over release ####
+index="ecosystem-qe-dev" test_type="cpu_util" ocp_build IN ($ocp_build$)
+| spath path=scenarios{} output=scenarios 
+| mvexpand scenarios 
+| rename scenarios as scenarios_seperated | spath input=scenarios_seperated path=scenario_name output=scenario_name | spath input=scenarios_seperated path=types{}.max_cpu output=max_cpu
+| mvexpand max_cpu 
+| rename max_cpu as max_cpu_seperated | eval max_cpu_seperated=round(max_cpu_seperated, 2)
+| chart max(max_cpu_seperated) over scenario_name by ocp_build
 
+#### Avg overall platform max CPU usage - release over release ####
+index="ecosystem-qe-dev" test_type="cpu_util" ocp_build IN ($ocp_build$)
+| spath path=scenarios{} output=scenarios 
+| mvexpand scenarios 
+| rename scenarios as scenarios_seperated 
+| spath input=scenarios_seperated path=scenario_name output=scenario_name 
+| spath input=scenarios_seperated path=types{}.max_cpu output=max_cpu
+| mvexpand max_cpu 
+| chart avg(max_cpu) over scenario_name by ocp_build
 
+###Max overall platform max CPU usage - by kernel####
+index="ecosystem-qe-dev" test_type="cpu_util" ocp_build IN ($ocp_build$)
+| spath path=scenarios{} output=scenarios 
+| mvexpand scenarios 
+| rename scenarios as scenarios_separated 
+| spath input=scenarios_separated path=scenario_name output=scenario_name 
+| spath input=scenarios_separated path=types{}.max_cpu output=max_cpu
+| mvexpand max_cpu 
+| rename max_cpu as max_cpu_separated 
+| eval max_cpu_separated=round(max_cpu_separated, 2)
+| replace "" with "unknown" in kernel
+| chart max(max_cpu_separated) over scenario_name by kernel
 
-### helpers
-info: get specific scenario details
-index="ecosystem-qe-dev" test_type="cpu_util" ocp_version = "?"  | spath path=scenarios{?} output=scenarios_seperated | search scenarios_seperated="*"
+###Avg overall platform max CPU usage - by kernel###
+index="ecosystem-qe-dev" test_type="cpu_util" ocp_build IN ($ocp_build$)
+| spath path=scenarios{} output=scenarios 
+| mvexpand scenarios 
+| rename scenarios as scenarios_seperated 
+| spath input=scenarios_seperated path=scenario_name output=scenario_name 
+| spath input=scenarios_seperated path=types{}.max_cpu output=max_cpu
+| mvexpand max_cpu 
+| replace "" with "unknown" in kernel
+| chart avg(max_cpu) over scenario_name by kernel
+
+###Max avg total cpu for steadyworkload - by release###
+index="ecosystem-qe-dev" test_type="cpu_util" ocp_build IN ($ocp_build$) | eval avg_cpu_total=spath(_raw, "scenarios{3}.avg_cpu_total")  | eval avg_cpu_total=round(avg_cpu_total, 2)
+| chart max(avg_cpu_total)  over ocp_build by ocp_version
+
+###Max avg total cpu for steadyworkload - by kernel###
+index="ecosystem-qe-dev" test_type="cpu_util" ocp_build IN ($ocp_build$) | eval avg_cpu_total=spath(_raw, "scenarios{3}.avg_cpu_total")  | eval avg_cpu_total=round(avg_cpu_total, 2) | replace "" with "unknown" in kernel
+| chart max(avg_cpu_total)  over ocp_build by kernel
+
+###general statistics for os daemon components -by ocp version###
+index="ecosystem-qe-dev" test_type="cpu_util" ocp_version IN ("4.11","4.12")  | eval components_os_daemon=spath(_raw, "scenarios{3}.components_os_daemon{}") | mvexpand components_os_daemon | spath input=components_os_daemon path=group_name output=group_name  | spath input=components_os_daemon path=avg_cpu output=avg_cpu   | stats p25(eval(avg_cpu)) as p25_cpu median(eval(avg_cpu)) as median_cpu p75(eval(avg_cpu)) as p75_cpu avg(eval(avg_cpu)) as avg_cpu  by ocp_version
+
+###general statistics for infra nodes components -by ocp version###
+index="ecosystem-qe-dev" test_type="cpu_util" ocp_version IN ("4.11","4.12")  | eval components_infra_pods=spath(_raw, "scenarios{3}.components_infra_pods{}") | mvexpand components_infra_pods | spath input=components_infra_pods path=namespace output=namespace  |  spath input=components_infra_pods path=pod output=pod  | spath input=components_infra_pods path=avg_cpu output=avg_cpu   | stats p25(eval(avg_cpu)) as p25_cpu median(eval(avg_cpu)) as median_cpu p75(eval(avg_cpu)) as p75_cpu  avg(eval(avg_cpu)) as avg_cpu by ocp_version
