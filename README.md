@@ -59,6 +59,49 @@ rather then menually collecting the results and store them in spreadsheets and l
 │   ├──pyvenv.cfg                                               ## virtual environmet config file<br>
 │   ├──splunkHecPush.py                                         ## script for pushing json files to splunk<br>
 
+
+├── venv 
+│   ├── ExtractTestsResults 
+│   │   ├── CreateAvailability 
+│   │   │   ├── CreateAvailabilityJson.py 
+│   │   │   ├── extractResultsFromAvailability.sh 
+│   │   ├── CreateCpuUtil 
+│   │   │   ├── CreateCpuUtilIterJson.py 
+│   │   │   ├── extractResultsFromCPUUtil.sh 
+│   │   ├── CreateDeployment 
+│   │   │   ├── CreateDeploymentJson.py 
+│   │   │   ├── ExtractResultsFromDeployment.sh 
+│   │   ├── CreateNetwork 
+│   │   │   ├── CreateNetworkJson.py 
+│   │   │   ├── extractResultsFromNetwork.sh 
+│   │   ├── CreateReboot 
+│   │   │   ├── CreateRebootJson.py 
+│   │   │   ├── extractResultsFromReboot.sh 
+│   │   ├── JenkinsLogs 
+│   │   ├── JsonTestsFolders 
+│   │   ├── Utils 
+│   │   │   ├── ExportAnsibleVars.sh 
+│   │   │   ├── Utils.py 
+│   │   ├── kpiRunMenu.sh 
+│   ├── JsonFormatsForSplunk 
+│   │   ├── AvailabilityTest.json 
+│   │   ├── CpuUtilTest.json 
+│   │   ├── DeploymentTest.json 
+│   │   ├── PtpTest.json 
+│   │   ├── RebootTest.json 
+│   │   ├── RfcTest.json 
+│   ├── bin 
+│   ├── lib/python3.10/site-packages 
+│   ├── spl_queries 
+│   │   ├── cpu_util_dashbords.txt 
+│   ├── ExtractFromCpuSpreadSheet.ipynb 
+│   ├── Informal - RAN QE CPU Utilization.xlsx - component.csv 
+│   ├── Informal - RAN QE CPU Utilization.xlsx - other.csv 
+│   ├── lib64 
+│   ├── pyvenv.cfg 
+│   ├── splunkHecPush.py 
+
+
 ## Notes and future plans:
     1. Some of the fields cannot be extracted from the jenkins logs. Those fields are divided to 2 groups:
         - Fields that can be extracted via exsited ansible playbook and to be exported as env variables to the driver script(kpiRunMenu.sh).
