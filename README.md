@@ -15,25 +15,25 @@ rather then menually collecting the results and store them in spreadsheets and l
 
 ## Project structure
 
-    ├── venv                                                       ## folder that conatin all the required files for the virtuall environment and the repo files
-    │   ├──ExtractTestsResults                                     ##contains different folders with script for extracting the metrics from jenkins logs and store them in json files
-    │   │   ├──CreateAvailability                                  ## folder with scripts for creating json file from oslat and cyclictest jenkins log
-    │   │   │   ├──CreateAvailabilityJson.py                       ## create json file from extracted fields
-    │   │   │   ├──extractResultsFromAvailability.sh               ## extract fields from jenkins log
-    │   │   ├──CreateCpuUtil                                       ## folder with scripts for creating json file from cpu util jenkins log
-    │   │   │   ├──CreateCpuUtilIterJson.py                        ## create json file from extracted fields
-    │   │   │   ├──extractResultsFromCPUUtil.sh                    ## extract fields from jenkins log
-    │   │   ├──CreateDeployment                                    ## folder with scripts for creating json file from deployment jenkins log
-    │   │   │   ├──CreateDeploymentJson.py                         ## create json file from extracted fields
-    │   │   │   ├──ExtractResultsFromDeployment.sh                 ## extract fields from jenkins log
-    │   │   ├──CreateNetwork                                       ## folder with scripts for creating json file from rfc and ptp jenkins log
-    │   │   │   ├──CreateNetworkJson.py                            ## create json file from extracted fields
-    │   │   │   ├──extractResultsFromNetwork.sh                    ## extract fields from jenkins log
-    │   │   ├──CreateReboot                                        ## folder with scripts for creating json file from reboot jenkins log
-    │   │   │   ├──CreateRebootJson.py                             ## create json file from extracted fields
-    │   │   │   ├──extractResultsFromReboot.sh                     ## extract fields from jenkins log
-    │   │   ├──JenkinsLogs                                         ## folder that contains test jenkins logs samples
-    │   │   ├──JsonTestsFolders                                    ## folder that contains different json files that were created from a given jenkins logs/spreadsheets
+    ├── venv                                                        ## folder that conatin all the required files for the virtuall environment and the repo files
+    │   ├──ExtractTestsResults                                      ##contains different folders with script for extracting the metrics from jenkins logs and store them in json files
+    │   │   ├──CreateAvailability                                   ## folder with scripts for creating json file from oslat and cyclictest jenkins log
+    │   │   │   ├──CreateAvailabilityJson.py                        ## create json file from extracted fields
+    │   │   │   ├──extractResultsFromAvailability.sh                ## extract fields from jenkins log
+    │   │   ├──CreateCpuUtil                                        ## folder with scripts for creating json file from cpu util jenkins log
+    │   │   │   ├──CreateCpuUtilIterJson.py                         ## create json file from extracted fields
+    │   │   │   ├──extractResultsFromCPUUtil.sh                     ## extract fields from jenkins log
+    │   │   ├──CreateDeployment                                     ## folder with scripts for creating json file from deployment jenkins log
+    │   │   │   ├──CreateDeploymentJson.py                          ## create json file from extracted fields
+    │   │   │   ├──ExtractResultsFromDeployment.sh                  ## extract fields from jenkins log
+    │   │   ├──CreateNetwork                                        ## folder with scripts for creating json file from rfc and ptp jenkins log
+    │   │   │   ├──CreateNetworkJson.py                             ## create json file from extracted fields
+    │   │   │   ├──extractResultsFromNetwork.sh                     ## extract fields from jenkins log
+    │   │   ├──CreateReboot                                         ## folder with scripts for creating json file from reboot jenkins log
+    │   │   │   ├──CreateRebootJson.py                              ## create json file from extracted fields
+    │   │   │   ├──extractResultsFromReboot.sh                      ## extract fields from jenkins log
+    │   │   ├──JenkinsLogs                                          ## folder that contains test jenkins logs samples
+    │   │   ├──JsonTestsFolders                                     ## folder that contains different json files that were created from a given jenkins logs/spreadsheets
     │   │   ├──Utils                                                ## folder with different utils scripts
     │   │   │   ├──ExportAnsibleVars.sh                             ## script for exporting job parameters that were extracted via ansible playbook(still not in the repo)
     │   │   │   ├──Utils.py                                         ## utils module 
@@ -48,7 +48,7 @@ rather then menually collecting the results and store them in spreadsheets and l
     │   ├──bin                                                      ## virtual environmet files
     │   ├──lib/python3.10/site-packages                             ## virtual environmet files
     │   ├── spl_queries                                             ## folder that contain files with queries for creating the different dashboards
-    │   │   │   ├── cpu_util_dashbords.txt                          ## queries for creating the cpu util dashboard
+    │   │   ├── cpu_util_dashbords.txt                              ## queries for creating the cpu util dashboard
     │   ├──ExtractFromCpuSpreadSheet.ipynb                          ## script for extracting and creating json files from cpu util spreadsheets
     │   ├──Informal - RAN QE CPU Utilization.xlsx - component.csv   ## cpu util component spreadsheet sample
     │   ├──Informal - RAN QE CPU Utilization.xlsx - other.csv       ## cpu util scenarios metrics spreadsheet sample
