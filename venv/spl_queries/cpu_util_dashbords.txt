@@ -77,3 +77,21 @@ index="ecosystem-qe-dev" test_type="cpu_util" ocp_version IN ("4.11","4.12")  | 
 
 ###general statistics for infra nodes components -by ocp version###
 index="ecosystem-qe-dev" test_type="cpu_util" ocp_version IN ("4.11","4.12")  | eval components_infra_pods=spath(_raw, "scenarios{3}.components_infra_pods{}") | mvexpand components_infra_pods | spath input=components_infra_pods path=namespace output=namespace  |  spath input=components_infra_pods path=pod output=pod  | spath input=components_infra_pods path=avg_cpu output=avg_cpu   | stats p25(eval(avg_cpu)) as p25_cpu median(eval(avg_cpu)) as median_cpu p75(eval(avg_cpu)) as p75_cpu  avg(eval(avg_cpu)) as avg_cpu by ocp_version
+
+
+### bubble charts queries ###
+
+### idle
+index="ecosystem-qe-dev" test_type="cpu_util" ocp_version IN ($ocp_build$)  | eval cpu_max_idle_os_daemon=spath(_raw, "scenarios{0}.types{0}{}.max_cpu") | eval cpu_max_idle_infra_pods=spath(_raw, "scenarios{0}.types{1}{}.max_cpu") | eval cpu_max_idle_total=spath(_raw, "scenarios{0}.types{2}{}.max_cpu") | table cpu_max_idle_os_daemon, cpu_max_idle_infra_pods, cpu_max_idle_total, ocp_build
+
+### workloadlaunch
+index="ecosystem-qe-dev" test_type="cpu_util" ocp_version IN ($ocp_build$)  | eval cpu_max_workloadlaunch_os_daemon=spath(_raw, "scenarios{4}.types{0}{}.max_cpu") | eval cpu_max_workloadlaunch_infra_pods=spath(_raw, "scenarios{4}.types{1}{}.max_cpu") | eval cpu_max_workloadlaunch_total=spath(_raw, "scenarios{4}.types{2}{}.max_cpu") | table cpu_max_workloadlaunch_os_daemon, cpu_max_workloadlaunch_infra_pods, cpu_max_workloadlaunch_total, ocp_build
+
+### mustgather
+index="ecosystem-qe-dev" test_type="cpu_util" ocp_version IN ($ocp_build$)  | eval cpu_max_mustgather_os_daemon=spath(_raw, "scenarios{1}.types{0}{}.max_cpu") | eval cpu_max_mustgather_infra_pods=spath(_raw, "scenarios{1}.types{1}{}.max_cpu") | eval cpu_max_mustgather_total=spath(_raw, "scenarios{1}.types{2}{}.max_cpu") | table cpu_max_mustgather_os_daemon, cpu_max_mustgather_infra_pods, cpu_max_mustgather_total, ocp_build
+
+### promquery
+index="ecosystem-qe-dev" test_type="cpu_util" ocp_version IN ($ocp_build$)  | eval cpu_max_promquery_os_daemon=spath(_raw, "scenarios{2}.types{0}{}.max_cpu") | eval cpu_max_promquery_infra_pods=spath(_raw, "scenarios{2}.types{1}{}.max_cpu") | eval cpu_max_promquery_total=spath(_raw, "scenarios{2}.types{2}{}.max_cpu") | table cpu_max_promquery_os_daemon, cpu_max_promquery_infra_pods, cpu_max_promquery_total, ocp_build
+
+### steadyworkload
+index="ecosystem-qe-dev" test_type="cpu_util" ocp_version IN ($ocp_build$)  | eval cpu_max_steadyworkload_os_daemon=spath(_raw, "scenarios{3}.types{0}{}.max_cpu") | eval cpu_max_steadyworkload_infra_pods=spath(_raw, "scenarios{3}.types{1}{}.max_cpu") | eval cpu_max_steadyworkload_total=spath(_raw, "scenarios{3}.types{2}{}.max_cpu") | table cpu_max_steadyworkload_os_daemon, cpu_max_steadyworkload_infra_pods, cpu_max_steadyworkload_total, ocp_build
