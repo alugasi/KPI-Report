@@ -11,7 +11,7 @@
 ############################################################################
 
 # load function to export ansible extracted fields
-source ../Utils/ExportAnsibleVars.sh
+source Utils/ExportAnsibleVars.sh
 
 #Global params
 TEST_RESULTS_PATH=$1
@@ -122,7 +122,7 @@ function handle_cpu_util_iter(){
     export_iter_metrics
 
     #call python script
-    python3 CreateCpuUtilIterJson.py
+    python3 CreateCpuUtil/CreateCpuUtilIterJson.py
 }
 
 

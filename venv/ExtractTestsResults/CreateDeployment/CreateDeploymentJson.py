@@ -5,8 +5,8 @@ import time
 import sys
 
 # add the parent directory to the system path
-sys.path.append("..")
-from Utils.Utils import *
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Utils/')))
+from Utils import *
 
 
 ######################################################################################
@@ -18,7 +18,7 @@ from Utils.Utils import *
 ######################################################################################
 
 #GLOBAL PARAMS:
-JSON_DIR="../JsonTestsFolders/Deployments/deployment-"
+JSON_DIR="JsonTestsFolders/Deployments/deployment-"
 
 ############################################################################
 #                                                                          #

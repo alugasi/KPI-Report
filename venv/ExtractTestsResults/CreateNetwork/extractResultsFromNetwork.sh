@@ -14,7 +14,7 @@
 
 
 # load function to export ansible extracted fields
-source ../Utils/ExportAnsibleVars.sh
+source Utils/ExportAnsibleVars.sh
 
 #export ansible fields
 export_ansible_vars
@@ -91,7 +91,7 @@ function handle_RFC() {
 
     #call python script
     local is_PTP="False"
-    python3 CreateNetworkJson.py $is_PTP
+    python3 CreateNetwork/CreateNetworkJson.py $is_PTP
 }
 
 function extract_PTP() {  
@@ -158,7 +158,7 @@ function handle_PTP() {
     
     #call python script
     local is_PTP="True"
-    python3 CreateNetworkJson.py $is_PTP
+    python3 CreateNetwork/CreateNetworkJson.py $is_PTP
 }
 
 if [ $IS_RFC -eq 1 ]; 

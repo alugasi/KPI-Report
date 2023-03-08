@@ -13,7 +13,7 @@
 ############################################################################
 
 # load function to export ansible extracted fields
-source ../Utils/ExportAnsibleVars.sh
+source Utils/ExportAnsibleVars.sh
 
 #Global params
 IS_CYCLICT=$1
@@ -91,7 +91,7 @@ function handle_availability() {
     export_metrics
 
     #call python script
-    python3 CreateAvailabilityJson.py $IS_OSLAT  $OPERATOR_VERSION 
+    python3 CreateAvailability/CreateAvailabilityJson.py $IS_OSLAT  $OPERATOR_VERSION 
 }
 
 if [ $IS_CYCLICT -eq 1 ]; 

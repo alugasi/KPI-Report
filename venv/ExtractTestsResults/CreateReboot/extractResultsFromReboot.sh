@@ -12,7 +12,7 @@
 ############################################################################
 
 # load function to export ansible extracted fields
-source ../Utils/ExportAnsibleVars.sh
+source Utils/ExportAnsibleVars.sh
 
 #Global Params:
 TEST_RESULTS_PATH=$1
@@ -97,7 +97,7 @@ function handle_reboot(){
     export_metrics
 
     #call python script
-    python3 CreateRebootJson.py
+    python3 CreateReboot/CreateRebootJson.py
 }
 
 handle_reboot

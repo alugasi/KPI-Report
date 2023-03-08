@@ -5,8 +5,8 @@ import time
 import sys
 
 # add the parent directory to the system path
-sys.path.append("..")
-from Utils.Utils import *
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Utils/')))
+from Utils import *
 
 
 
@@ -22,7 +22,7 @@ from Utils.Utils import *
 #GLOBAL PARAMS:
 SOFT_REBOOT_STAGES = ["soft_node_reachable", "soft_cluster_reachable", "soft_workload_recover", "soft_cluster_recover", "soft_total"]
 POWER_CYCLE_STAGES = ["power_cycle_node_reachable", "power_cycle_cluster_reachable", "power_cycle_workload_recover", "power_cycle_cluster_recover", "power_cycle_total"] 
-JSON_DIR = "../JsonTestsFolders/reboots/reboot-"
+JSON_DIR = "JsonTestsFolders/reboots/reboot-"
 
 ############################################################################
 #                                                                          #

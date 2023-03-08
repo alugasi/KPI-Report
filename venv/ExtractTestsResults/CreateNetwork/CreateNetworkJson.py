@@ -5,8 +5,8 @@ import sys
 import time
 
 # add the parent directory to the system path
-sys.path.append("..")
-from Utils.Utils import *
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Utils/')))
+from Utils import *
 
 
 ############################################################################
@@ -48,7 +48,7 @@ if not is_ptp:
         "max_delay":max_delay,\
         "avg_delay":avg_delay
     }
-    json_file_path = "../JsonTestsFolders/RFC2544/rfc2544-"
+    json_file_path = "JsonTestsFolders/RFC2544/rfc2544-"
 else :
     ptp4l_avg_offset = float(os.environ.get("ptp4l_avg_offset_PTP")) if os.environ.get("ptp4l_avg_offset_PTP") else None
     ptp4l_max_offset = float(os.environ.get("ptp4l_max_offset_PTP")) if os.environ.get("ptp4l_max_offset_PTP") else None
@@ -75,7 +75,7 @@ else :
         "phc2sys_max_offset":phc2sys_max_offset,\
         "phc2sys_min_offset":phc2sys_min_offset
     }
-    json_file_path = "../JsonTestsFolders/PTP/ptp-"
+    json_file_path = "JsonTestsFolders/PTP/ptp-"
 
 #extract ansible fields values
 results_dict = assign_anisble_fields(results_dict=results_dict)
