@@ -1,5 +1,5 @@
 # KPI_Splunk
-Git repository for the "KPI automation scripts and splunk pushing and quries scripts.
+Git repository for the "KPI automation report scripts and splunk pushing and retrive data queries scripts.
 
 ## Overview
 The repository contains scripts mainly for:<br>
@@ -9,13 +9,13 @@ The repository contains scripts mainly for:<br>
     c)queries for creating different dashboards based on the collected KPIs.<br>
 
 ## Goal
-The main goal of this repo is to be served as a POC for the Splunk alternative for autamtically collacting and storing tests results and creating dashboards,
-rather then menually collecting the results and store them in spreadsheets and later produce reports from them using Google data studio.
+The main goal of this repo is to be served as a POC for the Splunk alternative of autamtically collacting and storing tests results and creating dashboards,
+rather then manually collecting the results and store them in spreadsheets and later produce reports from them using Google data studio.
 
 
 ## Project structure
 
-    ├── venv                                                        ## folder that conatin all the required files for the virtuall environment and the repo files
+    ├── venv                                                        ## folder that conatin all the required files for the virtuall environment and the repo tasks files
     │   ├──ExtractTestsResults                                      ##contains different folders with script for extracting the metrics from jenkins logs and store them in json files
     │   │   ├──CreateAvailability                                   ## folder with scripts for creating json file from oslat and cyclictest jenkins log
     │   │   │   ├──CreateAvailabilityJson.py                        ## create json file from extracted fields
@@ -61,4 +61,4 @@ a) Some of the fields cannot be extracted from the jenkins logs. Those fields ar
     Fields that can be extracted via exsited ansible playbook and to be exported<br> 
     as env variables to the driver script(kpiRunMenu.sh). Fields that need to be inserted manuelly at this moment.<br>
 b) The test json formats are not permanent and may change in the future, we are looking for adding more valuable data!.<br>
-c) The repo is still not integrated as part of jenkins pipeline.<br>
+c) The repo is still not integrated as part of any jenkins pipeline.<br>
