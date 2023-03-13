@@ -1,0 +1,21 @@
+Version,OCP Version,Operator Source,Stage,Iteration,Seconds,Total Minutes,Cluster,Reboot Count
+4.11,4.11.0-rc.6,brew,DeploySnoDuNode,1,3285,117.87,test-sno-1,5
+4.11,4.11.0-rc.6,brew,WaitForDuProfileApply,1,3787,,test-sno-1,
+4.11,4.11.0-rc.6,brew,DeploySnoDuNode,2,3228,114.13,test-sno-1,5
+4.11,4.11.0-rc.6,brew,WaitForDuProfileApply,2,3620,,test-sno-1,
+4.11,4.11.0-rc.6,brew,DeploySnoDuNode,3,3093,109.27,test-sno-1,5
+4.11,4.11.0-rc.6,brew,WaitForDuProfileApply,3,3463,,test-sno-1,
+4.11,4.11.0-rc.6,brew,DeploySnoDuNode,4,3599,122.02,test-sno-1,6
+4.11,4.11.0-rc.6,brew,WaitForDuProfileApply,4,3722,,test-sno-1,
+4.11,4.11.0-rc.6,brew,DeploySnoDuNode,5,3285,113.07,test-sno-1,5
+4.11,4.11.0-rc.6,brew,WaitForDuProfileApply,5,3499,,test-sno-1,
+4.11,4.11.6,stage,DeploySnoDuNode,1,3528,85.55,cnfde23,3
+4.11,4.11.6,stage,WaitForDuProfileApply,1,1605,,cnfde23,
+4.11,4.11.6,stage,DeploySnoDuNode,2,3021,80.90,cnfde23,3
+4.11,4.11.6,stage,WaitForDuProfileApply,2,1833,,cnfde23,
+4.11,4.11.6,stage,DeploySnoDuNode,3,3703,88.05,cnfde23,3
+4.11,4.11.6,stage,WaitForDuProfileApply,3,1580,,cnfde23,
+4.11,4.11.6,stage,DeploySnoDuNode,4,3716,85.57,cnfde23,3
+4.11,4.11.6,stage,WaitForDuProfileApply,4,1418,,cnfde23,
+4.11,4.11.6,stage,DeploySnoDuNode,5,,0.00,cnfde23,3
+4.11,4.11.6,stage,WaitForDuProfileApply,5,,,cnfde23,

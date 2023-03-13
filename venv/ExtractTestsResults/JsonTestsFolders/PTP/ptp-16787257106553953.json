@@ -1,0 +1,1 @@
+{"ocp_version": "4.9", "ocp_build": "4.9.44", "test_type": "ptp", "node_name": "cnfde4", "config": "BC", "kernel": "4.18.0-305.49.1.rt7.121.el8_4.x86_64", "duration": "8h", "nic": "E810", "ptp4l_avg_offset": 4.65115, "ptp4l_max_offset": 27, "ptp4l_min_offset": 1, "phc2sys_avg_offset": 7.67151, "phc2sys_max_offset": 49, "phc2sys_min_offset": 1}

@@ -1,0 +1,1 @@
+{"ocp_version": "4.12", "ocp_build": "4.12.0-rc.1", "test_type": "ptp", "node_name": "cnfde4", "config": "BC - Dual Nic", "kernel": "4.18.0-425.3.1.rt7.213.el8.x86_64", "duration": "8h", "nic": "E810", "ptp4l_avg_offset": 6.03485, "ptp4l_max_offset": 42, "ptp4l_min_offset": 1, "phc2sys_avg_offset": 9.22973, "phc2sys_max_offset": 69, "phc2sys_min_offset": 1}

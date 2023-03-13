@@ -1,0 +1,1 @@
+{"ocp_version": "4.12", "ocp_build": "4.12.6", "test_type": "ptp", "node_name": "cnfde30", "config": "OC", "kernel": "4.18.0-372.46.1.el8_6.x86_64", "duration": "8h", "nic": "Chapman Beach - E810-C for QSFP", "ptp4l_avg_offset": 2.09817, "ptp4l_max_offset": 18, "ptp4l_min_offset": 1, "phc2sys_avg_offset": 5.58648, "phc2sys_max_offset": 61, "phc2sys_min_offset": 1}
