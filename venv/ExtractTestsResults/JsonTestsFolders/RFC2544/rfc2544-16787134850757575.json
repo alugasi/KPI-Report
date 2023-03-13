@@ -1,0 +1,1 @@
+{"ocp_version": "4.11", "ocp_build": "4.11.0-rc.1", "test_type": "rfc2544", "node_name": "cnfde4", "histogram": "", "kernel": "4.18.0-372.13.1.rt7.170.el8_6.x86_64", "duration": "8h", "nic": "E810", "frame_size": 512, "throughput": 99.912, "min_delay": 6.07, "max_delay": 32.128, "avg_delay": 7.125}
