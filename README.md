@@ -49,9 +49,10 @@ rather then manually collecting the results and store them in spreadsheets and l
     │   ├──lib/python3.10/site-packages                             ## virtual environmet files
     │   ├── spl_queries                                             ## folder that contain files with queries for creating the different dashboards
     │   │   ├── cpu_util_dashbords.txt                              ## queries for creating the cpu util dashboard
-    │   ├──ExtractFromCpuSpreadSheet.ipynb                          ## script for extracting and creating json files from cpu util spreadsheets
-    │   ├──Informal - RAN QE CPU Utilization.xlsx - component.csv   ## cpu util component spreadsheet sample
-    │   ├──Informal - RAN QE CPU Utilization.xlsx - other.csv       ## cpu util scenarios metrics spreadsheet sample
+    │   ├──ExtractFromCpuSpreadSheet.ipynb                          ## script for extracting and creating json
+    │   ├──ExtractFromPTPSpreadSheet.ipynb                          ## script for extracting and creating json
+    │   ├──ExtractFromRFC2544SpreadSheet.ipynb                      ## script for extracting and creating json files from cpu util spreadsheets
+    │   ├──spreadsheets                                             ## tests spreadsheets
     │   ├──lib64                                                    ## virtual environmet files
     │   ├──pyvenv.cfg                                               ## virtual environmet config file
     │   ├──splunkHecPush.py                                         ## script for pushing json files to splunk
